@@ -46,7 +46,7 @@ export default function PageantsPage() {
                     key={nation.name}
                     className="flex items-baseline justify-between gap-4 border-t border-hairline py-3"
                   >
-                    <span className="text-[15px] text-heading">{nation.name}</span>
+                    <span className="font-body text-[15px] text-heading">{nation.name}</span>
                     <span className="font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
                       {nation.count}
                     </span>

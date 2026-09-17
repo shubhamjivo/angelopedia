@@ -41,7 +41,7 @@ export default function GalleryPage() {
                   sizes="(max-width: 1023px) 50vw, 420px"
                 />
                 <figcaption className="mt-3">
-                  <p className="text-[15px] text-heading">{item.title}</p>
+                  <p className="font-heading text-[15px] text-heading">{item.title}</p>
                   <p className="mt-1 font-nav text-[11px] tracking-[1.2px] text-muted uppercase">
                     {item.meta}
                   </p>

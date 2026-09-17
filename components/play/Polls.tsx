@@ -25,7 +25,7 @@ export function Polls() {
               return (
                 <label
                   key={option}
-                  className={`flex cursor-pointer items-center border-t border-hairline py-3 text-[15px] ${
+                  className={`flex cursor-pointer items-center border-t border-hairline py-3 font-body text-[15px] ${
                     active ? "text-accent" : "text-ink"
                   }`}
                 >

@@ -53,7 +53,7 @@ export default function PlayPage() {
                 {LEADERBOARD.map((row) => (
                   <li
                     key={row.handle}
-                    className="grid grid-cols-[24px_minmax(0,1fr)_auto] gap-3 border-b border-hairline py-3 text-[14px]"
+                    className="grid grid-cols-[24px_minmax(0,1fr)_auto] gap-3 border-b border-hairline py-3 font-body text-[14px]"
                   >
                     <span className="text-muted">{row.rank}</span>
                     <span>{row.handle}</span>

@@ -124,7 +124,7 @@ export default function NewsPage() {
                     </span>
                     <Link
                       href="/news/the-year-of-grace"
-                      className="text-[15px] leading-snug text-heading hover:text-ink"
+                      className="font-heading text-[15px] leading-snug text-heading hover:text-ink"
                     >
                       {title}
                     </Link>

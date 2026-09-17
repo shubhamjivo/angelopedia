@@ -60,10 +60,10 @@ function MosaicCard({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-5 desk:p-7">
-        <p className="font-sans text-lg font-medium leading-snug text-white desk:text-[22px]">
+        <p className="font-heading text-lg font-medium leading-snug text-white desk:text-[22px]">
           {item.title}
         </p>
-        <span className="font-sans text-[13px] font-medium text-gold">Know More</span>
+        <span className="font-nav text-[13px] font-medium text-gold">Know More</span>
       </div>
     </Link>
   );

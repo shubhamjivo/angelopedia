@@ -28,7 +28,7 @@ export function GalleryPreview() {
                 sizes="250px"
               />
               <p className="mt-3 text-[15px] font-medium text-heading">{item.title}</p>
-              <p className="mt-1 text-[11px] tracking-[0.2px] text-muted">{item.meta}</p>
+              <p className="mt-1 font-nav text-[11px] tracking-[0.2px] text-muted">{item.meta}</p>
             </Link>
           ))}
         </div>

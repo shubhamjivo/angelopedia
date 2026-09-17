@@ -44,7 +44,7 @@ export default function ContestantPage() {
                   <dt className="font-nav text-[10px] tracking-[2px] text-muted uppercase">
                     {fact.label}
                   </dt>
-                  <dd className="text-right text-[15px] text-heading">{fact.value}</dd>
+                  <dd className="font-heading text-right text-[15px] text-heading">{fact.value}</dd>
                 </div>
               ))}
             </dl>
@@ -103,7 +103,7 @@ export default function ContestantPage() {
                   sizes="300px"
                 />
                 <figcaption className="mt-3">
-                  <p className="text-[14px] text-heading">{photo.title}</p>
+                  <p className="font-heading text-[14px] text-heading">{photo.title}</p>
                   <p className="mt-1 font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
                     {photo.meta}
                   </p>

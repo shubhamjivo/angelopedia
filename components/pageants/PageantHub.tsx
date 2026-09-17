@@ -136,7 +136,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
                   <p className="font-nav text-[11px] tracking-[1.2px] uppercase">
                     {queen.name}
                   </p>
-                  <p className="mt-1 text-[11px] text-muted">{queen.meta}</p>
+                  <p className="mt-1 font-nav text-[11px] text-muted">{queen.meta}</p>
                 </figcaption>
               </figure>
             ))}

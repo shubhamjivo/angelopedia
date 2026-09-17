@@ -66,10 +66,10 @@ export default function VideosPage() {
                     {item.duration}
                   </span>
                 </div>
-                <h3 className="mt-3 text-[16px] font-medium leading-snug text-heading">
+                <h3 className="mt-3 font-heading text-[16px] font-medium leading-snug text-heading">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-[13px] text-muted">{item.meta}</p>
+                <p className="mt-1 font-nav text-[13px] text-muted">{item.meta}</p>
               </article>
             ))}
           </div>
