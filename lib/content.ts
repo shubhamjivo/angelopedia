@@ -312,34 +312,171 @@ export const HOME_GALLERY = [
   },
 ];
 
-export const HOME_VIDEOS = {
-  featured: {
-    title: "The Final Question — Every Answer That Won a Crown",
-    meta: "12:48 · July 2026",
-    href: "/videos",
-    image: "/images/video-1.png",
-  },
-  items: [
-    {
-      title: "Inside the Atelier: Making a National Costume",
-      meta: "8:12",
-      href: "/videos",
-      image: "/images/video-2.png",
-    },
-    {
-      title: "Valentina Herrera: One Year with the Crown",
-      meta: "15:03",
-      href: "/videos",
-      image: "/images/video-3.png",
-    },
-    {
-      title: "The Walk: A Masterclass in Ten Steps",
-      meta: "6:40",
-      href: "/videos",
-      image: "/images/video-4.png",
-    },
-  ],
+export type WatchNowClip = {
+  title: string;
+  kicker: string;
+  image: string;
+  href: string;
 };
+
+export type WatchNowTab = {
+  id: "finals" | "interviews" | "masterclass" | "documentaries";
+  label: string;
+  href: string;
+  featured: WatchNowClip;
+  items: WatchNowClip[];
+};
+
+export const WATCH_NOW_TABS: WatchNowTab[] = [
+  {
+    id: "finals",
+    label: "Finals",
+    href: "/videos",
+    featured: {
+      title: "The Final Question — Every Answer That Won a Crown",
+      kicker: "Film · 12:48",
+      image: "/images/video-1.png",
+      href: "/videos",
+    },
+    items: [
+      {
+        title: "Coronation Night in Three Minutes — Extended Cut",
+        kicker: "Highlights · 3:12",
+        image: "/images/video-1.png",
+        href: "/videos",
+      },
+      {
+        title: "Miss Universe 2025: The Last Five",
+        kicker: "Finals · 9:20",
+        image: "/images/four-1.png",
+        href: "/videos",
+      },
+      {
+        title: "Miss World 2026: The Crowning in Nha Trang",
+        kicker: "Finals · 7:04",
+        image: "/images/four-5.jpg",
+        href: "/videos",
+      },
+      {
+        title: "Miss Earth 2025: Silver Anniversary Night",
+        kicker: "Finals · 8:41",
+        image: "/images/four-4.png",
+        href: "/videos",
+      },
+    ],
+  },
+  {
+    id: "interviews",
+    label: "Interviews",
+    href: "/videos",
+    featured: {
+      title: "Isabelle Fontaine: The First Interview",
+      kicker: "Interview · 7:18",
+      image: "/images/contestant.jpg",
+      href: "/videos",
+    },
+    items: [
+      {
+        title: "Joheirry Mola on Beauty with a Purpose",
+        kicker: "Interview · 11:02",
+        image: "/images/titleholders/mw-2026-joheirry.png",
+        href: "/videos",
+      },
+      {
+        title: "Fátima Bosch After the Bangkok Crown",
+        kicker: "Interview · 8:55",
+        image: "/images/titleholders/mu-2025-fatima.jpg",
+        href: "/videos",
+      },
+      {
+        title: "Catalina Duque: Sisterhood in Tokyo",
+        kicker: "Interview · 6:30",
+        image: "/images/titleholders/mi-2025-catalina.jpg",
+        href: "/videos",
+      },
+      {
+        title: "Natálie Puškinová on Beauties for a Cause",
+        kicker: "Interview · 9:14",
+        image: "/images/titleholders/me-2025-natalie.jpg",
+        href: "/videos",
+      },
+    ],
+  },
+  {
+    id: "masterclass",
+    label: "Masterclass",
+    href: "/videos",
+    featured: {
+      title: "The Walk: A Masterclass in Ten Steps",
+      kicker: "Masterclass · 6:40",
+      image: "/images/video-4.png",
+      href: "/videos",
+    },
+    items: [
+      {
+        title: "Inside the Atelier: Making a National Costume",
+        kicker: "Craft · 8:12",
+        image: "/images/video-2.png",
+        href: "/videos",
+      },
+      {
+        title: "Beauty Talks: The Quiet-Luxury Makeup Episode",
+        kicker: "Series · 9:55",
+        image: "/images/news-beauty.png",
+        href: "/videos",
+      },
+      {
+        title: "Evening Gown: How to Own the Last Look",
+        kicker: "Masterclass · 5:28",
+        image: "/images/gallery-4.jpg",
+        href: "/videos",
+      },
+      {
+        title: "The Interview Table: Ninety Seconds to the Crown",
+        kicker: "Masterclass · 10:07",
+        image: "/images/news-opinion.png",
+        href: "/videos",
+      },
+    ],
+  },
+  {
+    id: "documentaries",
+    label: "Documentaries",
+    href: "/videos",
+    featured: {
+      title: "Valentina Herrera: One Year with the Crown",
+      kicker: "Documentary · 15:03",
+      image: "/images/video-3.png",
+      href: "/videos",
+    },
+    items: [
+      {
+        title: "The Final Question — Every Answer That Won a Crown",
+        kicker: "Film · 12:48",
+        image: "/images/video-1.png",
+        href: "/videos",
+      },
+      {
+        title: "From Advocacy to Artistry",
+        kicker: "Documentary · 14:22",
+        image: "/images/news-earth.png",
+        href: "/videos",
+      },
+      {
+        title: "A Decade of Queens",
+        kicker: "Film · 18:10",
+        image: "/images/mosaic-grand.jpg",
+        href: "/videos",
+      },
+      {
+        title: "Host City: Bangkok’s Diamond Jubilee",
+        kicker: "Documentary · 11:36",
+        image: "/images/news-bangkok.jpg",
+        href: "/videos",
+      },
+    ],
+  },
+];
 
 export const NEWS_FILTERS = [
   { href: "/news", label: "All" },
