@@ -34,11 +34,9 @@ export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [compact, setCompact] = useState(false);
   const [atTop, setAtTop] = useState(true);
-  const headerRef = useRef<HTMLElement>(null);
   const chromeRef = useRef<HTMLDivElement>(null);
   const lastY = useRef(0);
   const raf = useRef(0);
-  const ignoreUntil = useRef(0);
 
   useEffect(() => {
     lastY.current = window.scrollY;
@@ -49,7 +47,7 @@ export function Header() {
       const delta = y - lastY.current;
       lastY.current = y;
 
-      const top = y < 16;
+      const top = y < 24;
       setAtTop(top);
 
       if (searchOpen || top) {
@@ -57,15 +55,8 @@ export function Header() {
         return;
       }
 
-      if (performance.now() < ignoreUntil.current) return;
-
-      if (delta > 6) {
-        setCompact(true);
-        ignoreUntil.current = performance.now() + 420;
-      } else if (delta < -6) {
-        setCompact(false);
-        ignoreUntil.current = performance.now() + 420;
-      }
+      if (delta > 10) setCompact(true);
+      else if (delta < -10) setCompact(false);
     };
 
     const onScroll = () => {
@@ -78,7 +69,7 @@ export function Header() {
       window.removeEventListener("scroll", onScroll);
       if (raf.current) cancelAnimationFrame(raf.current);
     };
-  }, [open, searchOpen]);
+  }, [searchOpen]);
 
   useEffect(() => {
     if (!open) return;
@@ -99,17 +90,24 @@ export function Header() {
   }, []);
 
   return (
+    <>
+    <div
+      aria-hidden
+      className="pointer-events-none"
+      style={{ height: "var(--header-h-top)" }}
+    />
     <header
-      ref={headerRef}
       data-compact={compact ? "true" : "false"}
       data-at-top={atTop ? "true" : "false"}
-      className={`sticky top-0 z-50 bg-paper text-ink transition-[box-shadow] duration-300 ease-out ${compact ? "shadow-[0_1px_0_0_rgba(65,64,66,0.12)]" : ""
-        }`}
+      className={`fixed inset-x-0 top-0 z-50 bg-paper text-ink ${
+        compact ? "shadow-[0_1px_0_0_rgba(65,64,66,0.12)]" : ""
+      }`}
     >
       <div ref={chromeRef}>
         <div
-          className={`overflow-hidden transition-all duration-300 ease-out ${atTop ? "max-h-8 opacity-100" : "max-h-0 opacity-0"
-            }`}
+          className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+            atTop ? "max-h-8 opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
           <div className="hidden border-b border-hairline sm:block">
             <Container className="flex h-8 items-center">
@@ -124,8 +122,9 @@ export function Header() {
         </div>
 
         <Container
-          className={`relative flex items-center justify-between transition-[height] duration-300 ease-out ${compact ? "h-14 lg:h-16" : "h-16 lg:h-[88px]"
-            }`}
+          className={`relative flex items-center justify-between transition-[height] duration-300 ease-out ${
+            compact ? "h-14 lg:h-16" : "h-16 lg:h-[88px]"
+          }`}
         >
           <div className="flex items-center gap-3 lg:gap-4">
             <button
@@ -195,8 +194,9 @@ export function Header() {
         </Container>
 
         <div
-          className={`overflow-hidden transition-all duration-300 ease-out ${compact || open ? "max-h-0 opacity-0" : "max-h-14 opacity-100"
-            }`}
+          className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+            compact || open ? "max-h-0 opacity-0" : "max-h-14 opacity-100"
+          }`}
         >
           <div className="border-t border-hairline">
             <Container>
@@ -306,5 +306,6 @@ export function Header() {
         </nav>
       ) : null}
     </header>
+    </>
   );
 }
