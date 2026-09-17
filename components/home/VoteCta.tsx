@@ -4,7 +4,7 @@ import { Kicker } from "@/components/ui/Kicker";
 
 export function VoteCta() {
   return (
-    <section className="py-16 desk:py-24">
+    <section className="screen-section flex flex-col justify-center py-16 desk:py-24">
       <Container className="flex flex-col items-center text-center">
         <Kicker>Have Your Say</Kicker>
         <h2 className="mt-4 max-w-[720px] font-heading text-[36px] font-semibold leading-tight text-heading desk:text-[52px]">

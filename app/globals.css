@@ -44,6 +44,9 @@
   --clr-neutral-600: #5c5952;
   --clr-neutral-800: #59595c;
   --clr-neutral-900: #000000;
+
+  --header-h: 3.5rem;
+  --header-h-top: 10.3125rem;
 }
 
 @theme inline {
@@ -78,6 +81,12 @@
   --breakpoint-desk: 90rem;
 }
 
+@media (min-width: 64rem) {
+  :root {
+    --header-h: 4rem;
+  }
+}
+
 @layer base {
 
   *,
@@ -102,6 +111,10 @@
 
   html:focus-within {
     scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-padding-top: var(--header-h);
   }
 
   html,
@@ -166,6 +179,21 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+.screen-section {
+  min-height: 100svh;
+}
+
+main > .screen-section:first-child {
+  min-height: calc(100svh - var(--header-h-top));
+}
+
+.screen-section:not(:first-child)::before {
+  content: "";
+  display: block;
+  height: var(--header-h);
+  flex-shrink: 0;
 }
 
 .container {

@@ -39,7 +39,7 @@ export function BigFour() {
   }
 
   return (
-    <section className="flex h-svh flex-col overflow-hidden bg-neutral-900 text-white">
+    <section className="screen-section flex h-svh flex-col overflow-hidden bg-neutral-900 text-white">
       <Container className="flex min-h-0 flex-1 flex-col py-5 lg:py-8">
         <div className="flex shrink-0 flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="font-heading text-[32px] font-semibold leading-none text-white lg:text-[36px] desk:text-[42px]">
@@ -64,9 +64,8 @@ export function BigFour() {
                     tabIndex={selected ? 0 : -1}
                     onClick={() => setActiveId(item.id)}
                     onKeyDown={(event) => onTabKeyDown(event, index)}
-                    className={`relative shrink-0 pb-2 font-nav text-[11px] tracking-[2px] uppercase transition-colors ${
-                      selected ? "text-white" : "text-white/45 hover:text-white/80"
-                    }`}
+                    className={`relative shrink-0 pb-2 font-nav text-[11px] tracking-[2px] uppercase transition-colors ${selected ? "text-white" : "text-white/45 hover:text-white/80"
+                      }`}
                   >
                     {item.label}
                     {selected ? (

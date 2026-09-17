@@ -5,7 +5,7 @@ import { CoverImage } from "@/components/ui/CoverImage";
 
 export function WatchNow() {
   return (
-    <section className="py-16 desk:py-24">
+    <section className="screen-section py-16 desk:py-24">
       <Container>
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">

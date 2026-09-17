@@ -7,7 +7,7 @@ import { LatestNewsCarousel } from "@/components/home/LatestNewsCarousel";
 
 export function LatestNews() {
   return (
-    <section className="py-8 desk:py-9">
+    <section className="screen-section py-8 desk:py-9">
       <Container>
         <SectionHeading title="Latest News" />
         <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,680px)_330px_330px] lg:gap-6">

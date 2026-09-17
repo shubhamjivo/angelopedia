@@ -7,7 +7,7 @@ export function HeroMosaic() {
   const [feature, wide, ...halves] = MOSAIC;
 
   return (
-    <section className="py-6 desk:py-10">
+    <section className="screen-section py-6 desk:py-10">
       <Container>
         <div className="grid gap-2.5 lg:h-[500px] lg:grid-cols-2 lg:grid-rows-2">
           <MosaicCard
