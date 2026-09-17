@@ -27,66 +27,64 @@ export const MOSAIC = [
 ];
 
 export const LATEST_FEATURED = {
-  title: "Inês Perestrello crowned Miss Grand Portugal 2024",
+  title: "Inês Perestrello Is Crowned Miss Grand Portugal 2024",
+  dek: "The Lisbon-born titleholder closed the night with a walk that filled the hall — and an interview on literacy that drew the evening’s only standing ovation.",
+  byline: "Story by Angelopedia · Photographs by Angelopedia Studio",
   href: "/news/ines-perestrello-miss-grand-portugal",
   image: "/images/ines.jpg",
 };
 
-export const LATEST_LEFT = [
+export const LATEST_SIDE = [
   {
-    title:
-      "Meet Beauty with Brain: Grace Sugawara Miss Earth Japan Hokkaido 2024",
+    title: "Grace Sugawara, Miss Earth Japan Hokkaido, Is a Beauty with a Brain",
     href: "/news/grace-sugawara",
     image: "/images/grace.jpg",
-    byline: "By Angelopedia · 2024",
+    byline: "Story by Angelopedia",
   },
   {
-    title: "Meet Bidhi Lamsal Miss Global Nepal 2024",
-    href: "/news/bidhi-lamsal",
-    image: "/images/bidhi.jpg",
-    byline: "By Angelopedia · 2024",
-  },
-  {
-    title: "Krishnah Gravidez Strong Contender of Miss World Philippines 2024",
+    title: "Krishnah Gravidez, a Strong Contender of Miss World Philippines 2024",
     href: "/news/krishnah-gravidez",
     image: "/images/krishnah.jpg",
-    byline: "By Angelopedia · 2024",
+    byline: "Story by Angelopedia",
   },
   {
-    title:
-      "Suzana Renaud's Journey to 1st Runner-Up at Miss Universe Thailand 2024",
+    title: "Suzana Renaud’s Journey to First Runner-Up at Miss Universe Thailand",
     href: "/news/suzana-renaud",
     image: "/images/suzana.jpg",
-    byline: "By Angelopedia · 2024",
-  },
-];
-
-export const LATEST_RIGHT = [
-  {
-    title: "Celebrating a Milestone: Happy 73rd Anniversary, Miss World!",
-    href: "/news/miss-world-73rd-anniversary",
-    image: "/images/miss-world-73.jpg",
-    byline: "By Angelopedia · 2024",
-  },
-  {
-    title:
-      "Happy Birthday Miss Universe 2020 3rd Runner Up Adline Castelino!",
-    href: "/news/adline-castelino",
-    image: "/images/adline.jpg",
-    byline: "By Angelopedia · 2024",
-  },
-  {
-    title:
-      "Messry Lung'atso Emerging as a Strong Contender for Miss Earth Kenya 2024",
-    href: "/news/messry-lungatso",
-    image: "/images/messry.jpg",
-    byline: "By Angelopedia · 2024",
+    byline: "Story by Angelopedia",
   },
   {
     title: "Harashta Haifa Zahra Sets New Milestones as Miss Supranational 2024",
     href: "/news/harashta-zahra",
     image: "/images/harashta.jpg",
-    byline: "By Angelopedia · 2024",
+    byline: "Story by Angelopedia",
+  },
+];
+
+export const OPINIONS = [
+  {
+    title: "Our Top 5 Favourites of Miss Earth Japan 2024",
+    href: "/news/miss-earth-japan-top-5-favourites-2024",
+    image: "/images/opinions/earth-japan.jpg",
+    byline: "26 Jul 2024 · Irina Silva",
+  },
+  {
+    title: "Our Top 5 Favourites of Miss Universe Japan 2024",
+    href: "/news/miss-universe-japan-top-5-favourites-2024",
+    image: "/images/opinions/universe-japan.jpg",
+    byline: "25 Jul 2024 · Camilla Saurez",
+  },
+  {
+    title: "Our Top 5 Favourites of Miss World Philippines 2024",
+    href: "/news/miss-world-philippines-top-5-favourites-2024",
+    image: "/images/opinions/world-philippines.jpg",
+    byline: "17 Jul 2024 · Camilla Saurez",
+  },
+  {
+    title: "Our Top 5 Favourites of Miss Universe Thailand 2024",
+    href: "/news/miss-universe-thailand-top-5-favourites-2024",
+    image: "/images/opinions/universe-thailand.jpg",
+    byline: "14 Jul 2024 · Camilla Saurez",
   },
 ];
 

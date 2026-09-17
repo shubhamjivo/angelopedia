@@ -1,36 +1,55 @@
 import Link from "next/link";
-import { LATEST_FEATURED, LATEST_LEFT, LATEST_RIGHT } from "@/lib/content";
+import { LATEST_FEATURED, LATEST_SIDE } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { LatestNewsCarousel } from "@/components/home/LatestNewsCarousel";
 
 export function LatestNews() {
   return (
-    <section className="screen-section py-8 desk:py-9">
+    <section className="screen-section bg-paper py-10 desk:py-14">
       <Container>
-        <SectionHeading title="Latest News" />
-        <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,680px)_330px_330px] lg:gap-6">
-          <Link
-            href={LATEST_FEATURED.href}
-            className="relative block min-h-[420px] overflow-hidden lg:h-[680px]"
-          >
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.65fr)_minmax(280px,1fr)] lg:gap-12">
+          <Link href={LATEST_FEATURED.href} className="group flex flex-col">
             <CoverImage
               src={LATEST_FEATURED.image}
               alt={LATEST_FEATURED.title}
-              className="absolute inset-0 h-full w-full"
-              sizes="(max-width: 1023px) 100vw, 680px"
+              className="h-[320px] w-full sm:h-[420px] lg:h-[480px]"
+              imageClassName="object-[center_20%] transition duration-500 group-hover:scale-[1.02]"
+              sizes="(max-width: 1023px) 100vw, 780px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-7">
-              <p className="font-sans text-[26px] font-medium leading-[1.18] text-white desk:text-[30px]">
-                {LATEST_FEATURED.title}
-              </p>
-              <span className="text-[13px] font-medium text-gold">Know More</span>
-            </div>
+            <h2 className="mt-6 font-heading text-[32px] font-medium leading-[1.12] text-heading sm:text-[40px] desk:text-[48px]">
+              {LATEST_FEATURED.title}
+            </h2>
+            <p className="mt-4 max-w-[42rem] font-body text-[17px] leading-relaxed text-ink">
+              {LATEST_FEATURED.dek}
+            </p>
+            <p className="mt-5 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">
+              {LATEST_FEATURED.byline}
+            </p>
           </Link>
-          <LatestNewsCarousel items={LATEST_LEFT} />
-          <LatestNewsCarousel items={LATEST_RIGHT} reverse />
+
+          <ul role="list" className="flex flex-col gap-7 lg:gap-8">
+            {LATEST_SIDE.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="group flex items-start gap-5">
+                  <CoverImage
+                    src={item.image}
+                    alt={item.title}
+                    className="h-[110px] w-[96px] shrink-0 sm:h-[128px] sm:w-[110px]"
+                    imageClassName="object-[center_18%]"
+                    sizes="110px"
+                  />
+                  <div className="min-w-0 pt-0.5">
+                    <p className="font-heading text-[22px] font-medium leading-snug text-heading transition-colors group-hover:text-ink sm:text-[24px]">
+                      {item.title}
+                    </p>
+                    <p className="mt-2 font-nav text-[10px] tracking-[1.5px] text-muted uppercase">
+                      {item.byline}
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </section>
