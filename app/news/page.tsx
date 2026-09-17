@@ -1,0 +1,172 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  FOLLOW_PAGEANTS,
+  MOST_READ,
+  NEWS_FEATURED,
+  NEWS_FEED,
+  NEWS_FILTERS,
+} from "@/lib/content";
+import { Container } from "@/components/ui/Container";
+import { CoverImage } from "@/components/ui/CoverImage";
+import { Kicker } from "@/components/ui/Kicker";
+import { PageHero } from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "The Latest",
+  description:
+    "Crowns, contests and the people who carry them — reported daily from 195 nations.",
+};
+
+export default function NewsPage() {
+  return (
+    <main>
+      <PageHero
+        kicker="Newsroom"
+        title="The Latest"
+        dek="Crowns, contests and the people who carry them — reported daily from 195 nations."
+      />
+
+      <nav className="border-y border-hairline">
+        <Container className="flex h-12 items-center justify-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] text-muted uppercase no-scrollbar">
+          {NEWS_FILTERS.map((filter, index) => (
+            <Link
+              key={filter.label}
+              href={filter.href}
+              className={index === 0 ? "text-ink" : "hover:text-ink"}
+            >
+              {filter.label}
+            </Link>
+          ))}
+        </Container>
+      </nav>
+
+      <section className="py-16">
+        <Container className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
+          <div className="min-w-0 flex-1">
+            <article className="flex flex-col gap-8 border-b border-hairline pb-14 lg:flex-row lg:items-center">
+              <div className="min-w-0 flex-1">
+                <Kicker tone="accent">{NEWS_FEATURED.kicker}</Kicker>
+                <h2 className="mt-3 font-heading text-[32px] font-semibold leading-tight text-heading desk:text-[40px]">
+                  <Link href={NEWS_FEATURED.href} className="hover:text-ink">
+                    {NEWS_FEATURED.title}
+                  </Link>
+                </h2>
+                <p className="mt-4 font-body text-[15px] leading-6 text-muted">
+                  {NEWS_FEATURED.dek}
+                </p>
+                <p className="mt-5 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
+                  {NEWS_FEATURED.byline}
+                </p>
+              </div>
+              <Link href={NEWS_FEATURED.href} className="lg:w-[420px] lg:shrink-0">
+                <CoverImage
+                  src={NEWS_FEATURED.image}
+                  alt={NEWS_FEATURED.title}
+                  className="h-[280px] w-full lg:h-[360px]"
+                  sizes="420px"
+                />
+              </Link>
+            </article>
+
+            <div className="flex flex-col">
+              {NEWS_FEED.map((item) => (
+                <article
+                  key={item.slug}
+                  className="flex gap-6 border-b border-hairline py-8"
+                >
+                  <div className="min-w-0 flex-1">
+                    <Kicker>{item.kicker}</Kicker>
+                    <h3 className="mt-2 font-heading text-[22px] font-semibold leading-snug text-heading">
+                      <Link href={item.href} className="hover:text-ink">
+                        {item.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-2 font-body text-[15px] leading-6 text-muted">
+                      {item.dek}
+                    </p>
+                    <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
+                      {item.date}
+                    </p>
+                  </div>
+                  <Link href={item.href} className="hidden w-[220px] shrink-0 sm:block">
+                    <CoverImage
+                      src={item.image}
+                      alt={item.title}
+                      className="h-[147px] w-[220px]"
+                      sizes="220px"
+                    />
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="flex justify-center py-12">
+              <button
+                type="button"
+                className="h-12 border border-ink px-8 font-nav text-[11px] tracking-[2px] uppercase"
+              >
+                Load more stories
+              </button>
+            </div>
+          </div>
+
+          <aside className="flex w-full flex-col gap-10 lg:w-[280px] lg:shrink-0">
+            <div>
+              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                Most Read
+              </p>
+              <ol className="mt-4 flex flex-col gap-4">
+                {MOST_READ.map((title, index) => (
+                  <li key={title} className="flex gap-3">
+                    <span className="font-heading text-xl text-muted">
+                      {index + 1}
+                    </span>
+                    <Link
+                      href="/news/the-year-of-grace"
+                      className="text-[15px] leading-snug text-heading hover:text-ink"
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div>
+              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                Follow a Pageant
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {FOLLOW_PAGEANTS.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="border border-hairline px-3 py-1.5 font-nav text-[10px] tracking-[1.2px] uppercase hover:border-ink"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                The Crown Letter
+              </p>
+              <p className="mt-4 font-body text-[15px] leading-6 text-muted">
+                One elegant email each Sunday — the week in pageantry, curated.
+              </p>
+              <Link
+                href="/#newsletter"
+                className="mt-4 flex h-11 items-center justify-center border border-ink font-nav text-[11px] tracking-[2px] uppercase"
+              >
+                Subscribe
+              </Link>
+            </div>
+          </aside>
+        </Container>
+      </section>
+    </main>
+  );
+}

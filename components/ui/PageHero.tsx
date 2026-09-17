@@ -1,0 +1,33 @@
+import { Container } from "@/components/ui/Container";
+import { Kicker } from "@/components/ui/Kicker";
+
+type PageHeroProps = {
+  kicker: string;
+  title: string;
+  dek: string;
+  dark?: boolean;
+};
+
+export function PageHero({ kicker, title, dek, dark = false }: PageHeroProps) {
+  return (
+    <section className={dark ? "bg-footer text-white" : "bg-paper"}>
+      <Container className="flex flex-col items-center px-6 py-16 text-center desk:px-0 desk:pt-16 desk:pb-14">
+        <Kicker tone={dark ? "accent" : "accent"}>{kicker}</Kicker>
+        <h1
+          className={`mt-3 font-heading text-[48px] font-semibold leading-none tracking-[-0.02em] desk:text-[80px] ${
+            dark ? "text-white" : "text-ink"
+          }`}
+        >
+          {title}
+        </h1>
+        <p
+          className={`mt-4 max-w-[560px] font-body text-base leading-relaxed ${
+            dark ? "text-neutral-300" : "text-muted"
+          }`}
+        >
+          {dek}
+        </p>
+      </Container>
+    </section>
+  );
+}

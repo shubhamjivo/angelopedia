@@ -1,0 +1,73 @@
+import type { Metadata, Viewport } from "next";
+import { Cormorant, Inter, Jost, Newsreader } from "next/font/google";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  variable: "--font-jost",
+});
+
+const cormorant = Cormorant({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  style: ["normal", "italic"],
+  weight: ["500", "600", "700"],
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "beauty pageants",
+    "Miss Universe",
+    "Miss World",
+    "Miss Earth",
+    "Miss International",
+    "pageant news",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#be1e2d",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${jost.variable} ${cormorant.variable} ${newsreader.variable} min-h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
