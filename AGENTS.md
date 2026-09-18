@@ -76,6 +76,9 @@ in `globals.css`.
 
 ### Styling
 
+- The whole site renders at 90% scale (`zoom: 0.9` on `html` in `globals.css`) —
+  this is intentional and mirrors the 90% browser-zoom look the design targets.
+  Don't remove it, and don't compensate with larger font/size tokens.
 - Style with Tailwind utility classes inline in JSX. Use semantic color aliases
   (`text-ink`, `text-heading`, `text-muted`, `bg-paper`, `border-hairline`,
   `bg-footer`, `text-accent`, `text-gold`, `text-neutral-300/400`) over raw hex.

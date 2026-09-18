@@ -115,6 +115,7 @@
 
   html {
     scroll-padding-top: var(--header-h);
+    zoom: 0.9;
   }
 
   html,
