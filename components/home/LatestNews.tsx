@@ -7,6 +7,7 @@ export function LatestNews() {
   return (
     <section className="screen-section bg-paper py-10 desk:py-14">
       <Container>
+        <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">The Latest News</h2>
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.65fr)_minmax(280px,1fr)] lg:gap-12">
           <Link href={LATEST_FEATURED.href} className="group flex flex-col">
             <CoverImage
@@ -19,9 +20,9 @@ export function LatestNews() {
             <h2 className="mt-6 font-heading text-[32px] font-medium leading-[1.12] text-heading sm:text-[40px] desk:text-[48px]">
               {LATEST_FEATURED.title}
             </h2>
-            <p className="mt-4 max-w-[42rem] font-body text-[17px] leading-relaxed text-ink">
-              {LATEST_FEATURED.dek}
-            </p>
+            {/* <p className="mt-4 max-w-[42rem] font-body text-[17px] leading-relaxed text-ink"> */}
+            {/*   {LATEST_FEATURED.dek} */}
+            {/* </p> */}
             <p className="mt-5 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">
               {LATEST_FEATURED.byline}
             </p>
