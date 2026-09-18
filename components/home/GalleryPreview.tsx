@@ -18,7 +18,7 @@ export function GalleryPreview() {
             All Photos
           </Link>
         </div>
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
           {HOME_GALLERY.map((item) => (
             <Link key={item.title} href={item.href} className="flex flex-col">
               <CoverImage

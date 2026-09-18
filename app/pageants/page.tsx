@@ -33,14 +33,14 @@ export default function PageantsPage() {
           {PAGEANT_DIRECTORY.map((group) => (
             <div key={group.continent}>
               <div className="flex items-baseline gap-4">
-                <h2 className="font-heading text-[36px] font-semibold text-heading">
+                <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
                   {group.continent}
                 </h2>
                 <p className="font-nav text-[11px] tracking-[2px] text-muted uppercase">
                   {group.count}
                 </p>
               </div>
-              <div className="mt-6 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-10 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
                 {group.nations.map((nation) => (
                   <div
                     key={nation.name}

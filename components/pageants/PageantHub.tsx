@@ -84,14 +84,14 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section className="bg-[#f7f5f1] py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[32px] font-semibold text-heading">
+            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
               Road to the Crown
             </h2>
             <p className="font-nav text-[11px] tracking-[2px] text-muted uppercase">
               2026 Season
             </p>
           </div>
-          <ol className="mt-8 flex flex-col">
+          <ol className="mt-10 flex flex-col">
             {UNIVERSE_TIMELINE.map((item) => (
               <li
                 key={item.date}
@@ -113,7 +113,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section className="py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[32px] font-semibold text-heading">
+            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
               A Decade of Queens
             </h2>
             <Link
@@ -123,7 +123,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
               Gallery
             </Link>
           </div>
-          <div className="mt-8 flex gap-3 overflow-x-auto no-scrollbar">
+          <div className="mt-10 flex gap-3 overflow-x-auto no-scrollbar">
             {DECADE_OF_QUEENS.map((queen) => (
               <figure key={queen.name} className="w-[180px] shrink-0">
                 <CoverImage
@@ -147,7 +147,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section className="pb-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[32px] font-semibold text-heading">
+            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
               Universe News
             </h2>
             <Link
@@ -157,7 +157,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
               All News
             </Link>
           </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {UNIVERSE_NEWS.map((item) => (
               <Link key={item.title} href={item.href} className="flex flex-col gap-3">
                 <CoverImage

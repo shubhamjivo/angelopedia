@@ -8,7 +8,7 @@ export function LatestNews() {
     <section className="screen-section bg-paper py-10 desk:py-14">
       <Container>
         <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">The Latest News</h2>
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.65fr)_minmax(280px,1fr)] lg:gap-12">
+        <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,1.65fr)_minmax(280px,1fr)] lg:gap-12">
           <Link href={LATEST_FEATURED.href} className="group flex flex-col">
             <CoverImage
               src={LATEST_FEATURED.image}

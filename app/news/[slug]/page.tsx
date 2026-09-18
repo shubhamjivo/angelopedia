@@ -94,10 +94,10 @@ export default function ArticlePage() {
 
       <section className="border-t border-hairline py-16">
         <Container>
-          <h2 className="font-heading text-[36px] font-semibold text-heading">
+          <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
             Read Next
           </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {READ_NEXT.map((item) => (
               <Link key={item.title} href={item.href} className="flex flex-col gap-3">
                 <CoverImage

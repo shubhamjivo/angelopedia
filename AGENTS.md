@@ -44,6 +44,20 @@ spacer) — do not add any margin to those. `PageHero` keeps its own hero paddin
 Do not reintroduce `py-8`, `py-10`, `py-12`, `py-14`, `pb-16`-only, `desk:py-24`,
 or `py-5 lg:py-8` on sections.
 
+### Section titles (IMPORTANT)
+
+Every section title uses one `<h2>` with the exact same classes — 36px mobile /
+42px at `desk:`, `text-heading` on light bands, `text-white` on dark bands:
+
+```tsx
+<h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">Title</h2>
+<h2 className="font-heading text-[36px] font-semibold leading-none text-white desk:text-[42px]">Title</h2> // dark band
+```
+
+Keep a consistent `mt-10` between the title and the first content block below it.
+Reserve other sizes for in-content headlines (featured stories, card titles,
+CTA/hero copy) — the section title is always the 36/42 pattern above.
+
 ### Typography (IMPORTANT)
 
 Every text element must declare its font family explicitly. The four families map

@@ -83,7 +83,7 @@ export default function ContestantPage() {
       <section className="py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[32px] font-semibold text-heading">
+            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
               Isabelle, In Photos
             </h2>
             <Link
@@ -93,7 +93,7 @@ export default function ContestantPage() {
               Full Gallery
             </Link>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
             {CONTESTANT.photos.map((photo) => (
               <figure key={photo.title}>
                 <CoverImage
