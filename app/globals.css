@@ -181,9 +181,9 @@
   }
 }
 
-.screen-section {
-  min-height: 100svh;
-}
+/* .screen-section { */
+/*   min-height: 100svh; */
+/* } */
 
 main>.screen-section:first-child {
   min-height: calc(100svh - var(--header-h-top));
