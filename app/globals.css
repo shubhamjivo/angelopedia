@@ -189,13 +189,6 @@ main>.screen-section:first-child {
   min-height: calc(100svh - var(--header-h-top));
 }
 
-.screen-section:not(:first-child)::before {
-  content: "";
-  display: block;
-  height: var(--header-h);
-  flex-shrink: 0;
-}
-
 .container {
   --max-width: 1360px;
   --gutter: 1.5rem;

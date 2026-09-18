@@ -37,8 +37,8 @@ page, including the full-viewport `screen-section` blocks on the homepage
 ```
 
 The spacing between consecutive full-viewport sections on the homepage comes
-from `globals.css` (`screen-section:not(:first-child)::before`, header-height
-spacer) — do not add any margin to those. `PageHero` keeps its own hero padding
+from each section's own `py-16 desk:py-20` — there is no `::before` spacer, so
+do not add any margin to those sections. `PageHero` keeps its own hero padding
 (`pt-16` / `pb-16 desk:pb-20`); it is a page header, not a stacked section.
 
 Do not reintroduce `py-8`, `py-10`, `py-12`, `py-14`, `pb-16`-only, `desk:py-24`,
