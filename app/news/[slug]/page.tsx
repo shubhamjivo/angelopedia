@@ -36,7 +36,7 @@ export default async function ArticlePage({ params }: ArticleProps) {
           <h1 className="mt-4 max-w-[920px] font-heading text-[36px] font-semibold leading-tight text-heading desk:text-[56px]">
             {story.title}
           </h1>
-          <p className="mt-5 max-w-[640px] font-body text-base leading-7 text-muted">
+          <p className="mt-5 max-w-[640px] font-body text-base leading-7 text-neutral-500">
             {story.dek}
           </p>
           <p className="mt-6 font-nav text-[11px] tracking-[1.8px] text-muted uppercase">

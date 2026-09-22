@@ -235,7 +235,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       aria-current={active ? "page" : undefined}
-                      className={`shrink-0 py-2 ${active ? "text-heading" : "text-muted"
+                      className={`shrink-0 py-2 ${active ? "text-heading" : "text-ink"
                         }`}
                     >
                       {link.label}
@@ -264,7 +264,7 @@ export function Header() {
               type="search"
               name="q"
               placeholder="Search..."
-              className="h-10 w-full border border-hairline px-3 font-sans text-sm text-ink outline-none placeholder:text-muted focus:border-ink"
+              className="h-10 w-full border border-hairline px-3 font-sans text-sm text-ink outline-none placeholder:text-neutral-500 focus:border-ink"
             />
           </Container>
         </form>

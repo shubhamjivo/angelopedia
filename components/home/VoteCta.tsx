@@ -11,7 +11,7 @@ export function VoteCta() {
           <h2 className="mt-4 font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
             Who wears the next Miss Universe crown?
           </h2>
-          <p className="mt-4 max-w-[520px] font-body text-base leading-7 text-muted">
+          <p className="mt-4 max-w-[520px] font-body text-base leading-7 text-neutral-500">
             Join 48,000 fans in this month&apos;s prediction — and see how your Top 5
             stacks against the world.
           </p>

@@ -66,7 +66,7 @@ export default function PlayPage() {
               <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
                 How Scoring Works
               </p>
-              <p className="mt-4 font-body text-[15px] leading-6 text-muted">
+              <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">
                 Correct crown — 100 points. Each correct Top 5 placement — 50. Any Top 5
                 pick who reaches the semifinals — 20. Scores settle on coronation night.
               </p>

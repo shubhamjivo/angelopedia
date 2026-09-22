@@ -30,7 +30,7 @@ export function PageHero({ kicker, title, dek, dark = false }: PageHeroProps) {
         </h1>
         <p
           className={`mt-4 max-w-[560px] font-body text-base leading-relaxed ${
-            dark ? "text-neutral-300" : "text-muted"
+            dark ? "text-neutral-300" : "text-neutral-500"
           }`}
         >
           {dek}

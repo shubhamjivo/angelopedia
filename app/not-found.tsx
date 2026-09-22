@@ -11,7 +11,7 @@ export default function NotFound() {
         <h1 className="mt-4 font-heading text-[48px] font-semibold text-heading">
           Page not found
         </h1>
-        <p className="mt-4 font-body text-muted">
+        <p className="mt-4 font-body text-neutral-500">
           That crown isn&apos;t in the archive.
         </p>
         <Link

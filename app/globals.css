@@ -2,8 +2,8 @@
 
 :root {
   --ff-primary: var(--font-poppins), Arial, Helvetica, sans-serif;
-  --ff-body: "Times New Roman", Times, serif;
-  --ff-heading: "Times New Roman", Times, serif;
+  --ff-body: var(--font-poppins), Arial, Helvetica, sans-serif;
+  --ff-heading: var(--font-poppins), Arial, Helvetica, sans-serif;
   --ff-nav: var(--font-poppins), Arial, Helvetica, sans-serif;
 
   --fw-regular: 400;

@@ -83,7 +83,7 @@ export function FrontPage() {
                     <h3 className="mt-2 font-heading text-[22px] font-medium leading-snug text-heading group-hover:text-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-2 font-body text-[15px] leading-6 text-neutral-300">
+                    <p className="mt-2 font-body text-[15px] leading-6 text-ink">
                       {item.dek}
                     </p>
                     <p className="mt-3 font-nav text-[11px] tracking-[1.4px] text-muted uppercase">
@@ -183,7 +183,7 @@ export function FrontPage() {
               <p className="mt-3 font-heading text-[22px] font-medium leading-snug text-heading">
                 {poll.question}
               </p>
-              <p className="mt-3 font-body text-[15px] leading-6 text-muted">
+              <p className="mt-3 font-body text-[15px] leading-6 text-neutral-500">
                 {poll.note}
               </p>
               <Link

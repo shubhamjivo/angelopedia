@@ -74,7 +74,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                       {featured.title}
                     </Link>
                   </h2>
-                  <p className="mt-4 font-body text-[15px] leading-6 text-muted">{featured.dek}</p>
+                  <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">{featured.dek}</p>
                   <p className="mt-5 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
                     By {featured.author} · {featured.date}
                   </p>
@@ -89,7 +89,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                 </Link>
               </article>
             ) : (
-              <p className="border-b border-hairline pb-14 font-body text-[17px] leading-7 text-muted">
+              <p className="border-b border-hairline pb-14 font-body text-[17px] leading-7 text-neutral-500">
                 No stories match. Try another section, or search a pageant, a country, or a writer.
               </p>
             )}
@@ -104,7 +104,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                         {item.title}
                       </Link>
                     </h3>
-                    <p className="mt-2 font-body text-[15px] leading-6 text-muted">{item.dek}</p>
+                    <p className="mt-2 font-body text-[15px] leading-6 text-neutral-500">{item.dek}</p>
                     <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
                       By {item.author} · {item.date}
                     </p>
@@ -163,7 +163,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
               <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
                 The Crown Letter
               </p>
-              <p className="mt-4 font-body text-[15px] leading-6 text-muted">
+              <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">
                 One elegant email each Sunday — the week in pageantry, curated.
               </p>
               <Link
