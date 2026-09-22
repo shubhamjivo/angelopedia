@@ -20,7 +20,7 @@ export default function VideosPage() {
         dark
       />
 
-      <section className="bg-footer pb-10">
+      <section id="featured-video" className="bg-footer pb-10">
         <Container>
           <div className="relative">
             <CoverImage
@@ -50,7 +50,7 @@ export default function VideosPage() {
         </Container>
       </section>
 
-      <section className="py-16">
+      <section id="all-videos" className="py-16">
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {VIDEOS.items.map((item) => (

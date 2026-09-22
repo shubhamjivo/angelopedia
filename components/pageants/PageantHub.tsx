@@ -25,7 +25,7 @@ type PageantHubProps = {
 export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
   return (
     <main>
-      <section className="bg-footer text-white">
+      <section id={title.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className="bg-footer text-white">
         <Container className="flex flex-col items-center px-6 py-16 text-center desk:py-20">
           <Kicker tone="accent">{kicker}</Kicker>
           <h1 className="mt-4 font-heading text-[48px] font-semibold tracking-[0.12em] text-white uppercase desk:text-[80px]">
@@ -47,7 +47,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section className="py-16 desk:py-24">
+      <section id="reigning-titleholder" className="py-16 desk:py-24">
         <Container className="grid items-center gap-10 lg:grid-cols-2">
           <figure>
             <CoverImage
@@ -81,7 +81,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section className="bg-[#f7f5f1] py-16">
+      <section id="road-to-the-crown" className="bg-[#f7f5f1] py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
@@ -110,7 +110,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section className="py-16">
+      <section id="a-decade-of-queens" className="py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
@@ -144,7 +144,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section className="pb-16">
+      <section id="pageant-news" className="pb-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">

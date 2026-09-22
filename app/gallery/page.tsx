@@ -29,7 +29,7 @@ export default function GalleryPage() {
         </Container>
       </nav>
 
-      <section className="py-16">
+      <section id="all-photos" className="py-16">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {GALLERIES.map((item) => (

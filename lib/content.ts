@@ -1,35 +1,47 @@
+import { MOST_READ_STORIES, storyPath } from "@/lib/stories";
+
 export const MOSAIC = [
   {
     title: "Host Countries Announced for Miss Grand International 2024",
     href: "/news/miss-grand-international-2024-hosts",
     image: "/images/mosaic-grand.jpg",
-    size: "feature" as const,
+    kicker: "Miss Grand",
+    date: "18 Jul 2024",
+    dek: "Organisers name the countries that will stage the 2024 season, and set the finale date.",
   },
   {
     title:
       "Miss Universe Nepal 2023 Jane Dipika Garrett Drops a Motivational Video",
     href: "/news/jane-dipika-garrett-video",
     image: "/images/mosaic-jane.jpg",
-    size: "wide" as const,
+    kicker: "Miss Universe Nepal",
+    date: "17 Jul 2024",
+    dek: "The reigning titleholder shares a message ahead of the next national season.",
   },
   {
     title: "Ana Luísa Silva crowned Miss Globe Portugal 2024",
     href: "/news/ana-luisa-silva-miss-globe-portugal",
     image: "/images/mosaic-ana.jpg",
-    size: "half" as const,
+    kicker: "Miss Globe",
+    date: "16 Jul 2024",
+    dek: "Portugal crowns its Miss Globe titleholder at the national finale.",
   },
   {
     title: "Anudi Gunasekara crowned Miss World Sri Lanka 2024",
     href: "/news/anudi-gunasekara-miss-world-sri-lanka",
     image: "/images/mosaic-anudi.jpg",
-    size: "half" as const,
+    kicker: "Miss World",
+    date: "16 Jul 2024",
+    dek: "Sri Lanka sends a new delegate to Miss World after the national crowning.",
   },
 ];
 
 export const LATEST_FEATURED = {
+  kicker: "Crowning",
   title: "Inês Perestrello Is Crowned Miss Grand Portugal 2024",
   dek: "The Lisbon-born titleholder closed the night with a walk that filled the hall — and an interview on literacy that drew the evening’s only standing ovation.",
   byline: "Story by Angelopedia · Photographs by Angelopedia Studio",
+  date: "15 Jul 2024",
   href: "/news/ines-perestrello-miss-grand-portugal",
   image: "/images/ines.jpg",
 };
@@ -39,24 +51,32 @@ export const LATEST_SIDE = [
     title: "Grace Sugawara, Miss Earth Japan Hokkaido, Is a Beauty with a Brain",
     href: "/news/grace-sugawara",
     image: "/images/grace.jpg",
+    kicker: "Featured",
+    date: "26 Jul 2024",
     byline: "Story by Angelopedia",
   },
   {
     title: "Krishnah Gravidez, a Strong Contender of Miss World Philippines 2024",
     href: "/news/krishnah-gravidez",
     image: "/images/krishnah.jpg",
+    kicker: "Miss World",
+    date: "17 Jul 2024",
     byline: "Story by Angelopedia",
   },
   {
     title: "Suzana Renaud’s Journey to First Runner-Up at Miss Universe Thailand",
     href: "/news/suzana-renaud",
     image: "/images/suzana.jpg",
+    kicker: "Miss Universe",
+    date: "14 Jul 2024",
     byline: "Story by Angelopedia",
   },
   {
     title: "Harashta Haifa Zahra Sets New Milestones as Miss Supranational 2024",
     href: "/news/harashta-zahra",
     image: "/images/harashta.jpg",
+    kicker: "Miss Supranational",
+    date: "12 Jul 2024",
     byline: "Story by Angelopedia",
   },
 ];
@@ -490,9 +510,9 @@ export const NEWS_FEATURED = {
   kicker: "Breaking",
   title: "Bangkok Unveils the Impact Arena Stage for Miss Universe's 75th Anniversary",
   dek: "A 360-degree runway, a live orchestra and the largest broadcast footprint in pageant history — Thailand intends to make the diamond jubilee unforgettable.",
-  byline: "By Nared Suksawat · July 17, 2026",
+  byline: "By Nared Suksawat · 22 September 2026",
   image: "/images/news-bangkok.jpg",
-  href: "/news/the-year-of-grace",
+  href: "/news/bangkok-unveils-the-impact-arena-stage",
 };
 
 export const NEWS_FEED = [
@@ -501,7 +521,7 @@ export const NEWS_FEED = [
     kicker: "Miss World",
     title: "Prague Confirmed as Host City for the 73rd Miss World Festival",
     dek: "The Czech capital beat bids from three continents; organisers promise a month-long festival of arts, sport and the Beauty with a Purpose gala.",
-    date: "July 16, 2026",
+    date: "20 September 2026",
     image: "/images/news-prague.png",
     href: "/news/prague-confirmed-host-73rd-miss-world",
   },
@@ -510,16 +530,16 @@ export const NEWS_FEED = [
     kicker: "National",
     title: "Isabelle Fontaine Crowned Miss France — A Story Written in Lyon",
     dek: "The 24-year-old architect closed the show with an interview answer on literacy that drew the evening's only standing ovation.",
-    date: "July 15, 2026",
+    date: "19 September 2026",
     image: "/images/news-isabelle.png",
-    href: "/contestants/isabelle-fontaine",
+    href: "/news/isabelle-fontaine-crowned-miss-france",
   },
   {
     slug: "from-advocacy-to-artistry",
     kicker: "Miss Earth",
     title: "From Advocacy to Artistry: The New Face of Environmental Pageantry",
-    dek: "Miss Earth's 2026 cycle introduces a project-based advocacy score — delegates will be judged on measurable impact, not manifests.",
-    date: "July 14, 2026",
+    dek: "Miss Earth's 2026 cycle introduces a project-based advocacy score. Delegates will be judged on measurable impact, not on a manifesto alone.",
+    date: "18 September 2026",
     image: "/images/news-earth.png",
     href: "/news/from-advocacy-to-artistry",
   },
@@ -528,7 +548,7 @@ export const NEWS_FEED = [
     kicker: "Opinion",
     title: "Why the Interview Round Now Decides Every Major Crown",
     dek: "Gowns dazzle and walks command, but the last five international titles were all won at a table, under a single spotlight, in ninety seconds.",
-    date: "July 13, 2026",
+    date: "17 September 2026",
     image: "/images/news-opinion.png",
     href: "/news/why-the-interview-round-now-decides",
   },
@@ -537,7 +557,7 @@ export const NEWS_FEED = [
     kicker: "Beauty Talks",
     title: "The Quiet Luxury of Pageant Beauty: Less Shimmer, More Skin",
     dek: "Backstage artists from three continents on the decade's biggest shift — and the five products they will not board a plane without.",
-    date: "July 12, 2026",
+    date: "16 September 2026",
     image: "/images/news-beauty.png",
     href: "/news/quiet-luxury-of-pageant-beauty",
   },
@@ -546,19 +566,16 @@ export const NEWS_FEED = [
     kicker: "In Pictures",
     title: "Forty-Two Frames from Coronation Night",
     dek: "Our photographers had the wings, the runway and the confetti drop. This is the night in full, from first look to final walk.",
-    date: "July 11, 2026",
+    date: "15 September 2026",
     image: "/images/gallery-1.jpg",
-    href: "/gallery",
+    href: "/news/forty-two-frames-from-coronation-night",
   },
 ];
 
-export const MOST_READ = [
-  "The Year of Grace: Inside the Road to Miss Universe 2026",
-  "Isabelle Fontaine Crowned Miss France",
-  "Beyond the Sash: How a Crown Became a Career",
-  "Prague to Host the 73rd Miss World",
-  "Prediction: Who Takes the 2026 Crown?",
-];
+export const MOST_READ = MOST_READ_STORIES.map((story) => ({
+  title: story.title,
+  href: storyPath(story),
+}));
 
 export const FOLLOW_PAGEANTS = [
   { href: "/miss-universe", label: "Miss Universe" },
@@ -609,8 +626,8 @@ export const READ_NEXT = [
   {
     kicker: "Profile",
     title: "Isabelle Fontaine: A Story Written in Lyon",
-    href: "/contestants/isabelle-fontaine",
-    image: "/images/contestant.jpg",
+    href: "/news/isabelle-fontaine-crowned-miss-france",
+    image: "/images/news-isabelle.png",
   },
   {
     kicker: "Opinion",
@@ -668,23 +685,23 @@ export const UNIVERSE_NEWS = [
   {
     kicker: "Breaking",
     title: "Bangkok Unveils the Impact Arena Stage for the 75th Anniversary",
-    date: "July 17, 2026",
-    href: "/news/the-year-of-grace",
+    date: "22 September 2026",
+    href: "/news/bangkok-unveils-the-impact-arena-stage",
     image: "/images/news-bangkok.jpg",
   },
   {
     kicker: "The Cover",
     title: "The Year of Grace: Inside the Road to Miss Universe 2026",
-    date: "July 17, 2026",
+    date: "21 September 2026",
     href: "/news/the-year-of-grace",
-    image: "/images/news-isabelle.png",
+    image: "/images/queens-1.png",
   },
   {
     kicker: "Dispatches",
     title: "France Sends an Architect: Isabelle Fontaine Heads to Bangkok",
-    date: "July 15, 2026",
-    href: "/contestants/isabelle-fontaine",
-    image: "/images/contestant.jpg",
+    date: "19 September 2026",
+    href: "/news/isabelle-fontaine-crowned-miss-france",
+    image: "/images/news-isabelle.png",
   },
 ];
 

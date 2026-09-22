@@ -26,23 +26,25 @@ section's own block padding.
 
 The one and only section padding is **`py-16 desk:py-20`** — 64px mobile / 80px
 at the `desk:` (90rem) breakpoint. This applies to every `<section>` on every
-page, including the full-viewport `screen-section` blocks on the homepage
-(HeroMosaic, LatestNews, Opinions, BigFour, WatchNow, GalleryPreview, VoteCta).
+page, including the homepage front page and the sections under it (the latest
+edition, BigFour, GalleryPreview, WatchNow, VoteCta). Homepage sections are
+stacked editorial blocks — a lead story, a news list, and a rail — not
+full-viewport screens.
 
 ```tsx
 <section className="py-16 desk:py-20">          // standard
-<section className="screen-section py-16 desk:py-20">
 <section className="bg-footer py-16 desk:py-20"> // dark band
 <section className="border-t border-hairline py-16 desk:py-20">
 ```
 
-The spacing between consecutive full-viewport sections on the homepage comes
-from each section's own `py-16 desk:py-20` — there is no `::before` spacer, so
-do not add any margin to those sections. `PageHero` keeps its own hero padding
-(`pt-16` / `pb-16 desk:pb-20`); it is a page header, not a stacked section.
+The spacing between consecutive homepage sections comes from each section's own
+`py-16 desk:py-20` — there is no `::before` spacer, so do not add any margin to
+those sections. `PageHero` keeps its own hero padding (`pt-16` / `pb-16
+desk:pb-20`); it is a page header, not a stacked section.
 
 Do not reintroduce `py-8`, `py-10`, `py-12`, `py-14`, `pb-16`-only, `desk:py-24`,
-or `py-5 lg:py-8` on sections.
+or `py-5 lg:py-8` on sections. The homepage photo mosaic is the exception and
+keeps `py-6 desk:py-10`.
 
 ### Section titles (IMPORTANT)
 

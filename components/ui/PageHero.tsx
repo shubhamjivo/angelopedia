@@ -8,9 +8,17 @@ type PageHeroProps = {
   dark?: boolean;
 };
 
+function sectionId(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/&/g, " ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function PageHero({ kicker, title, dek, dark = false }: PageHeroProps) {
   return (
-    <section className={dark ? "bg-footer text-white" : "bg-paper"}>
+    <section id={sectionId(title)} className={dark ? "bg-footer text-white" : "bg-paper"}>
       <Container className="flex flex-col items-center px-6 py-16 text-center desk:px-0 desk:pt-16 desk:pb-14">
         <Kicker tone={dark ? "accent" : "accent"}>{kicker}</Kicker>
         <h1

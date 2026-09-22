@@ -28,7 +28,7 @@ export default function PageantsPage() {
         </Container>
       </nav>
 
-      <section className="py-16">
+      <section id="directory" className="py-16">
         <Container className="flex flex-col gap-16">
           {PAGEANT_DIRECTORY.map((group) => (
             <div key={group.continent}>

@@ -21,7 +21,7 @@ export default function PlayPage() {
         dek="Have your say in this month’s polls, and predict the next crown to climb the leaderboard."
       />
 
-      <section className="pb-16">
+      <section id="polls" className="pb-16">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
           <div className="flex flex-col gap-8">
             <Polls />
