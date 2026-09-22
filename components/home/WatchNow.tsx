@@ -101,7 +101,7 @@ export function WatchNow() {
                   onClick={() => setActiveId(item.id)}
                   onKeyDown={(event) => onTabKeyDown(event, index)}
                   className={`flex min-h-[92px] overflow-hidden text-left transition-colors ${
-                    selected ? "bg-white/15" : "bg-white/5 hover:bg-white/10"
+                    selected ? "bg-white/30" : "bg-white/18 hover:bg-white/24"
                   }`}
                 >
                   <span
