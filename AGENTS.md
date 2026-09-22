@@ -65,15 +65,17 @@ CTA/hero copy) — the section title is always the 36/42 pattern above.
 Every text element must declare its font family explicitly. The four families map
 to tokens in `globals.css` — use them by role, never `font-sans` for content:
 
-| Family        | Token      | Use                                     |
-| ------------- | ---------- | --------------------------------------- |
-| `font-heading`| Cormorant  | Titles, headlines, card titles, numbers |
-| `font-body`   | Newsreader | Paragraphs, descriptions, deks, lists   |
-| `font-nav`    | Jost       | Labels, kickers, bylines, meta, captions, buttons, links |
-| `font-sans`   | Inter      | Base/UI chrome only (body, form inputs) |
+| Family        | Token            | Use                                     |
+| ------------- | ---------------- | --------------------------------------- |
+| `font-heading`| Times New Roman  | Titles, headlines, card titles, numbers |
+| `font-body`   | Times New Roman  | Paragraphs, descriptions, deks, lists   |
+| `font-nav`    | Poppins          | Labels, kickers, bylines, meta, captions, buttons, links |
+| `font-sans`   | Poppins          | Base/UI chrome only (body, form inputs) |
 
-Follow this mapping everywhere. Do not `import` new web fonts; only
-`font-heading` / `font-body` / `font-nav` / `font-sans` and the semantic colors
+The logo wordmark is the Montage outlines in `public/icons/logo.svg`. Do not
+`import` further web fonts. Brand colors are `#be1e2d`, `#cccccc`, `#414042`,
+and `#ffffff`. Follow this mapping everywhere, and only use
+`font-heading` / `font-body` / `font-nav` / `font-sans` plus the semantic colors
 in `globals.css`.
 
 ### Styling

@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --ff-primary: var(--font-inter), Arial, Helvetica, sans-serif;
-  --ff-body: var(--font-newsreader), Georgia, "Times New Roman", serif;
-  --ff-heading: var(--font-cormorant), Georgia, "Times New Roman", serif;
-  --ff-nav: var(--font-jost), Arial, Helvetica, sans-serif;
+  --ff-primary: var(--font-poppins), Arial, Helvetica, sans-serif;
+  --ff-body: "Times New Roman", Times, serif;
+  --ff-heading: "Times New Roman", Times, serif;
+  --ff-nav: var(--font-poppins), Arial, Helvetica, sans-serif;
 
   --fw-regular: 400;
   --fw-medium: 500;
@@ -32,18 +32,18 @@
   --size-900: 6.25rem;
 
   --clr-primary-100: #be1e2d;
-  --clr-primary-200: #d4a017;
+  --clr-primary-200: #be1e2d;
   --clr-primary-400: #414042;
-  --clr-primary-900: #262629;
+  --clr-primary-900: #414042;
 
   --clr-neutral-100: #ffffff;
-  --clr-neutral-200: #e6e3de;
-  --clr-neutral-300: #98948d;
-  --clr-neutral-400: #8a8681;
-  --clr-neutral-500: #73706b;
-  --clr-neutral-600: #5c5952;
-  --clr-neutral-800: #59595c;
-  --clr-neutral-900: #000000;
+  --clr-neutral-200: #cccccc;
+  --clr-neutral-300: #cccccc;
+  --clr-neutral-400: #767678;
+  --clr-neutral-500: #5c5c5e;
+  --clr-neutral-600: #414042;
+  --clr-neutral-800: #5a5a5c;
+  --clr-neutral-900: #414042;
 
   --header-h: 3.5rem;
   --header-h-top: 10.3125rem;

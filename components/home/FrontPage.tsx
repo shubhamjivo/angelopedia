@@ -34,9 +34,9 @@ export function FrontPage() {
             All stories
           </Link>
         </div>
-        <div className="mt-4 border-t-2 border-ink pt-[3px]">
-          <div className="border-t border-ink" />
-        </div>
+        {/* <div className="mt-4 border-t-2 border-ink pt-[3px]"> */}
+        {/*   <div className="border-t border-ink" /> */}
+        {/* </div> */}
 
         <div className="mt-8 grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-0">
           <div className="min-w-0 lg:pr-10">

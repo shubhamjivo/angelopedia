@@ -1,30 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant, Inter, Jost, Newsreader } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  variable: "--font-jost",
-});
-
-const cormorant = Cormorant({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  style: ["normal", "italic"],
-  weight: ["500", "600", "700"],
-});
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-newsreader",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -61,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jost.variable} ${cormorant.variable} ${newsreader.variable} min-h-full antialiased`}
+      className={`${poppins.variable} min-h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
         <Header />
