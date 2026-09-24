@@ -157,7 +157,7 @@ export function Header() {
           <Link
             href="/"
             aria-label="Angelopedia home"
-            className="absolute left-1/2 -translate-x-1/2"
+            className="absolute left-1/2 z-10 -translate-x-1/2 outline-none"
           >
             <Image
               src="/icons/logo.svg"
@@ -165,7 +165,7 @@ export function Header() {
               width={400}
               height={100}
               priority
-              className={`w-auto origin-center transition-[height,transform] duration-300 ease-out ${compact ? "h-6 lg:h-8" : "h-9 lg:h-14"
+              className={`block w-auto origin-center bg-transparent transition-[height] duration-300 ease-out ${compact ? "h-6 lg:h-8" : "h-9 lg:h-14"
                 }`}
             />
           </Link>

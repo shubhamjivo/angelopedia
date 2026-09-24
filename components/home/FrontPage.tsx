@@ -53,7 +53,7 @@ export function FrontPage() {
                 <Kicker tone="accent" className="mt-5">
                   {HOME_LEAD.kicker}
                 </Kicker>
-                <h3 className="mt-3 font-heading text-[32px] font-semibold leading-[1.08] text-heading group-hover:text-ink sm:text-[40px] desk:text-[46px]">
+                <h3 className="mt-3 font-heading text-[28px] font-semibold leading-[1.12] text-heading group-hover:text-ink desk:text-[34px]">
                   {HOME_LEAD.title}
                 </h3>
                 <p className="mt-4 max-w-[40rem] font-body text-[17px] leading-7 text-ink">
@@ -80,7 +80,7 @@ export function FrontPage() {
                       sizes="(max-width: 639px) 100vw, 320px"
                     />
                     <Kicker className="mt-3">{item.kicker}</Kicker>
-                    <h3 className="mt-2 font-heading text-[22px] font-medium leading-snug text-heading group-hover:text-ink">
+                    <h3 className="mt-2 font-heading text-[18px] font-medium leading-snug text-heading group-hover:text-ink desk:text-[20px]">
                       {item.title}
                     </h3>
                     <p className="mt-2 font-body text-[15px] leading-6 text-ink">
