@@ -52,19 +52,19 @@ export const ROUTES = [
     description:
       "Every national pageant we cover, from Albania to Zimbabwe — organised by continent.",
   },
-  {
-    href: "/gallery",
-    label: "Photos",
-    title: "The Gallery",
-    description:
-      "Runways, coronations and the quiet moments backstage — through our photographers’ lenses.",
-  },
-  {
-    href: "/videos",
-    label: "Videos",
-    title: "Videos",
-    description: "Finals, interviews and masterclasses — the pageant world in motion.",
-  },
+  // {
+  //   href: "/gallery",
+  //   label: "Photos",
+  //   title: "The Gallery",
+  //   description:
+  //     "Runways, coronations and the quiet moments backstage — through our photographers’ lenses.",
+  // },
+  // {
+  //   href: "/videos",
+  //   label: "Videos",
+  //   title: "Videos",
+  //   description: "Finals, interviews and masterclasses — the pageant world in motion.",
+  // },
   {
     href: "/play",
     label: "Play Zone",
