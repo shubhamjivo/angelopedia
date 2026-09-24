@@ -27,7 +27,7 @@ export default function PlayPage() {
             <Polls />
             <div className="bg-footer p-8 text-white desk:p-10">
               <Kicker tone="accent">The Prediction Game</Kicker>
-              <h2 className="mt-3 font-heading text-[32px] font-semibold leading-tight text-white">
+              <h2 className="mt-3 font-heading text-[22px] font-semibold leading-tight text-white">
                 Call the Top 5 in Bangkok. Beat the world.
               </h2>
               <p className="mt-4 max-w-[520px] font-body text-[15px] leading-6 text-neutral-300">

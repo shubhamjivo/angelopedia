@@ -33,7 +33,7 @@ export default async function ArticlePage({ params }: ArticleProps) {
       <article>
         <Container className="flex flex-col items-center px-6 pt-16 pb-10 text-center desk:px-0">
           <Kicker tone="accent">{story.kicker}</Kicker>
-          <h1 className="mt-4 max-w-[920px] font-heading text-[36px] font-semibold leading-tight text-heading desk:text-[56px]">
+          <h1 className="mt-4 max-w-[920px] font-heading text-[26px] font-semibold leading-tight text-heading desk:text-[32px]">
             {story.title}
           </h1>
           <p className="mt-5 max-w-[640px] font-body text-base leading-7 text-neutral-500">
@@ -119,7 +119,7 @@ export default async function ArticlePage({ params }: ArticleProps) {
 
       <section id="read-next" className="border-t border-hairline py-16 desk:py-20">
         <Container>
-          <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+          <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
             Read Next
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
@@ -132,7 +132,7 @@ export default async function ArticlePage({ params }: ArticleProps) {
                   sizes="400px"
                 />
                 <Kicker>{item.kicker}</Kicker>
-                <p className="font-heading text-xl font-semibold leading-snug text-heading group-hover:text-ink">
+                <p className="font-heading text-[16px] font-semibold leading-[1.4] text-heading group-hover:text-ink">
                   {item.title}
                 </p>
                 <p className="font-nav text-[11px] tracking-[1.4px] text-muted uppercase">

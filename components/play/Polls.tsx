@@ -16,7 +16,7 @@ export function Polls() {
           onSubmit={(event) => event.preventDefault()}
         >
           <Kicker tone="accent">{poll.kicker}</Kicker>
-          <h2 className="mt-3 font-heading text-[28px] font-semibold leading-snug text-heading">
+          <h2 className="mt-3 font-heading text-[20px] font-semibold leading-snug text-heading">
             {poll.question}
           </h2>
           <div className="mt-6 flex flex-col">

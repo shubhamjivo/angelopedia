@@ -48,17 +48,19 @@ keeps `py-6 desk:py-10`.
 
 ### Section titles (IMPORTANT)
 
-Every section title uses one `<h2>` with the exact same classes — 36px mobile /
-42px at `desk:`, `text-heading` on light bands, `text-white` on dark bands:
+Every section title uses one `<h2>` with the exact same classes — 30px mobile /
+36px at `desk:`, `text-heading` on light bands, `text-white` on dark bands.
+Story headlines stay smaller: a lead is 22px / 26px, a card headline is 16px,
+rail headlines are 15px.
 
 ```tsx
-<h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">Title</h2>
-<h2 className="font-heading text-[36px] font-semibold leading-none text-white desk:text-[42px]">Title</h2> // dark band
+<h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">Title</h2>
+<h2 className="font-heading text-[30px] font-semibold leading-none text-white desk:text-[36px]">Title</h2> // dark band
 ```
 
 Keep a consistent `mt-10` between the title and the first content block below it.
 Reserve other sizes for in-content headlines (featured stories, card titles,
-CTA/hero copy) — the section title is always the 36/42 pattern above.
+CTA/hero copy) — the section title is always the 30/36 pattern above.
 
 ### Typography (IMPORTANT)
 

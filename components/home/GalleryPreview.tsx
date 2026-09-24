@@ -10,7 +10,7 @@ export function GalleryPreview() {
     <section id="in-pictures" className="border-t border-hairline py-16 desk:py-20">
       <Container>
         <div className="flex items-end justify-between gap-4">
-          <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+          <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
             In Pictures
           </h2>
           <Link
@@ -30,7 +30,7 @@ export function GalleryPreview() {
               imageClassName="transition duration-500 group-hover:scale-[1.02]"
               sizes="(max-width: 1023px) 100vw, 760px"
             />
-            <p className="mt-3 font-heading text-[24px] font-medium leading-snug text-heading group-hover:text-ink">
+            <p className="mt-3 font-heading text-[18px] font-medium leading-snug text-heading group-hover:text-ink">
               {lead.title}
             </p>
             <p className="mt-1 font-nav text-[11px] tracking-[0.4px] text-muted">

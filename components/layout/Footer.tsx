@@ -19,7 +19,7 @@ export function Footer() {
           </p>
           <h2
             id="newsletter"
-            className="mt-4 font-heading text-[36px] font-semibold leading-none text-white desk:text-[54px]"
+            className="mt-4 font-heading text-[26px] font-semibold leading-none text-white desk:text-[32px]"
           >
             Pageantry, <em className={`${montage.className} not-italic font-normal`}>beautifully</em> told.
           </h2>

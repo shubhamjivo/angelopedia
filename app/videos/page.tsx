@@ -40,7 +40,7 @@ export default function VideosPage() {
           </div>
           <div className="py-8 text-white">
             <Kicker tone="accent">{VIDEOS.featured.kicker}</Kicker>
-            <h2 className="mt-3 font-heading text-[28px] font-semibold text-white desk:text-[36px]">
+            <h2 className="mt-3 font-heading text-[20px] font-semibold text-white desk:text-[22px]">
               {VIDEOS.featured.title}
             </h2>
             <p className="mt-2 font-nav text-[12px] tracking-[1.4px] text-neutral-300 uppercase">

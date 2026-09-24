@@ -39,7 +39,7 @@ export function BigFour() {
     <section id="the-big-four" className="bg-footer py-16 desk:py-20 text-white">
       <Container>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-heading text-[36px] font-semibold leading-none text-white desk:text-[42px]">
+          <h2 className="font-heading text-[30px] font-semibold leading-none text-white desk:text-[36px]">
             The Big Four
           </h2>
           <p className="font-nav text-[11px] tracking-[1.8px] text-white/60 uppercase">
@@ -67,7 +67,7 @@ export function BigFour() {
                 <p className="font-nav text-[11px] tracking-[1.8px] text-gold uppercase">
                   {tab.label} {tab.recent.year} · {tab.recent.country}
                 </p>
-                <p className="max-w-[28rem] font-heading text-[26px] font-medium leading-snug text-white desk:text-[32px]">
+                <p className="max-w-[28rem] font-heading text-[20px] font-medium leading-snug text-white desk:text-[22px]">
                   {tab.recent.title}
                 </p>
                 <span className="font-nav text-[13px] font-medium text-gold">Know More</span>
@@ -112,7 +112,7 @@ export function BigFour() {
                     <span className="font-nav text-[10px] tracking-[1.6px] text-gold uppercase">
                       {item.label}
                     </span>
-                    <span className="mt-1 font-heading text-[18px] font-medium leading-snug text-white">
+                    <span className="mt-1 font-heading text-[16px] font-medium leading-snug text-white">
                       {item.recent.name}
                     </span>
                     <span className="mt-1 font-nav text-[10px] tracking-[1.4px] text-white/55 uppercase">
@@ -144,7 +144,7 @@ export function BigFour() {
                   <p className="font-nav text-[10px] tracking-[1.5px] text-gold uppercase">
                     {item.year} · {item.country}
                   </p>
-                  <p className="font-heading text-[18px] font-medium leading-snug text-white">
+                  <p className="font-heading text-[16px] font-medium leading-snug text-white">
                     {item.name}
                   </p>
                 </div>

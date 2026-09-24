@@ -15,7 +15,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="flex items-center gap-4">
-      <h2 className="font-heading text-[28px] font-normal leading-none text-heading desk:text-[34px]">
+      <h2 className="font-heading text-[30px] font-normal leading-none text-heading desk:text-[36px]">
         {title}
       </h2>
       {rule ? <div className="h-px min-w-0 flex-1 bg-hairline" /> : null}

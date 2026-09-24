@@ -69,7 +69,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
               <article className="flex flex-col gap-8 border-b border-hairline pb-14 lg:flex-row lg:items-center">
                 <div className="min-w-0 flex-1">
                   <Kicker tone="accent">{featured.kicker}</Kicker>
-                  <h2 className="mt-3 font-heading text-[32px] font-semibold leading-tight text-heading desk:text-[40px]">
+                  <h2 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading desk:text-[26px]">
                     <Link href={storyPath(featured)} className="hover:text-ink">
                       {featured.title}
                     </Link>
@@ -99,7 +99,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                 <article key={item.slug} className="flex gap-6 border-b border-hairline py-8">
                   <div className="min-w-0 flex-1">
                     <Kicker>{item.kicker}</Kicker>
-                    <h3 className="mt-2 font-heading text-[22px] font-semibold leading-snug text-heading">
+                    <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
                       <Link href={storyPath(item)} className="hover:text-ink">
                         {item.title}
                       </Link>

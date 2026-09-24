@@ -83,7 +83,7 @@ export default function ContestantPage() {
       <section id="in-photos" className="py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
               Isabelle, In Photos
             </h2>
             <Link

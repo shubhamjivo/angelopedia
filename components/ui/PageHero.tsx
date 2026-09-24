@@ -22,7 +22,7 @@ export function PageHero({ kicker, title, dek, dark = false }: PageHeroProps) {
       <Container className="flex flex-col items-center px-6 py-16 text-center desk:px-0 desk:pt-16 desk:pb-14">
         <Kicker tone={dark ? "accent" : "accent"}>{kicker}</Kicker>
         <h1
-          className={`mt-3 font-heading text-[48px] font-semibold leading-none tracking-[-0.02em] desk:text-[80px] ${
+          className={`mt-3 font-heading text-[28px] font-semibold leading-none tracking-[-0.02em] desk:text-[36px] ${
             dark ? "text-white" : "text-ink"
           }`}
         >

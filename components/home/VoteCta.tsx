@@ -8,7 +8,7 @@ export function VoteCta() {
       <Container className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-[720px]">
           <Kicker>Have your say</Kicker>
-          <h2 className="mt-4 font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+          <h2 className="mt-4 font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
             Who wears the next Miss Universe crown?
           </h2>
           <p className="mt-4 max-w-[520px] font-body text-base leading-7 text-neutral-500">

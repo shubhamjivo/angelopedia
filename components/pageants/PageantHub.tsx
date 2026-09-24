@@ -62,7 +62,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
           </figure>
           <div>
             <Kicker>The Reigning Titleholder</Kicker>
-            <h2 className="mt-3 font-heading text-[40px] font-semibold leading-none text-heading">
+            <h2 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading">
               {reigning.name}
             </h2>
             <p className="mt-3 font-heading text-xl italic text-muted">
@@ -84,7 +84,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section id="road-to-the-crown" className="bg-[#f7f5f1] py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
               Road to the Crown
             </h2>
             <p className="font-nav text-[11px] tracking-[2px] text-muted uppercase">
@@ -113,7 +113,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section id="a-decade-of-queens" className="py-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
               A Decade of Queens
             </h2>
             <Link
@@ -147,7 +147,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
       <section id="pageant-news" className="pb-16">
         <Container>
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
               Universe News
             </h2>
             <Link
@@ -167,7 +167,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
                   sizes="400px"
                 />
                 <Kicker>{item.kicker}</Kicker>
-                <p className="font-heading text-xl font-semibold leading-snug text-heading">
+                <p className="font-heading text-[16px] font-semibold leading-[1.4] text-heading">
                   {item.title}
                 </p>
                 <p className="font-nav text-[11px] tracking-[1.4px] text-muted uppercase">

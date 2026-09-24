@@ -23,7 +23,7 @@ export function FrontPage() {
             <p className="font-nav text-[11px] tracking-[1.8px] text-muted uppercase">
               {EDITION_LABEL}
             </p>
-            <h2 className="mt-3 font-heading text-[36px] font-semibold leading-none text-heading desk:text-[42px]">
+            <h2 className="mt-3 font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
               The Latest
             </h2>
           </div>
@@ -53,10 +53,10 @@ export function FrontPage() {
                 <Kicker tone="accent" className="mt-5">
                   {HOME_LEAD.kicker}
                 </Kicker>
-                <h3 className="mt-3 font-heading text-[28px] font-semibold leading-[1.12] text-heading group-hover:text-ink desk:text-[34px]">
+                <h3 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading group-hover:text-ink desk:text-[26px]">
                   {HOME_LEAD.title}
                 </h3>
-                <p className="mt-4 max-w-[40rem] font-body text-[17px] leading-7 text-ink">
+                <p className="mt-3 max-w-[40rem] font-body text-[15px] leading-6 text-ink">
                   {HOME_LEAD.dek}
                 </p>
                 <p className="mt-4 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">
@@ -80,10 +80,10 @@ export function FrontPage() {
                       sizes="(max-width: 639px) 100vw, 320px"
                     />
                     <Kicker className="mt-3">{item.kicker}</Kicker>
-                    <h3 className="mt-2 font-heading text-[18px] font-medium leading-snug text-heading group-hover:text-ink desk:text-[20px]">
+                    <h3 className="mt-2 font-heading text-[16px] font-medium leading-[1.4] text-heading group-hover:text-ink">
                       {item.title}
                     </h3>
-                    <p className="mt-2 font-body text-[15px] leading-6 text-ink">
+                    <p className="mt-2 font-body text-[14px] leading-5 text-ink">
                       {item.dek}
                     </p>
                     <p className="mt-3 font-nav text-[11px] tracking-[1.4px] text-muted uppercase">
@@ -108,7 +108,7 @@ export function FrontPage() {
                     </span>
                     <Link
                       href={item.href}
-                      className="font-heading text-[17px] leading-snug text-heading hover:text-ink"
+                      className="font-heading text-[15px] leading-[1.4] text-heading hover:text-ink"
                     >
                       {item.title}
                     </Link>
@@ -136,7 +136,7 @@ export function FrontPage() {
                         <span className="block font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
                           {item.kicker} · {item.date}
                         </span>
-                        <span className="mt-1 block font-heading text-[17px] leading-snug font-medium text-heading group-hover:text-ink">
+                        <span className="mt-1 block font-heading text-[15px] leading-[1.4] font-medium text-heading group-hover:text-ink">
                           {item.title}
                         </span>
                       </span>
@@ -165,7 +165,7 @@ export function FrontPage() {
                         <span className="block font-nav text-[10px] tracking-[1.6px] text-ink uppercase">
                           {name ?? item.byline}
                         </span>
-                        <span className="mt-1 block font-heading text-[17px] leading-snug font-medium text-heading group-hover:text-ink">
+                        <span className="mt-1 block font-heading text-[15px] leading-[1.4] font-medium text-heading group-hover:text-ink">
                           {item.title}
                         </span>
                         <span className="mt-2 block font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
@@ -180,7 +180,7 @@ export function FrontPage() {
 
             <div className="bg-neutral-200/40 p-5">
               <Kicker tone="accent">{poll.kicker}</Kicker>
-              <p className="mt-3 font-heading text-[22px] font-medium leading-snug text-heading">
+              <p className="mt-3 font-heading text-[16px] font-medium leading-snug text-heading">
                 {poll.question}
               </p>
               <p className="mt-3 font-body text-[15px] leading-6 text-neutral-500">
