@@ -25,7 +25,7 @@ export type Story = {
   links?: { href: string; label: string }[];
 };
 
-export const EDITION_LABEL = "Tuesday, 22 September 2026";
+export const EDITION_LABEL = "Saturday, 26 September 2026";
 
 export const SECTION_LABELS: Record<StorySection, string> = {
   news: "News",
@@ -41,19 +41,19 @@ const STORIES: Story[] = [
     slug: "bangkok-unveils-the-impact-arena-stage",
     section: "news",
     kicker: "Breaking",
-    title: "Bangkok Unveils the Impact Arena Stage for Miss Universe's 75th Anniversary",
-    dek: "A 360-degree runway, a live orchestra and the largest broadcast footprint in pageant history — Thailand intends to make the diamond jubilee unforgettable.",
+    title: "San Juan Sets 24 November for the 75th Miss Universe",
+    dek: "Fátima Bosch of Mexico will crown her successor at the José Miguel Agrelot Coliseum. The national costume show is 21 November, the same night Miss International crowns its next queen.",
     author: "Nared Suksawat",
-    date: "22 September 2026",
-    dateISO: "2026-09-22",
+    date: "26 September 2026",
+    dateISO: "2026-09-26",
     image: "/images/news-bangkok.jpg",
     credit: "Angelopedia",
     caption: "Impact Arena, Bangkok — the anniversary stage on the morning it was shown to the press",
     tags: ["Miss Universe", "Thailand", "2026"],
     paragraphs: [
-      "Bangkok showed its hand on Tuesday morning. Inside Impact Arena, carpenters were still on the lotus-shaped runway when the organising committee walked reporters onto the floor and confirmed what the drawings had only suggested: Miss Universe’s 75th anniversary will be staged in the round, with the orchestra in the room rather than on a tape.",
-      "The broadcast plan is the largest the pageant has commissioned. Cameras ring the stage at floor level, and a second feed will follow the final five off the runway and into the interview room without a cut to a studio desk. Producers say the aim is to keep the night in one place.",
-      "Delegates arrive in the first week of November. The finale remains set for 21 November. Tuesday’s unveiling was the host city’s argument that the anniversary should be remembered for the room, not only for the crown.",
+      "San Juan, not Bangkok, will hold the 75th Miss Universe. The José Miguel Agrelot Coliseum is booked for 24 November 2026, with the national costume show on 21 November and the preliminary the day after. Fátima Bosch of Mexico, crowned in Thailand in November 2025, will hand on the crown.",
+      "Roku, Telemundo and TV Azteca will carry the night. Organisers expect delegates from about 130 countries and territories. Malawi, the Republic of the Congo, Saint Martin and Uganda are set to debut. Miss International’s own final falls the same evening, the first time two Big Four coronations have been scheduled within hours of each other.",
+      "As of 26 September, several national queens are already named, among them Kaziah Liz Mejo of India and Jennifer Kraft Zhou of Hong Kong. Miss France has withdrawn from the organisation, so Angélique Angarni-Filopon will not compete.",
     ],
     quote: {
       text: "We are not choosing a face. We are choosing a voice that a billion people will hear.",
@@ -74,7 +74,7 @@ const STORIES: Story[] = [
     caption: "Rehearsal week — the opening number takes shape",
     tags: ["Miss Universe", "2026 Season", "Cover Story"],
     paragraphs: [
-      "Bangkok in September is a city rehearsing. In the cool dark of Impact Arena, a runway shaped like a lotus is going up board by board. Across the river, a choreographer counts to eight in three languages at once. One hundred and thirty women will arrive in November carrying one hundred and thirty nations, and the 75th anniversary of the most-watched pageant on earth will begin.",
+      "San Juan in September is a city counting weeks, not days. The 75th Miss Universe is set for 24 November at the José Miguel Agrelot Coliseum, and Fátima Bosch is still the titleholder who will give the crown away. About 130 women are expected, and the interview — not a swimsuit score — is the round the national directors are coaching for.",
       "It is tempting to describe Miss Universe as unchanged — the crown, the sash, the single question. The institution turning seventy-five is quieter than that, and less familiar. The swimsuit score is gone. The age ceiling is gone. The interview, once a courtesy, is now the axis of the campaign.",
       "Applications to national franchises rose sharply this cycle. The delegate who arrives now tends to bring a degree, an organisation she founded, and an audience of her own. The pageant has professionalised in return: stylists on contract, media training, and a year on the road that treats the titleholder as a working representative rather than an ornament.",
       "What has not changed is the walk. Ten steps, a turn, ten steps more. Women who have worn the crown describe the same silence, the moment the music drops and the arena holds its breath. In November, one hundred and thirty women will chase that silence. One will own it.",
@@ -88,27 +88,27 @@ const STORIES: Story[] = [
     slug: "prague-confirmed-host-73rd-miss-world",
     section: "news",
     kicker: "Miss World",
-    title: "Prague Confirmed as Host City for the 73rd Miss World Festival",
-    dek: "The Czech capital beat bids from three continents. Organisers promise a month-long festival of arts, sport and the Beauty with a Purpose gala.",
+    title: "Joheirry Mola of the Dominican Republic Is Miss World 2026",
+    dek: "Crowned on 5 September at April 2nd Square in Nha Trang, she is the second Miss World from her country, 44 years after Mariasela Álvarez. Spain’s Elisabeth Reynés was first runner-up.",
     author: "Camilla Saurez",
-    date: "20 September 2026",
-    dateISO: "2026-09-20",
+    date: "25 September 2026",
+    dateISO: "2026-09-25",
     image: "/images/news-prague.png",
     credit: "Angelopedia",
     caption: "Prague — the host city announced for the 73rd Miss World festival",
     tags: ["Miss World", "Czechia", "2026"],
     paragraphs: [
-      "Prague will host the 73rd Miss World. The announcement, made on Sunday, ends a bidding year in which three continents were still in the conversation into the summer. The Czech capital’s offer paired a riverside festival site with a month of public events rather than a single televised night.",
-      "Organisers described a programme that runs from a sports meeting through a Beauty with a Purpose gala and into the final. The city’s pageant history is part of the pitch: the crown has been here before, and the local franchise has spent two years building the volunteer and venue plan the bid required.",
-      "Delegates are expected in the city several weeks before the final. A full calendar will be published once the head of state reception and the beach fashion filming days are locked.",
+      "Joheirry Mola of the Dominican Republic was crowned Miss World 2026 on 5 September at April 2nd Square in Nha Trang, Vietnam. Suchata Chuangsri of Thailand, the 2025 winner, placed the crown. It is the Dominican Republic’s second Miss World title, after Mariasela Álvarez in 1982.",
+      "Elisabeth Reynés of Spain finished first runner-up and Taanusiya Chetty of Malaysia second. The top six also included Snit Tewoldemedhin of Eritrea, Romanda Hombir of South Africa and Bảo Ngọc Lê Nguyễn of Vietnam. One hundred and eleven contestants took part. Stephanie Del Valle and Daniel Mejía presented the final.",
+      "Mola, from Santo Domingo, is a model and teacher with a degree in business management from Universidad Iberoamericana. Three weeks into the reign, the organisation’s own film of the crowning is the record of the night.",
     ],
   },
   {
     slug: "isabelle-fontaine-crowned-miss-france",
     section: "news",
     kicker: "National",
-    title: "Isabelle Fontaine Crowned Miss France — A Story Written in Lyon",
-    dek: "The 24-year-old architect closed the show with an interview answer on literacy that drew the evening's only standing ovation.",
+    title: "Kaziah Liz Mejo of Kerala Is Miss Universe India 2026",
+    dek: "The 19-year-old law student was crowned in Jaipur on 23 August and will compete in San Juan this November. Vaishnavi Gannesh of Tamil Nadu was first runner-up.",
     author: "Camilla Saurez",
     date: "19 September 2026",
     dateISO: "2026-09-19",

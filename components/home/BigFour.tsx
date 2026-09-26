@@ -22,7 +22,7 @@ export function BigFour() {
               key={tab.id}
               className="grid grid-cols-1 gap-4 bg-paper p-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 sm:p-5"
             >
-              <Link href={tab.href} className="group relative block aspect-[3/4] sm:aspect-auto sm:h-full sm:min-h-[16rem]">
+              <Link href={tab.href} className="group relative block aspect-[4/5] w-full self-start">
                 <CoverImage
                   src={tab.recent.image}
                   alt={`${tab.recent.name}, ${tab.label} ${tab.recent.year}`}
@@ -53,7 +53,7 @@ export function BigFour() {
                     Recent {tab.label} titleholders
                   </p>
                   <ul role="list" className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-1">
-                    {tab.previous.map((item) => (
+                    {tab.previous.slice(0, 3).map((item) => (
                       <li key={item.name}>
                         <Link href={tab.href} className="group flex items-center gap-2.5">
                           <CoverImage

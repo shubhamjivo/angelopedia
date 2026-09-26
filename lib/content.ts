@@ -2,37 +2,36 @@ import { MOST_READ_STORIES, storyPath } from "@/lib/stories";
 
 export const MOSAIC = [
   {
-    title: "Host Countries Announced for Miss Grand International 2024",
-    href: "/news/miss-grand-international-2024-hosts",
-    image: "/images/mosaic-grand.jpg",
-    kicker: "Miss Grand",
-    date: "18 Jul 2024",
-    dek: "Organisers name the countries that will stage the 2024 season, and set the finale date.",
-  },
-  {
-    title:
-      "Miss Universe Nepal 2023 Jane Dipika Garrett Drops a Motivational Video",
-    href: "/news/jane-dipika-garrett-video",
-    image: "/images/mosaic-jane.jpg",
-    kicker: "Miss Universe Nepal",
-    date: "17 Jul 2024",
-    dek: "The reigning titleholder shares a message ahead of the next national season.",
-  },
-  {
-    title: "Ana Luísa Silva crowned Miss Globe Portugal 2024",
-    href: "/news/ana-luisa-silva-miss-globe-portugal",
-    image: "/images/mosaic-ana.jpg",
-    kicker: "Miss Globe",
-    date: "16 Jul 2024",
-    dek: "Portugal crowns its Miss Globe titleholder at the national finale.",
-  },
-  {
-    title: "Anudi Gunasekara crowned Miss World Sri Lanka 2024",
-    href: "/news/anudi-gunasekara-miss-world-sri-lanka",
-    image: "/images/mosaic-anudi.jpg",
+    title: "Joheirry Mola of the Dominican Republic Is Miss World 2026",
+    href: "/news/prague-confirmed-host-73rd-miss-world",
+    image: "/images/instagram/mw-joheirry.jpg",
     kicker: "Miss World",
-    date: "16 Jul 2024",
-    dek: "Sri Lanka sends a new delegate to Miss World after the national crowning.",
+    date: "5 Sep 2026",
+    dek: "Crowned in Nha Trang on 5 September, she is the second Miss World from the Dominican Republic.",
+  },
+  {
+    title: "Fátima Bosch Will Crown Her Successor in San Juan",
+    href: "/news/bangkok-unveils-the-impact-arena-stage",
+    image: "/images/instagram/mu-fatima.jpg",
+    kicker: "Miss Universe",
+    date: "26 Sep 2026",
+    dek: "The 75th Miss Universe is set for 24 November at the José Miguel Agrelot Coliseum.",
+  },
+  {
+    title: "Natálie Puškinová Is Still Miss Earth",
+    href: "/news/from-advocacy-to-artistry",
+    image: "/images/instagram/me-natalie-desert.jpg",
+    kicker: "Miss Earth",
+    date: "17 Aug 2026",
+    dek: "The Czech titleholder, crowned in Manila in November 2025, is on the road until the next Earth final.",
+  },
+  {
+    title: "Catalina Duque’s Year for the Global Goals",
+    href: "/news/the-first-beauty-with-a-purpose-prize",
+    image: "/images/instagram/mi-catalina.jpg",
+    kicker: "Miss International",
+    date: "26 Sep 2026",
+    dek: "Colombia’s Miss International 2025 reigns until the Tokyo successor is chosen on 24 November.",
   },
 ];
 
@@ -83,22 +82,22 @@ export const LATEST_SIDE = [
 
 export const OPINIONS = [
   {
-    title: "Our Top 5 Favourites of Miss Earth Japan 2024",
-    href: "/news/miss-earth-japan-top-5-favourites-2024",
-    image: "/images/opinions/earth-japan.jpg",
-    byline: "26 Jul 2024 · Irina Silva",
+    title: "Two Big Four Finals on One Night Is a Gamble",
+    href: "/news/bangkok-unveils-the-impact-arena-stage",
+    image: "/images/instagram/mu-fatima.jpg",
+    byline: "26 Sep 2026 · Irina Silva",
   },
   {
-    title: "Our Top 5 Favourites of Miss Universe Japan 2024",
-    href: "/news/miss-universe-japan-top-5-favourites-2024",
-    image: "/images/opinions/universe-japan.jpg",
-    byline: "25 Jul 2024 · Camilla Saurez",
+    title: "What Joheirry Mola’s Winning Answer Asked of the Crown",
+    href: "/news/prague-confirmed-host-73rd-miss-world",
+    image: "/images/instagram/mw-joheirry.jpg",
+    byline: "6 Sep 2026 · Camilla Saurez",
   },
   {
-    title: "Our Top 5 Favourites of Miss World Philippines 2024",
-    href: "/news/miss-world-philippines-top-5-favourites-2024",
-    image: "/images/opinions/world-philippines.jpg",
-    byline: "17 Jul 2024 · Camilla Saurez",
+    title: "Fátima Bosch, Ten Months into a Disputed Reign",
+    href: "/news/the-year-of-grace",
+    image: "/images/instagram/mu-fatima.jpg",
+    byline: "21 Sep 2026 · Camilla Saurez",
   },
 ];
 
@@ -129,7 +128,7 @@ export const BIG_FOUR_TABS: BigFourTab[] = [
       country: "Dominican Republic",
       title:
         "Joheirry Mola of the Dominican Republic Is Now Miss World",
-      image: "/images/titleholders/mw-2026-joheirry.png",
+      image: "/images/instagram/mw-joheirry.jpg",
     },
     previous: [
       {
@@ -171,7 +170,7 @@ export const BIG_FOUR_TABS: BigFourTab[] = [
       year: 2025,
       country: "Mexico",
       title: "Fátima Bosch of Mexico Is Now Miss Universe",
-      image: "/images/titleholders/mu-2025-fatima.jpg",
+      image: "/images/instagram/mu-fatima.jpg",
     },
     previous: [
       {
@@ -214,7 +213,7 @@ export const BIG_FOUR_TABS: BigFourTab[] = [
       country: "Czech Republic",
       title:
         "Natálie Puškinová of the Czech Republic Is Now Miss Earth",
-      image: "/images/titleholders/me-2025-natalie.jpg",
+      image: "/images/instagram/me-natalie-desert.jpg",
     },
     previous: [
       {
@@ -256,7 +255,7 @@ export const BIG_FOUR_TABS: BigFourTab[] = [
       year: 2025,
       country: "Colombia",
       title: "Catalina Duque of Colombia Is Now Miss International",
-      image: "/images/titleholders/mi-2025-catalina.jpg",
+      image: "/images/instagram/mi-catalina.jpg",
     },
     previous: [
       {
@@ -293,28 +292,28 @@ export const BIG_FOUR_TABS: BigFourTab[] = [
 
 export const HOME_GALLERY = [
   {
-    title: "The Coronation Night",
-    meta: "Miss Universe 2025 · 42 Photos",
-    href: "/gallery",
-    image: "/images/gallery-1.jpg",
+    title: "Beauty with a Purpose",
+    meta: "Miss World 2026 · @joheirry_mola",
+    href: "https://www.instagram.com/p/DctiVPEkd23/",
+    image: "/images/instagram/pictures-joheirry.jpg",
   },
   {
-    title: "National Costume",
-    meta: "Miss World 2025 · 36 Photos",
-    href: "/gallery",
-    image: "/images/gallery-2.jpg",
+    title: "Fátima Bosch, for Caras",
+    meta: "Miss Universe 2025 · Instagram",
+    href: "https://www.instagram.com/p/DUDuFMWDgYL/",
+    image: "/images/instagram/pictures-fatima.jpg",
   },
   {
-    title: "Backstage, Unscripted",
-    meta: "Miss Earth 2025 · 28 Photos",
-    href: "/gallery",
-    image: "/images/gallery-3.jpg",
+    title: "Received at the Old Town Hall",
+    meta: "Miss Earth · @missczechrepublic",
+    href: "https://www.instagram.com/p/DRNEpknDDrw/",
+    image: "/images/instagram/pictures-natalie.jpg",
   },
   {
-    title: "The Evening Gowns",
-    meta: "Miss International · 31 Photos",
-    href: "/gallery",
-    image: "/images/gallery-4.jpg",
+    title: "The Queen from Medellín",
+    meta: "Miss International 2025 · Official",
+    href: "https://www.instagram.com/p/DRTKz1lk_5k/",
+    image: "/images/instagram/pictures-catalina.jpg",
   },
   {
     title: "Arrivals in Bangkok",
@@ -329,6 +328,7 @@ export type WatchNowClip = {
   kicker: string;
   image: string;
   href: string;
+  video?: string;
 };
 
 export type WatchNowTab = {
@@ -345,10 +345,11 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
     label: "Finals",
     href: "/videos",
     featured: {
-      title: "The Final Question — Every Answer That Won a Crown",
-      kicker: "Film · 12:48",
-      image: "/images/video-1.png",
-      href: "/videos",
+      title: "The Crowning of Joheirry Mola",
+      kicker: "Reel · Miss World · 5 Sep 2026",
+      image: "/images/instagram/mw-crowning.jpg",
+      video: "/videos/instagram/crowning.mp4",
+      href: "https://www.instagram.com/reel/Dc63VSeS_xh/",
     },
     items: [
       {
@@ -382,10 +383,11 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
     label: "Interviews",
     href: "/videos",
     featured: {
-      title: "Isabelle Fontaine: The First Interview",
-      kicker: "Interview · 7:18",
-      image: "/images/contestant.jpg",
-      href: "/videos",
+      title: "Fátima Bosch, in Her Own Words",
+      kicker: "Reel · Miss Universe · 17 Dec 2025",
+      image: "/images/instagram/mu-fatima-reel.jpg",
+      video: "/videos/instagram/fatima.mp4",
+      href: "https://www.instagram.com/reel/DSYDHoFEdus/",
     },
     items: [
       {
@@ -419,10 +421,11 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
     label: "Masterclass",
     href: "/videos",
     featured: {
-      title: "The Walk: A Masterclass in Ten Steps",
-      kicker: "Masterclass · 6:40",
-      image: "/images/video-4.png",
-      href: "/videos",
+      title: "The Night the Crown Went to the Dominican Republic",
+      kicker: "Reel · Miss World · 5 Sep 2026",
+      image: "/images/instagram/mw-reel-crown.jpg",
+      video: "/videos/instagram/night.mp4",
+      href: "https://www.instagram.com/reel/Dc6dkrCzqFV/",
     },
     items: [
       {
@@ -456,10 +459,11 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
     label: "Documentaries",
     href: "/videos",
     featured: {
-      title: "Valentina Herrera: One Year with the Crown",
-      kicker: "Documentary · 15:03",
-      image: "/images/video-3.png",
-      href: "/videos",
+      title: "The Royal Court of Miss World 2026",
+      kicker: "Reel · Miss World · 6 Sep 2026",
+      image: "/images/instagram/mw-reel-court.jpg",
+      video: "/videos/instagram/court.mp4",
+      href: "https://www.instagram.com/reel/Dc8thZpTdCI/",
     },
     items: [
       {
@@ -481,7 +485,7 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
         href: "/videos",
       },
       {
-        title: "Host City: Bangkok’s Diamond Jubilee",
+        title: "San Juan, the 75th Miss Universe Host City",
         kicker: "Documentary · 11:36",
         image: "/images/news-bangkok.jpg",
         href: "/videos",
@@ -635,7 +639,7 @@ export const UNIVERSE_STATS = [
   { value: "74", label: "Editions held" },
   { value: "130", label: "Nations competing" },
   { value: "1B+", label: "Broadcast reach" },
-  { value: "Nov 21", label: "Finale · Bangkok" },
+  { value: "Nov 24", label: "Finale · San Juan" },
 ];
 
 export const UNIVERSE_TIMELINE = [
@@ -650,36 +654,36 @@ export const UNIVERSE_TIMELINE = [
     place: "Digital",
   },
   {
-    date: "Nov 3",
-    title: "Arrivals & Registration — three weeks of events begin",
-    place: "Bangkok",
-  },
-  {
-    date: "Nov 17",
-    title: "Preliminary Competition — gown, swimwear and closed-door interviews",
-    place: "Impact Arena",
-  },
-  {
     date: "Nov 21",
-    title: "The 74th Miss Universe — live finale & coronation",
-    place: "Impact Arena",
+    title: "National Costume — the first show of Miss Universe week",
+    place: "San Juan",
+  },
+  {
+    date: "Nov 22",
+    title: "Preliminary Competition — closed-door interviews and the runway",
+    place: "San Juan",
+  },
+  {
+    date: "Nov 24",
+    title: "The 75th Miss Universe — live finale and coronation",
+    place: "José Miguel Agrelot Coliseum",
   },
 ];
 
 export const DECADE_OF_QUEENS = [
-  { name: "Valentina Herrera", meta: "Colombia · 2025", image: "/images/mosaic-grand.jpg" },
-  { name: "Freja Lindqvist", meta: "Denmark · 2024", image: "/images/queens-1.png" },
-  { name: "Camila Duarte", meta: "Nicaragua · 2023", image: "/images/queens-2.png" },
-  { name: "Anong Chaipasit", meta: "Thailand · 2022", image: "/images/queens-3.png" },
-  { name: "Lucía Fernández", meta: "India · 2021", image: "/images/queens-4.jpg" },
-  { name: "Doe Papadopoulos", meta: "Mexico · 2020", image: "/images/queens-5.png" },
+  { name: "Fátima Bosch", meta: "Mexico · 2025", image: "/images/instagram/mu-fatima.jpg" },
+  { name: "Victoria Kjær Theilvig", meta: "Denmark · 2024", image: "/images/titleholders/mu-2024-victoria.jpg" },
+  { name: "Sheynnis Palacios", meta: "Nicaragua · 2023", image: "/images/titleholders/mu-2023-sheynnis.jpg" },
+  { name: "R'Bonney Gabriel", meta: "United States · 2022", image: "/images/titleholders/mu-2022-rbonney.jpg" },
+  { name: "Harnaaz Sandhu", meta: "India · 2021", image: "/images/titleholders/mu-2021-harnaaz.jpg" },
+  { name: "Andrea Meza", meta: "Mexico · 2020", image: "/images/queens-5.png" },
 ];
 
 export const UNIVERSE_NEWS = [
   {
     kicker: "Breaking",
-    title: "Bangkok Unveils the Impact Arena Stage for the 75th Anniversary",
-    date: "22 September 2026",
+    title: "San Juan Sets 24 November for the 75th Miss Universe",
+    date: "26 September 2026",
     href: "/news/bangkok-unveils-the-impact-arena-stage",
     image: "/images/news-bangkok.jpg",
   },
@@ -692,7 +696,7 @@ export const UNIVERSE_NEWS = [
   },
   {
     kicker: "Dispatches",
-    title: "France Sends an Architect: Isabelle Fontaine Heads to Bangkok",
+    title: "Kaziah Liz Mejo of Kerala Is Miss Universe India 2026",
     date: "19 September 2026",
     href: "/news/isabelle-fontaine-crowned-miss-france",
     image: "/images/news-isabelle.png",
@@ -947,8 +951,8 @@ export const PAGEANT_HUBS = {
       name: "Fátima Bosch",
       title: "Miss Universe 2025 · Mexico",
       copy: "Crowned in Bangkok, the Tabasco-born titleholder is Mexico’s fourth Miss Universe — and the woman the 75th anniversary will send on the road.",
-      image: "/images/titleholders/mu-2025-fatima.jpg",
-      caption: "The reigning titleholder",
+      image: "/images/instagram/mu-fatima.jpg",
+      caption: "Photograph · @fatimaboschfdz on Instagram",
     },
   },
   "/miss-world": {
@@ -958,9 +962,9 @@ export const PAGEANT_HUBS = {
     reigning: {
       name: "Joheirry Mola",
       title: "Miss World 2026 · Dominican Republic",
-      copy: "Crowned in Nha Trang on 5 September 2026, the Dominican educator and journalist is the second Miss World from her country — forty-four years after Mariasela Álvarez.",
-      image: "/images/titleholders/mw-2026-joheirry.png",
-      caption: "The reigning titleholder",
+      copy: "Crowned in Nha Trang on 5 September 2026, the Santo Domingo model and teacher is the second Miss World from her country — forty-four years after Mariasela Álvarez.",
+      image: "/images/instagram/mw-joheirry.jpg",
+      caption: "Photograph · @joheirry_mola on Instagram",
     },
   },
   "/miss-earth": {
@@ -971,8 +975,8 @@ export const PAGEANT_HUBS = {
       name: "Natálie Puškinová",
       title: "Miss Earth 2025 · Czech Republic",
       copy: "Crowned in Manila on the pageant’s silver anniversary, she is the Czech Republic’s second Miss Earth — and the current face of Beauties for a Cause.",
-      image: "/images/titleholders/me-2025-natalie.jpg",
-      caption: "The reigning titleholder",
+      image: "/images/instagram/me-natalie-desert.jpg",
+      caption: "Photograph · @nataliepuskin on Instagram",
     },
   },
   "/miss-international": {
@@ -983,8 +987,8 @@ export const PAGEANT_HUBS = {
       name: "Catalina Duque",
       title: "Miss International 2025 · Colombia",
       copy: "Crowned in Tokyo on 27 November 2025, she is Colombia’s fourth Miss International — the country’s first in twenty-one years.",
-      image: "/images/titleholders/mi-2025-catalina.jpg",
-      caption: "The reigning titleholder",
+      image: "/images/instagram/mi-catalina.jpg",
+      caption: "Photograph · @missinternationalofficial on Instagram",
     },
   },
 } as const;

@@ -26,8 +26,8 @@ export function GalleryPreview() {
                 <CoverImage
                   src={item.image}
                   alt={item.title}
-                  className="aspect-[4/3] w-full"
-                  imageClassName="object-[center_18%] transition duration-500 group-hover:scale-[1.02]"
+                  className="aspect-[4/5] w-full"
+                  imageClassName="object-center"
                   sizes="(max-width: 767px) 50vw, 320px"
                 />
                 <p className="mt-3 font-heading text-[16px] font-medium leading-snug text-heading group-hover:text-accent">

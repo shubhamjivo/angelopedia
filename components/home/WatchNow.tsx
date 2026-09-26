@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WATCH_NOW_TABS } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
+import { ReelFrame } from "@/components/home/ReelFrame";
 
 export function WatchNow() {
   return (
@@ -25,19 +26,27 @@ export function WatchNow() {
               key={tab.id}
               className="grid grid-cols-1 gap-4 bg-paper p-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 sm:p-5"
             >
-              <Link
-                href={tab.featured.href}
-                className="group relative block aspect-[3/4] sm:aspect-auto sm:h-full sm:min-h-[16rem]"
-              >
-                <CoverImage
-                  src={tab.featured.image}
-                  alt={tab.featured.title}
-                  className="absolute inset-0 h-full w-full"
-                  imageClassName="object-[center_18%] transition duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-width: 639px) 100vw, 340px"
+              {tab.featured.video ? (
+                <ReelFrame
+                  href={tab.featured.href}
+                  src={tab.featured.video}
+                  poster={tab.featured.image}
+                  title={tab.featured.title}
                 />
-                <PlayMark />
-              </Link>
+              ) : (
+                <Link
+                  href={tab.featured.href}
+                  className="group relative block aspect-[9/16] w-full self-start"
+                >
+                  <CoverImage
+                    src={tab.featured.image}
+                    alt={tab.featured.title}
+                    className="absolute inset-0 h-full w-full"
+                    imageClassName="object-cover"
+                    sizes="(max-width: 639px) 100vw, 340px"
+                  />
+                </Link>
+              )}
 
               <div className="flex min-w-0 flex-col">
                 <Link href={tab.featured.href} className="group">
@@ -92,13 +101,3 @@ export function WatchNow() {
   );
 }
 
-function PlayMark() {
-  return (
-    <span
-      aria-hidden
-      className="absolute top-3 left-3 flex size-9 items-center justify-center rounded-full bg-ink"
-    >
-      <span className="ml-0.5 border-y-[7px] border-l-[11px] border-y-transparent border-l-white" />
-    </span>
-  );
-}

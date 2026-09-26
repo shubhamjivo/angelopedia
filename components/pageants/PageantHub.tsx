@@ -72,7 +72,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
               {reigning.copy}
             </p>
             <Link
-              href="/contestants/isabelle-fontaine"
+              href="/news/the-year-of-grace"
               className="mt-8 inline-flex h-11 items-center border border-ink px-6 font-nav text-[11px] tracking-[2px] uppercase hover:bg-ink hover:text-white"
             >
               Her Story
