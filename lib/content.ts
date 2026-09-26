@@ -494,6 +494,128 @@ export const WATCH_NOW_TABS: WatchNowTab[] = [
   },
 ];
 
+export type OtherPageantId = "grand" | "supranational" | "intercontinental";
+
+export type OtherPageantStory = {
+  title: string;
+  dek: string;
+  kicker: string;
+  author: string;
+  date: string;
+  image: string;
+};
+
+export const OTHER_PAGEANT_TABS: { id: OtherPageantId; label: string }[] = [
+  { id: "grand", label: "Miss Grand International" },
+  { id: "supranational", label: "Miss Supranational" },
+  { id: "intercontinental", label: "Miss Intercontinental" },
+];
+
+export const OTHER_PAGEANT_STORIES: Record<OtherPageantId, OtherPageantStory[]> = {
+  grand: [
+    {
+      kicker: "On the ground",
+      title: "Miss Grand International 2026 Is Underway in Bangkok",
+      dek: "The 14th edition left India on 3 September and reconvened at MGI Hall. Emma Tiglao of the Philippines will crown her successor on 10 October.",
+      author: "Nared Suksawat",
+      date: "26 September 2026",
+      image: "/images/news-bangkok.jpg",
+    },
+    {
+      kicker: "Schedule",
+      title: "National Costume and the Preliminary Share 7 October",
+      dek: "After the move from New Delhi, the closed-door interview is set for 4 October and the grand final for 10 October, all at MGI Hall.",
+      author: "Camilla Saurez",
+      date: "3 September 2026",
+      image: "/images/gallery-2.jpg",
+    },
+    {
+      kicker: "Reigning",
+      title: "Emma Tiglao Still Wears the Grand Crown",
+      dek: "The Filipina was crowned on 18 October 2025 in Bangkok. She is the second Miss Grand International from the Philippines, following Christine Juliane Opiaza.",
+      author: "Irina Silva",
+      date: "18 October 2025",
+      image: "/images/queens-3.png",
+    },
+    {
+      kicker: "Host country",
+      title: "Patthama Jitsawat of Chonburi Represents Thailand",
+      dek: "Miss Grand Thailand 2026 is in the field at home, after the organisation ended the India contract and brought the contest back to Bangkok.",
+      author: "Amara Castellanos",
+      date: "20 September 2026",
+      image: "/images/gallery-4.jpg",
+    },
+  ],
+  supranational: [
+    {
+      kicker: "Crowning",
+      title: "Katrina Llegado of the Philippines Is Miss Supranational 2026",
+      dek: "Eduarda Braum of Brazil crowned her on 31 July at the Strzelecki Park Amphitheater in Nowy Sącz. It is the Philippines’ second Supranational title, after Mutya Datul in 2013.",
+      author: "Camilla Saurez",
+      date: "31 July 2026",
+      image: "/images/queens-1.png",
+    },
+    {
+      kicker: "Runners-up",
+      title: "Eve Gilles of France Finishes First Runner-Up",
+      dek: "Lara Marina of Brazil was second, Ndah Eno of Nigeria third, and Karolína Gorylová of the Czech Republic fourth. Sixty-seven contestants took part.",
+      author: "Irina Silva",
+      date: "1 August 2026",
+      image: "/images/gallery-3.jpg",
+    },
+    {
+      kicker: "The court",
+      title: "A Top 12 That Reached Vietnam, Venezuela and the Host Country",
+      dek: "Mai Ngô of Vietnam, Silvia Maestre of Venezuela and Oliwia Mikulska of Poland were among the twelve who remained after the semifinal cut.",
+      author: "Nared Suksawat",
+      date: "31 July 2026",
+      image: "/images/gallery-1.jpg",
+    },
+    {
+      kicker: "Special awards",
+      title: "Sadia Nagatori of Japan Is Miss Congeniality",
+      dek: "Eve Gilles also took Photogenic. The 17th edition was carried by Polsat, Zoom, GEN and Venevisión from Lesser Poland.",
+      author: "Amara Castellanos",
+      date: "1 August 2026",
+      image: "/images/news-prague.png",
+    },
+  ],
+  intercontinental: [
+    {
+      kicker: "Reigning",
+      title: "Varvara Yakovenko of Russia Holds Miss Intercontinental",
+      dek: "She was crowned on 29 January 2025 in Sahl Hasheesh, Egypt, the country’s title since Valentina Rasulova won in 2015. Lorena Suárez of Cuba was first runner-up.",
+      author: "Camilla Saurez",
+      date: "29 January 2025",
+      image: "/images/gallery-5.jpg",
+    },
+    {
+      kicker: "2026 edition",
+      title: "The 54th Final Returns to Sahl Hasheesh",
+      dek: "About 70 contestants are expected on Egypt’s Red Sea coast. The grand final is set for 31 January 2027 at The Grand Resort, where Yakovenko will crown her successor.",
+      author: "Nared Suksawat",
+      date: "27 July 2026",
+      image: "/images/gallery-5.jpg",
+    },
+    {
+      kicker: "Road",
+      title: "National Crowns Are Already Being Named for Egypt",
+      dek: "Isabel Medina Acevedo was crowned Miss Intercontinental Jalisco on 12 September and will compete for Mexico in Querétaro at the end of October.",
+      author: "Irina Silva",
+      date: "16 September 2026",
+      image: "/images/instagram/pictures-fatima.jpg",
+    },
+    {
+      kicker: "The court",
+      title: "Cuba, Thailand and Tanzania Stood Beside Russia in 2025",
+      dek: "Lorena Suárez Lara, Vanessa Nattacha Wenk and Faidah Kassim completed the placements published by the organisation after the Sahl Hasheesh final.",
+      author: "Amara Castellanos",
+      date: "29 January 2025",
+      image: "/images/queens-6.jpg",
+    },
+  ],
+};
+
 export const NEWS_FILTERS = [
   { href: "/news", label: "All" },
   { href: "/news?section=opinions", label: "Opinions" },

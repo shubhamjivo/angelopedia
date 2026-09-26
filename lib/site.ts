@@ -46,6 +46,13 @@ export const ROUTES = [
     description: "The festival of beauty and goodwill.",
   },
   {
+    href: "/other-pageants",
+    label: "Other Pageants",
+    title: "Other Pageants",
+    description:
+      "Miss Grand International, Miss Supranational and Miss Intercontinental — the crowns beyond the Big Four.",
+  },
+  {
     href: "/pageants",
     label: "Pageants A–Z",
     title: "Pageants A–Z",
