@@ -100,12 +100,6 @@ export const OPINIONS = [
     image: "/images/opinions/world-philippines.jpg",
     byline: "17 Jul 2024 · Camilla Saurez",
   },
-  {
-    title: "Our Top 5 Favourites of Miss Universe Thailand 2024",
-    href: "/news/miss-universe-thailand-top-5-favourites-2024",
-    image: "/images/opinions/universe-thailand.jpg",
-    byline: "14 Jul 2024 · Camilla Saurez",
-  },
 ];
 
 export type BigFourTitleholder = {
