@@ -43,8 +43,8 @@ export function BigFour() {
                   <p className="mt-2 font-nav text-[10px] leading-relaxed tracking-[1.4px] text-ink uppercase">
                     {tab.recent.name} · {tab.recent.country} · {tab.recent.year}
                   </p>
-                  <span className="mt-3 inline-flex font-nav text-[13px] font-medium text-accent">
-                    Know More
+                  <span className="mt-3 inline-flex font-nav text-[13px] font-medium text-accent underline-offset-2 group-hover:underline">
+                    Visit {tab.label}
                   </span>
                 </Link>
 
