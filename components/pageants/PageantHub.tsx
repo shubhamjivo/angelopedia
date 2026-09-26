@@ -47,7 +47,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section id="reigning-titleholder" className="py-16 desk:py-24">
+      <section id="reigning-titleholder" className="py-8 desk:py-10">
         <Container className="grid items-center gap-10 lg:grid-cols-2">
           <figure>
             <CoverImage
@@ -81,7 +81,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section id="road-to-the-crown" className="bg-[#f7f5f1] py-16">
+      <section id="road-to-the-crown" className="bg-[#f7f5f1] py-8 desk:py-10">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
@@ -110,7 +110,7 @@ export function PageantHub({ kicker, title, dek, reigning }: PageantHubProps) {
         </Container>
       </section>
 
-      <section id="a-decade-of-queens" className="py-16">
+      <section id="a-decade-of-queens" className="py-8 desk:py-10">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">

@@ -5,7 +5,7 @@ import { CoverImage } from "@/components/ui/CoverImage";
 
 export function BigFour() {
   return (
-    <section id="the-big-four" className="border-t border-hairline bg-paper py-16 text-ink desk:py-20">
+    <section id="the-big-four" className="border-t border-hairline bg-paper py-8 text-ink desk:py-10">
       <Container>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">

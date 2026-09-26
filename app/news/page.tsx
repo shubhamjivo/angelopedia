@@ -62,7 +62,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
         </Container>
       </nav>
 
-      <section id="stories" className="py-16 desk:py-20">
+      <section id="stories" className="py-8 desk:py-10">
         <Container className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
           <div className="min-w-0 flex-1">
             {featured ? (

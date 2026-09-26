@@ -50,7 +50,7 @@ export default function VideosPage() {
         </Container>
       </section>
 
-      <section id="all-videos" className="py-16">
+      <section id="all-videos" className="py-8 desk:py-10">
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {VIDEOS.items.map((item) => (

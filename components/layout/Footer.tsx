@@ -1,13 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import localFont from "next/font/local";
 import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
-
-const montage = localFont({
-  src: "../../fonts/Montage.woff2",
-  display: "swap",
-});
 
 export function Footer() {
   return (
@@ -19,9 +13,9 @@ export function Footer() {
           </p>
           <h2
             id="newsletter"
-            className="mt-4 font-heading text-[26px] font-semibold leading-none text-white desk:text-[32px]"
+            className="mt-4 font-heading text-[36px] font-semibold leading-none text-white desk:text-[54px]"
           >
-            Pageantry, <em className={`${montage.className} not-italic font-normal`}>beautifully</em> told.
+            Pageantry, <em className="font-medium italic">beautifully</em> told.
           </h2>
           <p className="mt-4 max-w-[520px] font-body text-base text-neutral-300">
             One elegant email each Sunday — the week&apos;s crowns, stories and

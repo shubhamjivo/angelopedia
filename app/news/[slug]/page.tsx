@@ -117,7 +117,7 @@ export default async function ArticlePage({ params }: ArticleProps) {
         </Container>
       </article>
 
-      <section id="read-next" className="border-t border-hairline py-16 desk:py-20">
+      <section id="read-next" className="border-t border-hairline py-8 desk:py-10">
         <Container>
           <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
             Read Next

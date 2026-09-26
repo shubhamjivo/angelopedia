@@ -16,7 +16,7 @@ export function FrontPage() {
   const poll = POLLS[0];
 
   return (
-    <section id="the-latest" className="border-t border-hairline py-16 desk:py-20">
+    <section id="the-latest" className="border-t border-hairline py-8 desk:py-10">
       <Container>
         <div className="flex items-end justify-between gap-4">
           <div>

@@ -4,7 +4,7 @@ import { Kicker } from "@/components/ui/Kicker";
 
 export function VoteCta() {
   return (
-    <section id="vote" className="border-t border-hairline py-16 desk:py-20">
+    <section id="vote" className="border-t border-hairline py-8 desk:py-10">
       <Container className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-[720px]">
           <Kicker>Have your say</Kicker>

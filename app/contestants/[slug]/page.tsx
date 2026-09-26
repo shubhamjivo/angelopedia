@@ -80,7 +80,7 @@ export default function ContestantPage() {
         </Container>
       </section>
 
-      <section id="in-photos" className="py-16">
+      <section id="in-photos" className="py-8 desk:py-10">
         <Container>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
