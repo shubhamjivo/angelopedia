@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Footer() {
   return (
-    <footer className="bg-footer text-white">
+    <footer className="bg-black text-white">
       <div className="border-b border-neutral-800">
         <Container className="flex flex-col items-center px-6 py-16 text-center desk:px-14 desk:pt-[84px] desk:pb-[85px]">
           <p className="font-nav text-[11px] font-medium tracking-[3.52px] text-accent uppercase">
