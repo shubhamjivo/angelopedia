@@ -21,11 +21,11 @@ export function WatchNow() {
           </Link>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline desk:grid-cols-4">
           {WATCH_NOW_TABS.map((tab) => (
             <article key={tab.id} className="flex flex-col gap-4 bg-paper p-4 sm:gap-5 sm:p-5">
               <ChevronTitle href={tab.href} label={tab.label} />
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 desk:grid-cols-1">
                 {tab.featured.video ? (
                   <ReelFrame
                     href={tab.featured.href}
@@ -43,7 +43,7 @@ export function WatchNow() {
                       alt={tab.featured.title}
                       className="absolute inset-0 h-full w-full"
                       imageClassName="object-cover"
-                      sizes="(max-width: 639px) 100vw, 340px"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1439px) 46vw, 300px"
                     />
                   </Link>
                 )}

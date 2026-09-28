@@ -17,18 +17,18 @@ export function BigFour() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline desk:grid-cols-4">
           {BIG_FOUR_TABS.map((tab) => (
             <article key={tab.id} className="flex flex-col gap-4 bg-paper p-4 sm:gap-5 sm:p-5">
               <ChevronTitle href={tab.href} label={tab.label} />
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 desk:grid-cols-1">
                 <Link href={tab.href} className="group relative block aspect-[4/5] w-full self-start">
                   <CoverImage
                     src={tab.recent.image}
                     alt={`${tab.recent.name}, ${tab.label} ${tab.recent.year}`}
                     className="absolute inset-0 h-full w-full"
                     imageClassName="object-[center_15%] transition duration-500 group-hover:scale-[1.02]"
-                    sizes="(max-width: 639px) 100vw, 340px"
+                    sizes="(max-width: 639px) 100vw, (max-width: 1439px) 46vw, 300px"
                   />
                 </Link>
 
