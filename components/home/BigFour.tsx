@@ -17,9 +17,14 @@ export function BigFour() {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline desk:grid-cols-4">
-          {BIG_FOUR_TABS.map((tab) => (
-            <article key={tab.id} className="flex flex-col gap-4 bg-paper p-4 sm:gap-5 sm:p-5">
+        <div className="mt-10 grid grid-cols-1 gap-8 desk:grid-cols-4 desk:gap-0">
+          {BIG_FOUR_TABS.map((tab, index) => (
+            <article
+              key={tab.id}
+              className={`flex min-w-0 flex-col gap-4 sm:gap-5 ${
+                index > 0 ? "desk:border-l desk:border-hairline desk:pl-4" : ""
+              } ${index < BIG_FOUR_TABS.length - 1 ? "desk:pr-4" : ""}`}
+            >
               <ChevronTitle href={tab.href} label={tab.label} />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 desk:grid-cols-1">
                 <Link href={tab.href} className="group relative block aspect-[4/5] w-full self-start">

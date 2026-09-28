@@ -11,7 +11,7 @@ export function WatchNow() {
       <Container>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
-            Watch Now
+            Angelopedia Exclusive
           </h2>
           <Link
             href="/videos"
@@ -21,9 +21,14 @@ export function WatchNow() {
           </Link>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-px bg-hairline desk:grid-cols-4">
-          {WATCH_NOW_TABS.map((tab) => (
-            <article key={tab.id} className="flex flex-col gap-4 bg-paper p-4 sm:gap-5 sm:p-5">
+        <div className="mt-10 grid grid-cols-1 gap-8 desk:grid-cols-4 desk:gap-0">
+          {WATCH_NOW_TABS.map((tab, index) => (
+            <article
+              key={tab.id}
+              className={`flex min-w-0 flex-col gap-4 sm:gap-5 ${
+                index > 0 ? "desk:border-l desk:border-hairline desk:pl-4" : ""
+              } ${index < WATCH_NOW_TABS.length - 1 ? "desk:pr-4" : ""}`}
+            >
               <ChevronTitle href={tab.href} label={tab.label} />
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] sm:gap-5 desk:grid-cols-1">
                 {tab.featured.video ? (

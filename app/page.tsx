@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BigFour } from "@/components/home/BigFour";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { FrontPage } from "@/components/home/FrontPage";
+import { SectionBoard } from "@/components/home/SectionBoard";
 import { HeroMosaic } from "@/components/home/HeroMosaic";
 import { VoteCta } from "@/components/home/VoteCta";
 import { WatchNow } from "@/components/home/WatchNow";
@@ -19,8 +20,9 @@ export default function Home() {
     <main>
       <HeroMosaic />
       <FrontPage />
+      <SectionBoard />
       <BigFour />
-      <GalleryPreview />
+      {/* <GalleryPreview /> */}
       <WatchNow />
       <VoteCta />
     </main>
