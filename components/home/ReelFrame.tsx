@@ -22,12 +22,16 @@ export function ReelFrame({
     if (!video || !frame) return;
 
     function play() {
-      void video.play().catch(() => {});
+      const media = videoRef.current;
+      if (!media) return;
+      void media.play().catch(() => {});
     }
 
     function stop() {
-      video.pause();
-      video.currentTime = 0;
+      const media = videoRef.current;
+      if (!media) return;
+      media.pause();
+      media.currentTime = 0;
     }
 
     frame.addEventListener("mouseenter", play);
