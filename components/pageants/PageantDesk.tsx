@@ -82,7 +82,7 @@ function YearBox({
 }) {
   const items = [{ id: "", label: "All" }, ...years.map((year) => ({ id: year, label: year }))];
   return (
-    <nav aria-label="Years" className="border border-hairline lg:col-start-2 lg:row-start-1">
+    <nav aria-label="Years" className="order-1 border border-hairline lg:order-none">
       <p className="border-b border-ink px-3 py-3 font-nav text-[11px] tracking-[2px] uppercase">Year</p>
       <div className="flex flex-wrap gap-2 p-3">
         {items.map((item) => {
@@ -159,9 +159,8 @@ export function PageantDesk({
       </nav>
 
       <section id="stories" className="py-8 desk:py-10">
-        <Container className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start lg:gap-x-8 lg:gap-y-10">
-          <YearBox basePath={basePath} tabId={current.id} years={years} active={activeYear} />
-          <div className="min-w-0 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+        <Container className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-8">
+          <div className="order-2 min-w-0 flex-1 lg:order-1">
             {opening.length ? (
               <div>
                 <Opening frames={opening} />
@@ -233,7 +232,9 @@ export function PageantDesk({
             </div>
           </div>
 
-          <aside className="flex w-full flex-col gap-10 lg:col-start-2 lg:row-start-2">
+          <div className="contents lg:order-2 lg:flex lg:w-[280px] lg:shrink-0 lg:flex-col lg:gap-10">
+            <YearBox basePath={basePath} tabId={current.id} years={years} active={activeYear} />
+            <aside className="order-3 flex w-full flex-col gap-10 lg:order-none">
             <div>
               <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">Most Read</p>
               <ol className="mt-4 flex flex-col gap-4">
@@ -279,7 +280,8 @@ export function PageantDesk({
                 Subscribe
               </Link>
             </div>
-          </aside>
+            </aside>
+          </div>
         </Container>
       </section>
     </main>
