@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { MOST_READ, OPINIONS, POLLS } from "@/lib/content";
+import { MOST_READ, POLLS } from "@/lib/content";
+import { NEWS_IN_PICTURES, PICTURES_HREF, picturePath } from "@/lib/pictures";
 import {
   EDITION_LABEL,
   HOME_LEAD,
@@ -148,51 +149,35 @@ export function FrontPage() {
 
             <div>
               <div className="flex items-baseline justify-between gap-3 border-b border-ink pb-3">
-                <p className="font-nav text-[11px] tracking-[2px] text-ink uppercase">Opinions</p>
+                <p className="font-nav text-[11px] tracking-[2px] text-ink uppercase">
+                  News In Pictures
+                </p>
                 <Link
-                  href="/news?section=opinions"
+                  href={PICTURES_HREF}
                   className="font-nav text-[10px] tracking-[1.2px] text-muted uppercase hover:text-ink"
                 >
-                  All opinions
+                  All pictures
                 </Link>
               </div>
-              <ul role="list">
-                {OPINIONS.map((item) => {
-                  const [date, name] = item.byline.split(" · ");
-                  return (
-                    <li key={item.href} className="border-b border-hairline">
-                      <Link href={item.href} className="group block py-4">
-                        <span className="block font-nav text-[10px] tracking-[1.6px] text-ink uppercase">
-                          {name ?? item.byline}
-                        </span>
-                        <span className="mt-1 block font-heading text-[15px] leading-[1.4] font-medium text-heading group-hover:text-ink">
-                          {item.title}
-                        </span>
-                        <span className="mt-2 block font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
-                          Opinion · {date}
-                        </span>
-                      </Link>
-                    </li>
-                  );
-                })}
+              <ul role="list" className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5">
+                {NEWS_IN_PICTURES.map((album, index) => (
+                  <li key={album.slug}>
+                    <Link href={picturePath(album)} className="group block">
+                      <CoverImage
+                        src={album.cover}
+                        alt=""
+                        className="aspect-[3/2] w-full"
+                        sizes="150px"
+                      />
+                      <p className="mt-2 font-body text-[12px] leading-5 text-ink">
+                        {album.title}
+                      </p>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            <div className="bg-neutral-200/40 p-5">
-              <Kicker tone="accent">{poll.kicker}</Kicker>
-              <p className="mt-3 font-heading text-[16px] font-medium leading-snug text-heading">
-                {poll.question}
-              </p>
-              <p className="mt-3 font-body text-[15px] leading-6 text-neutral-500">
-                {poll.note}
-              </p>
-              <Link
-                href="/play"
-                className="mt-4 inline-flex font-nav text-[11px] tracking-[1.6px] text-ink uppercase hover:text-heading"
-              >
-                Cast your vote
-              </Link>
-            </div>
           </aside>
         </div>
       </Container>

@@ -85,6 +85,12 @@ export const NAV_LINKS = ROUTES.filter((route) => route.href !== "/").map(
   ({ href, label }) => ({ href, label }),
 );
 
+export const OTHER_PAGEANT_LINKS = [
+  { href: "/other-pageants/miss-grand-international", label: "Miss Grand International" },
+  { href: "/other-pageants/miss-supranational", label: "Miss Supranational" },
+  { href: "/other-pageants/miss-intercontinental", label: "Miss Intercontinental" },
+] as const;
+
 export const UTILITY_LINKS = [
   { href: "/play", label: "Prediction Game" },
   { href: "/#newsletter", label: "Newsletter" },

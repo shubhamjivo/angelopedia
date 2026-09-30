@@ -1,13 +1,55 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FOLLOW_PAGEANTS, MOST_READ, NEWS_FILTERS } from "@/lib/content";
-import { SECTION_LABELS, listStories, storyPath, type StorySection } from "@/lib/stories";
+import { NEWS_IN_PICTURES, picturePath } from "@/lib/pictures";
+import { SECTION_LABELS, listStories, storyPath, type Story, type StorySection } from "@/lib/stories";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
 import { PageHero } from "@/components/ui/PageHero";
 
 const SECTIONS = new Set<string>(Object.keys(SECTION_LABELS));
+
+type DeskItem = {
+  key: string;
+  href: string;
+  kicker: string;
+  title: string;
+  dek: string;
+  byline: string;
+  image: string;
+  clamp: boolean;
+};
+
+function pictureItems(query: string): DeskItem[] {
+  const needle = query.toLowerCase();
+  const albums = needle
+    ? NEWS_IN_PICTURES.filter((album) => `${album.title} ${album.dek}`.toLowerCase().includes(needle))
+    : NEWS_IN_PICTURES;
+  return albums.map((album) => ({
+    key: album.slug,
+    href: picturePath(album),
+    kicker: "In Pictures",
+    title: album.title,
+    dek: album.dek,
+    byline: `By ${album.credit} · ${album.date}`,
+    image: album.cover,
+    clamp: true,
+  }));
+}
+
+function storyItems(stories: Story[]): DeskItem[] {
+  return stories.map((story) => ({
+    key: story.slug,
+    href: storyPath(story),
+    kicker: story.kicker,
+    title: story.title,
+    dek: story.dek,
+    byline: `By ${story.author} · ${story.date}`,
+    image: story.image,
+    clamp: false,
+  }));
+}
 
 type NewsProps = {
   searchParams: Promise<{ section?: string; q?: string }>;
@@ -29,13 +71,16 @@ export async function generateMetadata({ searchParams }: NewsProps): Promise<Met
 
 export default async function NewsPage({ searchParams }: NewsProps) {
   const { section, q } = await searchParams;
-  const activeSection = section && SECTIONS.has(section) ? section : undefined;
+  const activeSection = section && SECTIONS.has(section) ? (section as StorySection) : undefined;
   const query = q?.trim() ?? "";
-  const stories = listStories({ section: activeSection, q: query });
-  const [featured, ...feed] = stories;
+  const pictures = activeSection === "in-pictures";
+  const items = pictures
+    ? pictureItems(query)
+    : storyItems(listStories({ section: activeSection, q: query }));
+  const [featured, ...feed] = items;
   const heading = query ? `Results for “${query}”` : sectionLabel(activeSection);
   const dek = query
-    ? `${stories.length} ${stories.length === 1 ? "story" : "stories"} match.`
+    ? `${items.length} ${items.length === 1 ? "story" : "stories"} match.`
     : activeSection
       ? `${sectionLabel(activeSection)} from the Angelopedia desk.`
       : "Crowns, contests and the people who carry them — reported daily from 195 nations.";
@@ -70,16 +115,18 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                 <div className="min-w-0 flex-1">
                   <Kicker tone="accent">{featured.kicker}</Kicker>
                   <h2 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading desk:text-[26px]">
-                    <Link href={storyPath(featured)} className="hover:text-ink">
+                    <Link href={featured.href} className="hover:text-ink">
                       {featured.title}
                     </Link>
                   </h2>
-                  <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">{featured.dek}</p>
+                  <p className={`mt-4 font-body text-[15px] leading-6 text-neutral-500${featured.clamp ? " line-clamp-4" : ""}`}>
+                    {featured.dek}
+                  </p>
                   <p className="mt-5 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
-                    By {featured.author} · {featured.date}
+                    {featured.byline}
                   </p>
                 </div>
-                <Link href={storyPath(featured)} className="lg:w-[420px] lg:shrink-0">
+                <Link href={featured.href} className="lg:w-[420px] lg:shrink-0">
                   <CoverImage
                     src={featured.image}
                     alt={featured.title}
@@ -96,20 +143,22 @@ export default async function NewsPage({ searchParams }: NewsProps) {
 
             <div className="flex flex-col">
               {feed.map((item) => (
-                <article key={item.slug} className="flex gap-6 border-b border-hairline py-8">
+                <article key={item.key} className="flex gap-6 border-b border-hairline py-8">
                   <div className="min-w-0 flex-1">
                     <Kicker>{item.kicker}</Kicker>
                     <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
-                      <Link href={storyPath(item)} className="hover:text-ink">
+                      <Link href={item.href} className="hover:text-ink">
                         {item.title}
                       </Link>
                     </h3>
-                    <p className="mt-2 font-body text-[15px] leading-6 text-neutral-500">{item.dek}</p>
+                    <p className={`mt-2 font-body text-[15px] leading-6 text-neutral-500${item.clamp ? " line-clamp-3" : ""}`}>
+                      {item.dek}
+                    </p>
                     <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
-                      By {item.author} · {item.date}
+                      {item.byline}
                     </p>
                   </div>
-                  <Link href={storyPath(item)} className="hidden w-[220px] shrink-0 sm:block">
+                  <Link href={item.href} className="hidden w-[220px] shrink-0 sm:block">
                     <CoverImage
                       src={item.image}
                       alt={item.title}

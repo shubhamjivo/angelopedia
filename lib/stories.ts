@@ -33,7 +33,7 @@ export const SECTION_LABELS: Record<StorySection, string> = {
   "beauty-talks": "Beauty Talks",
   featured: "Featured",
   specials: "Specials",
-  "in-pictures": "In Pictures",
+  "in-pictures": "News In Pictures",
 };
 
 const STORIES: Story[] = [
@@ -621,7 +621,7 @@ const edition = listStories().filter((story) => story.dateISO.startsWith("2026-0
 
 export const HOME_LEAD = edition[0];
 export const HOME_SECONDARY = edition.slice(1, 10);
-export const LATEST_DESK = edition.slice(7);
+export const LATEST_DESK = edition.slice(12);
 
 const MOST_READ_SLUGS = [
   "the-year-of-grace",

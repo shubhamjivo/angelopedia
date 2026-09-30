@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BigFour } from "@/components/home/BigFour";
+import { FashionBeauty } from "@/components/home/FashionBeauty";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { FrontPage } from "@/components/home/FrontPage";
 import { SectionBoard } from "@/components/home/SectionBoard";
@@ -22,6 +23,7 @@ export default function Home() {
       <FrontPage />
       <SectionBoard />
       <BigFour />
+      <FashionBeauty />
       {/* <GalleryPreview /> */}
       <WatchNow />
       <VoteCta />

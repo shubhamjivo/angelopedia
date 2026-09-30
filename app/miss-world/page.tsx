@@ -1,14 +1,34 @@
 import type { Metadata } from "next";
-import { PageantHub } from "@/components/pageants/PageantHub";
-import { PAGEANT_HUBS } from "@/lib/content";
+import { PageantDesk } from "@/components/pageants/PageantDesk";
+import { resolveTab } from "@/lib/pageants/desk";
+import { MISS_WORLD_TABS } from "@/lib/miss-world";
 
-const hub = PAGEANT_HUBS["/miss-world"];
+const TABS = MISS_WORLD_TABS.filter((tab) => tab.id !== "2021-info" && tab.id !== "2021-news");
 
-export const metadata: Metadata = {
-  title: hub.title,
-  description: hub.dek,
+type PageProps = {
+  searchParams: Promise<{ tab?: string; year?: string }>;
 };
 
-export default function MissWorldPage() {
-  return <PageantHub {...hub} />;
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const { tab } = await searchParams;
+  const current = resolveTab(TABS, tab);
+  return {
+    title: current.label,
+    description: current.dek,
+  };
+}
+
+export default async function MissWorldPage({ searchParams }: PageProps) {
+  const { tab, year } = await searchParams;
+  const current = resolveTab(TABS, tab);
+  return (
+    <PageantDesk
+      name="Miss World"
+      basePath="/miss-world"
+      editionName="Miss World 2021"
+      tabs={TABS}
+      tab={current.id}
+      year={year}
+    />
+  );
 }

@@ -4,12 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { NAV_LINKS } from "@/lib/site";
+import { NAV_LINKS, OTHER_PAGEANT_LINKS } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function OtherPageantMenu({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <div className="flex flex-col border border-hairline bg-paper py-2 shadow-[0_8px_24px_rgba(65,64,66,0.08)]">
+      {OTHER_PAGEANT_LINKS.map((child) => (
+        <Link
+          key={child.href}
+          href={child.href}
+          className="px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] whitespace-nowrap text-ink uppercase hover:text-heading"
+          onClick={onNavigate}
+        >
+          {child.label}
+        </Link>
+      ))}
+    </div>
+  );
 }
 
 function SearchIcon({ className = "" }: { className?: string }) {
@@ -194,8 +211,8 @@ export function Header() {
         </Container>
 
         <div
-          className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
-            compact || open ? "max-h-0 opacity-0" : "max-h-14 opacity-100"
+          className={`transition-[max-height,opacity] duration-300 ease-out ${
+            compact || open ? "max-h-0 overflow-hidden opacity-0" : "overflow-visible opacity-100"
           }`}
         >
           <div className="border-t border-hairline">
@@ -206,40 +223,88 @@ export function Header() {
               >
                 {NAV_LINKS.map((link) => {
                   const active = isActive(pathname, link.href);
+                  const className = `relative py-2 hover:text-heading ${active ? "text-heading" : "text-ink"}`;
+                  if (link.href !== "/other-pageants") {
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        aria-current={active ? "page" : undefined}
+                        className={className}
+                      >
+                        {link.label}
+                        {active ? <span className="absolute inset-x-0 bottom-0 h-px bg-ink" /> : null}
+                      </Link>
+                    );
+                  }
                   return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      aria-current={active ? "page" : undefined}
-                      className={`relative py-2 hover:text-heading ${active ? "text-heading" : "text-ink"
-                        }`}
-                    >
-                      {link.label}
-                      {active ? (
-                        <span className="absolute inset-x-0 bottom-0 h-px bg-ink" />
-                      ) : null}
-                    </Link>
+                    <div key={link.href} className="group relative">
+                      <Link
+                        href={link.href}
+                        aria-current={active ? "page" : undefined}
+                        aria-haspopup="true"
+                        className={className}
+                      >
+                        {link.label}
+                        {active ? <span className="absolute inset-x-0 bottom-0 h-px bg-ink" /> : null}
+                      </Link>
+                      <div className="invisible absolute top-full left-1/2 z-50 -translate-x-1/2 pt-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                        <OtherPageantMenu />
+                      </div>
+                    </div>
                   );
                 })}
               </nav>
 
               <nav
                 aria-label="Primary"
-                className={`h-10 items-center gap-5 overflow-x-auto no-scrollbar font-nav text-[11px] tracking-[1.8px] text-ink uppercase lg:hidden ${open ? "hidden" : "flex"
+                className={`h-10 items-center gap-5 overflow-x-auto font-nav text-[11px] tracking-[1.8px] text-ink uppercase no-scrollbar lg:hidden ${open ? "hidden" : "flex"
                   }`}
               >
                 {NAV_LINKS.map((link) => {
                   const active = isActive(pathname, link.href);
+                  if (link.href !== "/other-pageants") {
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        aria-current={active ? "page" : undefined}
+                        className={`shrink-0 py-2 ${active ? "text-heading" : "text-ink"}`}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  }
                   return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      aria-current={active ? "page" : undefined}
-                      className={`shrink-0 py-2 ${active ? "text-heading" : "text-ink"
+                    <details key={link.href} className="relative shrink-0">
+                      <summary
+                        className={`flex cursor-pointer list-none items-center gap-1 py-2 whitespace-nowrap marker:content-none [&::-webkit-details-marker]:hidden ${
+                          active ? "text-heading" : "text-ink"
                         }`}
-                    >
-                      {link.label}
-                    </Link>
+                      >
+                        Other Pageants
+                        <span aria-hidden className="font-nav text-[9px]">
+                          ▾
+                        </span>
+                      </summary>
+                      <div className="fixed inset-x-4 z-50 border border-hairline bg-paper py-2 shadow-[0_8px_24px_rgba(65,64,66,0.08)]" style={{ top: "var(--header-h-top)" }}>
+                        <Link
+                          href="/other-pageants"
+                          className="block px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] text-ink uppercase hover:text-heading"
+                        >
+                          All pageants
+                        </Link>
+                        {OTHER_PAGEANT_LINKS.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] text-ink uppercase hover:text-heading"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </details>
                   );
                 })}
               </nav>
@@ -291,6 +356,21 @@ export function Header() {
                     >
                       {link.label}
                     </Link>
+                    {link.href === "/other-pageants" ? (
+                      <ul className="mt-3 flex flex-col gap-2">
+                        {OTHER_PAGEANT_LINKS.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              className="font-nav text-[13px] tracking-[1.2px] text-ink uppercase hover:text-heading"
+                              onClick={() => setOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </li>
                 );
               })}

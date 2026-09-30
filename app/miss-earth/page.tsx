@@ -1,14 +1,30 @@
 import type { Metadata } from "next";
-import { PageantHub } from "@/components/pageants/PageantHub";
-import { PAGEANT_HUBS } from "@/lib/content";
+import { PageantDesk } from "@/components/pageants/PageantDesk";
+import { resolveTab } from "@/lib/pageants/desk";
+import { getDesk } from "@/lib/pageants/registry";
 
-const hub = PAGEANT_HUBS["/miss-earth"];
+const desk = getDesk("miss-earth")!;
 
-export const metadata: Metadata = {
-  title: hub.title,
-  description: hub.dek,
+type PageProps = {
+  searchParams: Promise<{ tab?: string; year?: string }>;
 };
 
-export default function MissEarthPage() {
-  return <PageantHub {...hub} />;
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const { tab } = await searchParams;
+  const current = resolveTab(desk.tabs, tab);
+  return { title: current.label, description: current.dek };
+}
+
+export default async function MissEarthPage({ searchParams }: PageProps) {
+  const { tab, year } = await searchParams;
+  return (
+    <PageantDesk
+      name={desk.name}
+      basePath={desk.basePath}
+      editionName={desk.editionName}
+      tabs={desk.tabs}
+      tab={tab}
+      year={year}
+    />
+  );
 }
