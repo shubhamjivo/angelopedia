@@ -12,6 +12,7 @@ import {
 } from "@/lib/pageants/desk";
 import { openingFrames, pictureFor, sampleFrame, type Frame } from "@/lib/pageants/frames";
 import type { PageantPiece, PageantTab } from "@/lib/pageants/types";
+import { HallRoll } from "@/components/pageants/HallRoll";
 import { ReactionBar } from "@/components/pageants/ReactionBar";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
@@ -108,7 +109,7 @@ function PieceAnchor({
 
 function BodyCopy({ paragraphs }: { paragraphs: string[] }) {
   return (
-    <div className="flex max-w-[40rem] flex-col gap-5">
+    <div className="flex w-full flex-col gap-5">
       {paragraphs.map((paragraph) => (
         <p key={paragraph.slice(0, 48)} className="font-body text-[16px] leading-7 text-ink">
           {paragraph}
@@ -182,7 +183,7 @@ function EssayColumn({ pieces, body }: { pieces: PageantPiece[]; body: string[] 
                     <span className="font-heading text-[22px] text-heading desk:text-[26px]">{item.kicker}</span>
                   </div>
                 )}
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <Kicker>{item.kicker}</Kicker>
                   <h3 className="mt-2 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
                     {item.title}
@@ -228,40 +229,6 @@ function NewsColumn({ pieces }: { pieces: PageantPiece[] }) {
                 <p className="mt-2 font-nav text-[11px] tracking-[1.4px] text-muted uppercase">{date.author}</p>
               </div>
             </PieceAnchor>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
-function HallRoll({ pieces, scope }: { pieces: PageantPiece[]; scope: string }) {
-  return (
-    <ul className="flex flex-col">
-      {pieces.map((item, index) => {
-        const frame = pictureFor(item);
-        return (
-          <li key={`${item.kicker}-${item.title}`} className="border-b border-hairline py-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
-              {frame ? (
-                <FrameShot
-                  frame={frame}
-                  className="aspect-[3/2] w-full sm:w-[300px] sm:shrink-0"
-                  sizes="300px"
-                  priority={index === 0}
-                />
-              ) : null}
-              <div className="min-w-0">
-                <p className="font-heading text-[30px] leading-none text-heading desk:text-[36px]">{item.kicker}</p>
-                <h3 className="mt-3 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 font-nav text-[13px] tracking-[1.4px] text-ink uppercase">{item.dek}</p>
-              </div>
-            </div>
-            {item.reactions ? (
-              <ReactionBar id={`${scope}:hall:${item.kicker}:${item.title}`} name={item.title} counts={item.reactions} />
-            ) : null}
           </li>
         );
       })}
@@ -574,16 +541,18 @@ function DeskColumn({
   body,
   opening,
   scope,
+  name,
 }: {
   layout: PageantTab["layout"];
   pieces: PageantPiece[];
   body: string[];
   opening: Frame[];
   scope: string;
+  name: string;
 }) {
   if (layout === "essay") return <EssayColumn pieces={pieces} body={body} />;
   if (layout === "news") return <NewsColumn pieces={pieces} />;
-  if (layout === "roll") return <HallRoll pieces={pieces} scope={scope} />;
+  if (layout === "roll") return <HallRoll pieces={pieces} scope={scope} name={name} />;
   if (layout === "portraits") return <PortraitWall pieces={pieces} scope={scope} />;
   if (layout === "results") return <ResultsBoard pieces={pieces} body={body} />;
   if (layout === "videos") return <VideoGrid pieces={pieces} />;
@@ -706,6 +675,7 @@ export function PageantDesk({
                 body={activeYear && current.layout === "essay" ? [] : current.body}
                 opening={opening}
                 scope={basePath}
+                name={name}
               />
             ) : null}
           </div>
