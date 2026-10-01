@@ -1,3 +1,10 @@
+export type ReactionCounts = {
+  like: number;
+  dislike: number;
+  love: number;
+  flower: number;
+};
+
 export type PageantPiece = {
   kicker: string;
   title: string;
@@ -5,6 +12,7 @@ export type PageantPiece = {
   byline: string;
   image?: string;
   href?: string;
+  reactions?: ReactionCounts;
 };
 
 export type PageantLayout = "cards" | "essay" | "news" | "roll" | "portraits" | "results" | "videos";

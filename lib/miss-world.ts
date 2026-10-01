@@ -1,3 +1,5 @@
+import type { ReactionCounts } from "@/lib/pageants/types";
+
 export type MissWorldPiece = {
   kicker: string;
   title: string;
@@ -5,6 +7,7 @@ export type MissWorldPiece = {
   byline: string;
   image?: string;
   href?: string;
+  reactions?: ReactionCounts;
 };
 
 export type MissWorldLayout = "cards" | "essay" | "news" | "roll" | "portraits" | "results" | "videos";
@@ -344,6 +347,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Jamaica · 23 years · 167 cm",
       byline: "Jamaica · 23 years · 167 cm",
       image: "/images/miss-world/titleholder-2019.jpg",
+      reactions: { like: 151, dislike: 640, love: 57, flower: 25 },
     },
     {
       kicker: "2018",
@@ -351,6 +355,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Mexico · 26 years · 170 cm",
       byline: "Mexico · 26 years · 170 cm",
       image: "/images/miss-world/titleholder-2018.jpg",
+      reactions: { like: 2327, dislike: 6504, love: 118, flower: 77 },
     },
     {
       kicker: "2017",
@@ -358,6 +363,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "India · 20 years · 175 cm",
       byline: "India · 20 years · 175 cm",
       image: "/images/miss-world/titleholder-2017.jpg",
+      reactions: { like: 3160, dislike: 1195, love: 4741, flower: 569 },
     },
     {
       kicker: "2016",
@@ -365,6 +371,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Puerto Rico · 20 years · 176 cm",
       byline: "Puerto Rico · 20 years · 176 cm",
       image: "/images/miss-world/titleholder-2016.jpg",
+      reactions: { like: 1013, dislike: 14153, love: 14, flower: 9 },
     },
     {
       kicker: "2015",
@@ -372,6 +379,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Spain · 23 years · 177 cm",
       byline: "Spain · 23 years · 177 cm",
       image: "/images/miss-world/titleholder-2015.jpg",
+      reactions: { like: 1426, dislike: 9380, love: 149, flower: 59 },
     },
     {
       kicker: "2014",
@@ -379,6 +387,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "South Africa · 22 years · 177 cm",
       byline: "South Africa · 22 years · 177 cm",
       image: "/images/miss-world/titleholder-2014.jpg",
+      reactions: { like: 246, dislike: 10330, love: 90, flower: 59 },
     },
     {
       kicker: "2013",
@@ -386,6 +395,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Philippines · 23 years · 170 cm",
       byline: "Philippines · 23 years · 170 cm",
       image: "/images/miss-world/titleholder-2013.jpg",
+      reactions: { like: 2123, dislike: 8724, love: 1380, flower: 952 },
     },
     {
       kicker: "2012",
@@ -393,6 +403,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "China · 23 years · 178 cm",
       byline: "China · 23 years · 178 cm",
       image: "/images/miss-world/titleholder-2012.jpg",
+      reactions: { like: 11, dislike: 70, love: 3, flower: 2 },
     },
     {
       kicker: "2011",
@@ -400,6 +411,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Venezuela · 22 years · 180 cm",
       byline: "Venezuela · 22 years · 180 cm",
       image: "/images/miss-world/titleholder-2011.jpg",
+      reactions: { like: 5, dislike: 116, love: 3, flower: 3 },
     },
     {
       kicker: "2010",
@@ -407,6 +419,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "United States of America · 18 years · 178 cm",
       byline: "United States of America · 18 years · 178 cm",
       image: "/images/miss-world/titleholder-2010.jpg",
+      reactions: { like: 91, dislike: 28, love: 1, flower: 1 },
     },
     ],
   },
@@ -1112,6 +1125,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Argentina · 23 Years",
       byline: "Argentina · 23 Years",
       image: "/images/miss-world/amira-hidalgo.jpg",
+      reactions: { like: 160, dislike: 22, love: 220, flower: 51 },
     },
     {
       kicker: "Contestant",
@@ -1119,6 +1133,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Belgium · 25 Years",
       byline: "Belgium · 25 Years",
       image: "/images/miss-world/celine-van-ouytsel.jpg",
+      reactions: { like: 131, dislike: 1821, love: 18, flower: 8 },
     },
     {
       kicker: "Contestant",
@@ -1126,6 +1141,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Bolivia · 19 Years",
       byline: "Bolivia · 19 Years",
       image: "/images/miss-world/alondra-mercado-campos.jpg",
+      reactions: { like: 81, dislike: 15, love: 90, flower: 30 },
     },
     {
       kicker: "Contestant",
@@ -1133,6 +1149,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Cambodia · 18 Years",
       byline: "Cambodia · 18 Years",
       image: "/images/miss-world/phum-sophorn.jpg",
+      reactions: { like: 128, dislike: 18, love: 160, flower: 100 },
     },
     {
       kicker: "Contestant",
@@ -1140,6 +1157,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Canada · 21 Years",
       byline: "Canada · 21 Years",
       image: "/images/miss-world/svetlana-mamaeva.jpg",
+      reactions: { like: 117, dislike: 30, love: 4319, flower: 4460 },
     },
     {
       kicker: "Contestant",
@@ -1147,6 +1165,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Cayman Islands · 24 Years",
       byline: "Cayman Islands · 24 Years",
       image: "/images/miss-world/rashana-hydes.jpg",
+      reactions: { like: 79, dislike: 21, love: 150, flower: 110 },
     },
     {
       kicker: "Contestant",
@@ -1154,6 +1173,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Costa Rica · 21 Years",
       byline: "Costa Rica · 21 Years",
       image: "/images/miss-world/andrea-montero.jpg",
+      reactions: { like: 90, dislike: 10, love: 100, flower: 40 },
     },
     {
       kicker: "Contestant",
@@ -1161,6 +1181,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Czech Republic · 22 Years",
       byline: "Czech Republic · 22 Years",
       image: "/images/miss-world/karolina-kopincova.jpg",
+      reactions: { like: 1201, dislike: 18, love: 4740, flower: 4600 },
     },
     {
       kicker: "Contestant",
@@ -1168,6 +1189,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Ecuador · 24 Years",
       byline: "Ecuador · 24 Years",
       image: "/images/miss-world/amar-pacheco.jpg",
+      reactions: { like: 70, dislike: 12, love: 120, flower: 80 },
     },
     {
       kicker: "Contestant",
@@ -1175,6 +1197,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Ghana · 20 Years",
       byline: "Ghana · 20 Years",
       image: "/images/miss-world/monique-agbedekpui.jpg",
+      reactions: { like: 183, dislike: 60, love: 140, flower: 60 },
     },
     {
       kicker: "Contestant",
@@ -1182,6 +1205,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Guadeloupe · 25 Years",
       byline: "Guadeloupe · 25 Years",
       image: "/images/miss-world/prescilla-larose.jpg",
+      reactions: { like: 90, dislike: 7, love: 100, flower: 60 },
     },
     {
       kicker: "Contestant",
@@ -1189,6 +1213,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Guatemala · 22 Years",
       byline: "Guatemala · 22 Years",
       image: "/images/miss-world/hillary-mendoza.jpg",
+      reactions: { like: 63, dislike: 10, love: 48, flower: 35 },
     },
     {
       kicker: "Contestant",
@@ -1196,6 +1221,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "India · 24 Years",
       byline: "India · 24 Years",
       image: "/images/miss-world/manasa-varanasi.jpg",
+      reactions: { like: 103, dislike: 12, love: 260, flower: 230 },
     },
     {
       kicker: "Contestant",
@@ -1203,6 +1229,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Indonesia · 24 Years",
       byline: "Indonesia · 24 Years",
       image: "/images/miss-world/pricilia-yules.jpg",
+      reactions: { like: 2641, dislike: 14, love: 5091, flower: 4930 },
     },
     {
       kicker: "Contestant",
@@ -1210,6 +1237,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Japan · 18 Years",
       byline: "Japan · 18 Years",
       image: "/images/miss-world/maria-kaneya.jpg",
+      reactions: { like: 51, dislike: 11, love: 40, flower: 30 },
     },
     {
       kicker: "Contestant",
@@ -1217,6 +1245,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Laos · 24 Years",
       byline: "Laos · 24 Years",
       image: "/images/miss-world/phonevilai-luanglath.jpg",
+      reactions: { like: 62, dislike: 9, love: 31, flower: 30 },
     },
     {
       kicker: "Contestant",
@@ -1224,6 +1253,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Luxembourg · 25 Years",
       byline: "Luxembourg · 25 Years",
       image: "/images/miss-world/emilie-boland.jpg",
+      reactions: { like: 37, dislike: 23, love: 3322, flower: 370 },
     },
     {
       kicker: "Contestant",
@@ -1231,6 +1261,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Madagascar · 24 Years",
       byline: "Madagascar · 24 Years",
       image: "/images/miss-world/nellie-anjaratiana.jpg",
+      reactions: { like: 651, dislike: 13, love: 30, flower: 20 },
     },
     {
       kicker: "Contestant",
@@ -1238,6 +1269,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Malta · 26 Years",
       byline: "Malta · 26 Years",
       image: "/images/miss-world/naomi-dingli.jpg",
+      reactions: { like: 74, dislike: 40, love: 101, flower: 42 },
     },
     {
       kicker: "Contestant",
@@ -1245,6 +1277,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Mauritius · 25 Years",
       byline: "Mauritius · 25 Years",
       image: "/images/miss-world/angelique-sanson.jpg",
+      reactions: { like: 138, dislike: 45, love: 280, flower: 40 },
     },
     {
       kicker: "Contestant",
@@ -1252,6 +1285,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Montenegro · 28 Years",
       byline: "Montenegro · 28 Years",
       image: "/images/miss-world/natalia-labovic.jpg",
+      reactions: { like: 122, dislike: 29, love: 141, flower: 60 },
     },
     {
       kicker: "Contestant",
@@ -1259,6 +1293,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Nepal · 23 Years",
       byline: "Nepal · 23 Years",
       image: "/images/miss-world/namrata-shrestha.jpg",
+      reactions: { like: 143, dislike: 32, love: 381, flower: 41 },
     },
     {
       kicker: "Contestant",
@@ -1266,6 +1301,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Nicaragua · 21 Years",
       byline: "Nicaragua · 21 Years",
       image: "/images/miss-world/sheynnis-palacios.jpg",
+      reactions: { like: 83, dislike: 10, love: 50, flower: 40 },
     },
     {
       kicker: "Contestant",
@@ -1273,6 +1309,7 @@ export const MISS_WORLD_TABS: MissWorldTab[] = [
       dek: "Panama · 26 Years",
       byline: "Panama · 26 Years",
       image: "/images/miss-world/krysthelle-barretto.jpg",
+      reactions: { like: 71, dislike: 21, love: 51, flower: 40 },
     },
     ],
   },

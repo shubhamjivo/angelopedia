@@ -12,6 +12,7 @@ import {
 } from "@/lib/pageants/desk";
 import { openingFrames, pictureFor, sampleFrame, type Frame } from "@/lib/pageants/frames";
 import type { PageantPiece, PageantTab } from "@/lib/pageants/types";
+import { ReactionBar } from "@/components/pageants/ReactionBar";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
@@ -234,28 +235,33 @@ function NewsColumn({ pieces }: { pieces: PageantPiece[] }) {
   );
 }
 
-function HallRoll({ pieces }: { pieces: PageantPiece[] }) {
+function HallRoll({ pieces, scope }: { pieces: PageantPiece[]; scope: string }) {
   return (
     <ul className="flex flex-col">
       {pieces.map((item, index) => {
         const frame = pictureFor(item);
         return (
-          <li key={`${item.kicker}-${item.title}`} className="flex flex-col gap-4 border-b border-hairline py-6 sm:flex-row sm:items-center sm:gap-8">
-            {frame ? (
-              <FrameShot
-                frame={frame}
-                className="aspect-[3/2] w-full sm:w-[300px] sm:shrink-0"
-                sizes="300px"
-                priority={index === 0}
-              />
-            ) : null}
-            <div className="min-w-0">
-              <p className="font-heading text-[30px] leading-none text-heading desk:text-[36px]">{item.kicker}</p>
-              <h3 className="mt-3 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
-                {item.title}
-              </h3>
-              <p className="mt-3 font-nav text-[13px] tracking-[1.4px] text-ink uppercase">{item.dek}</p>
+          <li key={`${item.kicker}-${item.title}`} className="border-b border-hairline py-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+              {frame ? (
+                <FrameShot
+                  frame={frame}
+                  className="aspect-[3/2] w-full sm:w-[300px] sm:shrink-0"
+                  sizes="300px"
+                  priority={index === 0}
+                />
+              ) : null}
+              <div className="min-w-0">
+                <p className="font-heading text-[30px] leading-none text-heading desk:text-[36px]">{item.kicker}</p>
+                <h3 className="mt-3 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 font-nav text-[13px] tracking-[1.4px] text-ink uppercase">{item.dek}</p>
+              </div>
             </div>
+            {item.reactions ? (
+              <ReactionBar id={`${scope}:hall:${item.kicker}:${item.title}`} name={item.title} counts={item.reactions} />
+            ) : null}
           </li>
         );
       })}
@@ -263,7 +269,7 @@ function HallRoll({ pieces }: { pieces: PageantPiece[] }) {
   );
 }
 
-function PortraitWall({ pieces }: { pieces: PageantPiece[] }) {
+function PortraitWall({ pieces, scope }: { pieces: PageantPiece[]; scope: string }) {
   return (
     <ul className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-4 desk:grid-cols-4">
       {pieces.map((item, index) => {
@@ -291,6 +297,14 @@ function PortraitWall({ pieces }: { pieces: PageantPiece[] }) {
             <PieceAnchor href={item.href} className="group block">
               {card}
             </PieceAnchor>
+            {item.reactions ? (
+              <ReactionBar
+                id={`${scope}:contestant:${item.title}`}
+                name={item.title}
+                counts={item.reactions}
+                layout="grid"
+              />
+            ) : null}
           </li>
         );
       })}
@@ -298,20 +312,93 @@ function PortraitWall({ pieces }: { pieces: PageantPiece[] }) {
   );
 }
 
-function ResultLine({ item }: { item: PageantPiece }) {
-  const frame = pictureFor(item);
-  const region = item.kicker === "Continental Queen" ? item.byline : null;
-  const note = region ? null : resultNote(item);
+const RESULT_FILLERS = [
+  "/images/miss-world/alondra-mercado-campos.jpg",
+  "/images/miss-world/amar-pacheco.jpg",
+  "/images/miss-world/amira-hidalgo.jpg",
+  "/images/miss-world/andrea-montero.jpg",
+  "/images/miss-world/angelique-sanson.jpg",
+  "/images/miss-world/celine-van-ouytsel.jpg",
+  "/images/miss-world/emilie-boland.jpg",
+  "/images/miss-world/hillary-mendoza.jpg",
+  "/images/miss-world/krysthelle-barretto.jpg",
+  "/images/miss-world/maria-kaneya.jpg",
+  "/images/miss-world/monique-agbedekpui.jpg",
+  "/images/miss-world/namrata-shrestha.jpg",
+  "/images/miss-world/naomi-dingli.jpg",
+  "/images/miss-world/natalia-labovic.jpg",
+  "/images/miss-world/nellie-anjaratiana.jpg",
+  "/images/miss-world/phonevilai-luanglath.jpg",
+  "/images/miss-world/phum-sophorn.jpg",
+  "/images/miss-world/prescilla-larose.jpg",
+  "/images/miss-world/rashana-hydes.jpg",
+  "/images/miss-world/sheynnis-palacios.jpg",
+  "/images/miss-world/svetlana-mamaeva.jpg",
+];
+
+function nameHash(value: string) {
+  let hash = 0;
+  for (const char of value) hash = (hash * 33 + char.charCodeAt(0)) >>> 0;
+  return hash;
+}
+
+function resultFrames(pieces: PageantPiece[]) {
+  const frames = new Map<string, Frame>();
+  const used = new Set<string>();
+  for (const item of pieces) {
+    if (frames.has(item.title)) continue;
+    const known = pictureFor(item);
+    if (!known) continue;
+    frames.set(item.title, known);
+    used.add(known.src);
+  }
+  const missing = [...new Set(pieces.map((item) => item.title))].filter((title) => !frames.has(title));
+  missing.sort((a, b) => nameHash(a) - nameHash(b));
+  const pool = [...RESULT_FILLERS].sort((a, b) => nameHash(a) - nameHash(b));
+  let cursor = 0;
+  for (const title of missing) {
+    let src = pool[cursor % pool.length];
+    let hops = 0;
+    while (src && used.has(src) && hops < pool.length) {
+      cursor += 1;
+      src = pool[cursor % pool.length];
+      hops += 1;
+    }
+    if (!src) continue;
+    used.add(src);
+    cursor += 1;
+    frames.set(title, { src, alt: `Sample · ${title}` });
+  }
+  return frames;
+}
+
+function ResultPortrait({
+  item,
+  frame,
+  kicker,
+  note,
+  nameClass,
+  shotClass,
+  sizes,
+  priority = false,
+}: {
+  item: PageantPiece;
+  frame: Frame;
+  kicker?: string;
+  note?: string | null;
+  nameClass: string;
+  shotClass: string;
+  sizes: string;
+  priority?: boolean;
+}) {
   return (
-    <li className="flex items-center gap-4 border-b border-hairline py-3">
-      {frame ? <FrameShot frame={frame} className="h-16 w-14 shrink-0" sizes="56px" /> : null}
-      <div className="min-w-0">
-        {region ? <p className="font-nav text-[11px] tracking-[1.4px] text-muted uppercase">{region}</p> : null}
-        <h3 className="mt-1 font-heading text-[16px] font-semibold leading-[1.3] text-heading">{item.title}</h3>
-        <p className="mt-1 font-body text-[15px] leading-6 text-ink">{item.dek}</p>
-        {note ? <p className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase">{note}</p> : null}
-      </div>
-    </li>
+    <>
+      <FrameShot frame={frame} className={shotClass} sizes={sizes} priority={priority} />
+      {kicker ? <p className="mt-3 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">{kicker}</p> : null}
+      <h3 className={nameClass}>{item.title}</h3>
+      <p className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase">{item.dek}</p>
+      {note ? <p className="mt-2 font-body text-[15px] leading-6 text-ink">{note}</p> : null}
+    </>
   );
 }
 
@@ -321,22 +408,22 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
   const continents = pieces.filter((piece) => piece.kicker === "Continental Queen");
   const top6 = pieces.filter((piece) => piece.kicker === "Top 6");
   const top13 = pieces.filter((piece) => piece.kicker === "Top 13");
-  const winnerFrame = winner ? pictureFor(winner) : undefined;
+  const frames = resultFrames(pieces);
+  const winnerFrame = winner ? frames.get(winner.title) : undefined;
   const winnerNote = winner ? resultNote(winner) : null;
+  const cardName = "mt-2 font-heading text-[16px] font-semibold leading-[1.3] text-heading";
   return (
     <div className="flex flex-col gap-10">
-      {winner ? (
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-8">
-          {winnerFrame ? (
-            <FrameShot
-              frame={winnerFrame}
-              className="aspect-[3/4] w-full sm:w-[280px] sm:shrink-0"
-              sizes="280px"
-              priority
-            />
-          ) : null}
-          <div className="min-w-0">
-            <Kicker>{winner.kicker}</Kicker>
+      {winner && winnerFrame ? (
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-8">
+          <FrameShot
+            frame={winnerFrame}
+            className="aspect-[5/6] w-full sm:w-[300px] sm:shrink-0"
+            sizes="300px"
+            priority
+          />
+          <div className="min-w-0 sm:pt-2">
+            <Kicker tone="accent">{winner.kicker}</Kicker>
             <h3 className="mt-3 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
               {winner.title}
             </h3>
@@ -346,48 +433,93 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
         </div>
       ) : null}
       {runners.length ? (
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {runners.map((item, index) => (
-            <li key={item.kicker} className="border border-hairline p-5">
-              <p className="font-heading text-[30px] leading-none text-heading">{index + 1}</p>
-              <p className="mt-4 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">{item.kicker}</p>
-              <h3 className="mt-2 font-heading text-[22px] font-semibold leading-none text-heading">{item.title}</h3>
-              <p className="mt-2 font-nav text-[13px] tracking-[1.4px] text-ink uppercase">{item.dek}</p>
-              {resultNote(item) ? (
-                <p className="mt-3 font-body text-[15px] leading-6 text-ink">{resultNote(item)}</p>
-              ) : null}
-            </li>
-          ))}
+        <ul className="grid gap-6 sm:grid-cols-2">
+          {runners.map((item) => {
+            const frame = frames.get(item.title);
+            if (!frame) return null;
+            return (
+              <li key={item.kicker}>
+                <ResultPortrait
+                  item={item}
+                  frame={frame}
+                  kicker={item.kicker}
+                  note={resultNote(item)}
+                  nameClass="mt-2 font-heading text-[22px] font-semibold leading-none text-heading"
+                  shotClass="aspect-[5/6] w-full"
+                  sizes="(max-width: 640px) 100vw, 420px"
+                />
+              </li>
+            );
+          })}
         </ul>
       ) : null}
       {body.length ? <BodyCopy paragraphs={body} /> : null}
       {continents.length ? (
         <div>
           <GroupLabel>Continental Queens</GroupLabel>
-          <ul className="mt-4">
-            {continents.map((item) => (
-              <ResultLine key={`${item.byline}-${item.title}`} item={item} />
-            ))}
+          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 desk:grid-cols-5">
+            {continents.map((item) => {
+              const frame = frames.get(item.title);
+              if (!frame) return null;
+              return (
+                <li key={`${item.byline}-${item.title}`}>
+                  <ResultPortrait
+                    item={item}
+                    frame={frame}
+                    kicker={item.byline}
+                    nameClass={cardName}
+                    shotClass="aspect-[5/6] w-full"
+                    sizes="(max-width: 640px) 46vw, 180px"
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}
       {top6.length ? (
         <div>
           <GroupLabel>Top 6</GroupLabel>
-          <ul className="mt-4">
-            {top6.map((item, index) => (
-              <ResultLine key={`${item.title}-${index}`} item={item} />
-            ))}
+          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3">
+            {top6.map((item) => {
+              const frame = frames.get(item.title);
+              if (!frame) return null;
+              return (
+                <li key={`${item.title}-${item.dek}`}>
+                  <ResultPortrait
+                    item={item}
+                    frame={frame}
+                    note={resultNote(item)}
+                    nameClass={cardName}
+                    shotClass="aspect-[5/6] w-full"
+                    sizes="(max-width: 640px) 46vw, 280px"
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}
       {top13.length ? (
         <div>
           <GroupLabel>Also in the Top 13</GroupLabel>
-          <ul className="mt-4">
-            {top13.map((item, index) => (
-              <ResultLine key={`${item.title}-${index}`} item={item} />
-            ))}
+          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 desk:grid-cols-4">
+            {top13.map((item) => {
+              const frame = frames.get(item.title);
+              if (!frame) return null;
+              return (
+                <li key={`${item.title}-${item.dek}`}>
+                  <ResultPortrait
+                    item={item}
+                    frame={frame}
+                    note={resultNote(item)}
+                    nameClass={cardName}
+                    shotClass="aspect-[5/6] w-full"
+                    sizes="(max-width: 640px) 46vw, 220px"
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}
@@ -441,16 +573,18 @@ function DeskColumn({
   pieces,
   body,
   opening,
+  scope,
 }: {
   layout: PageantTab["layout"];
   pieces: PageantPiece[];
   body: string[];
   opening: Frame[];
+  scope: string;
 }) {
   if (layout === "essay") return <EssayColumn pieces={pieces} body={body} />;
   if (layout === "news") return <NewsColumn pieces={pieces} />;
-  if (layout === "roll") return <HallRoll pieces={pieces} />;
-  if (layout === "portraits") return <PortraitWall pieces={pieces} />;
+  if (layout === "roll") return <HallRoll pieces={pieces} scope={scope} />;
+  if (layout === "portraits") return <PortraitWall pieces={pieces} scope={scope} />;
   if (layout === "results") return <ResultsBoard pieces={pieces} body={body} />;
   if (layout === "videos") return <VideoGrid pieces={pieces} />;
   return (
@@ -571,6 +705,7 @@ export function PageantDesk({
                 pieces={visible}
                 body={activeYear && current.layout === "essay" ? [] : current.body}
                 opening={opening}
+                scope={basePath}
               />
             ) : null}
           </div>
