@@ -7,12 +7,15 @@ export type PageantPiece = {
   href?: string;
 };
 
+export type PageantLayout = "cards" | "essay" | "news" | "roll" | "portraits" | "results" | "videos";
+
 export type PageantTab = {
   id: string;
   label: string;
   dek: string;
   body: string[];
   pieces: PageantPiece[];
+  layout?: PageantLayout;
 };
 
 export type PageantDesk = {
