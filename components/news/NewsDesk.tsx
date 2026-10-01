@@ -1,14 +1,19 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { FOLLOW_PAGEANTS, MOST_READ, NEWS_FILTERS } from "@/lib/content";
+import { FOLLOW_PAGEANTS, NEWS_FILTERS } from "@/lib/content";
 import { NEWS_IN_PICTURES, picturePath } from "@/lib/pictures";
-import { SECTION_LABELS, listStories, storyPath, type Story, type StorySection } from "@/lib/stories";
+import {
+  MOST_READ_STORIES,
+  SECTION_LABELS,
+  listStories,
+  newsDeskPath,
+  storyPath,
+  type Story,
+  type StorySection,
+} from "@/lib/stories";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
 import { PageHero } from "@/components/ui/PageHero";
-
-const SECTIONS = new Set<string>(Object.keys(SECTION_LABELS));
 
 type DeskItem = {
   key: string;
@@ -51,38 +56,20 @@ function storyItems(stories: Story[]): DeskItem[] {
   }));
 }
 
-type NewsProps = {
-  searchParams: Promise<{ section?: string; q?: string }>;
-};
-
-function sectionLabel(section?: string) {
-  if (section && SECTIONS.has(section)) return SECTION_LABELS[section as StorySection];
+export function sectionLabel(section?: string) {
+  if (section && section in SECTION_LABELS) return SECTION_LABELS[section as StorySection];
   return "The Latest";
 }
 
-export async function generateMetadata({ searchParams }: NewsProps): Promise<Metadata> {
-  const { section, q } = await searchParams;
-  const title = q?.trim() ? `Search: ${q.trim()}` : sectionLabel(section);
-  return {
-    title,
-    description: "Crowns, contests and the people who carry them — reported daily from 195 nations.",
-  };
-}
-
-export default async function NewsPage({ searchParams }: NewsProps) {
-  const { section, q } = await searchParams;
-  const activeSection = section && SECTIONS.has(section) ? (section as StorySection) : undefined;
-  const query = q?.trim() ?? "";
-  const pictures = activeSection === "in-pictures";
-  const items = pictures
-    ? pictureItems(query)
-    : storyItems(listStories({ section: activeSection, q: query }));
+export function NewsDesk({ section, query }: { section?: StorySection; query: string }) {
+  const pictures = section === "in-pictures";
+  const items = pictures ? pictureItems(query) : storyItems(listStories({ section, q: query }));
   const [featured, ...feed] = items;
-  const heading = query ? `Results for “${query}”` : sectionLabel(activeSection);
+  const heading = query ? `Results for “${query}”` : sectionLabel(section);
   const dek = query
     ? `${items.length} ${items.length === 1 ? "story" : "stories"} match.`
-    : activeSection
-      ? `${sectionLabel(activeSection)} from the Angelopedia desk.`
+    : section
+      ? `${sectionLabel(section)} from the Angelopedia desk.`
       : "Crowns, contests and the people who carry them — reported daily from 195 nations.";
 
   return (
@@ -92,7 +79,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
       <nav className="sticky top-[var(--header-offset,0px)] z-40 border-y border-hairline bg-paper">
         <Container className="flex h-12 items-center justify-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] text-muted uppercase no-scrollbar">
           {NEWS_FILTERS.map((filter) => {
-            const current = filter.href === "/news" ? !activeSection && !query : filter.href === `/news?section=${activeSection}`;
+            const current = filter.href === "/news" ? !section && !query : filter.href === newsDeskPath(section);
             return (
               <Link
                 key={filter.label}
@@ -177,14 +164,20 @@ export default async function NewsPage({ searchParams }: NewsProps) {
                 Most Read
               </p>
               <ol className="mt-4 flex flex-col gap-4">
-                {MOST_READ.map((item, index) => (
-                  <li key={item.href} className="flex gap-3">
-                    <span className="font-heading text-xl text-muted">{index + 1}</span>
-                    <Link
-                      href={item.href}
-                      className="font-heading text-[15px] leading-snug text-heading hover:text-ink"
-                    >
-                      {item.title}
+                {MOST_READ_STORIES.map((story, index) => (
+                  <li key={story.slug}>
+                    <Link href={storyPath(story)} className="group flex w-full items-start gap-3">
+                      <CoverImage
+                        src={story.image}
+                        alt=""
+                        className="size-16 shrink-0"
+                        imageClassName="object-cover"
+                        sizes="64px"
+                      />
+                      <span className="font-heading text-[22px] leading-none text-accent">{index + 1}</span>
+                      <span className="min-w-0 font-heading text-[15px] leading-[1.4] text-heading group-hover:text-ink">
+                        {story.title}
+                      </span>
                     </Link>
                   </li>
                 ))}

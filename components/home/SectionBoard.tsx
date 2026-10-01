@@ -5,6 +5,7 @@ import { CoverImage } from "@/components/ui/CoverImage";
 import {
   SECTION_LABELS,
   listStories,
+  newsDeskPath,
   storyPath,
   type Story,
   type StorySection,
@@ -54,7 +55,7 @@ export function SectionBoard() {
               } ${index >= 2 ? "md:border-t md:border-hairline md:pt-8" : ""}`}
             >
               <ChevronTitle
-                href={`/news?section=${board.section}`}
+                href={newsDeskPath(board.section)}
                 label={SECTION_LABELS[board.section]}
               />
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start lg:gap-5">

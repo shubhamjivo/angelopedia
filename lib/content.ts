@@ -1,5 +1,5 @@
 import { PICTURES_HREF } from "@/lib/pictures";
-import { MOST_READ_STORIES, storyPath } from "@/lib/stories";
+import { MOST_READ_STORIES, newsDeskPath, storyPath } from "@/lib/stories";
 
 export const MOSAIC = [
   {
@@ -325,12 +325,13 @@ export const HOME_GALLERY = [
 ];
 
 export const NEWS_FILTERS = [
-  { href: "/news", label: "All" },
-  { href: "/news?section=opinions", label: "Opinions" },
-  { href: "/news?section=beauty-talks", label: "Beauty Talks" },
-  { href: "/news?section=featured", label: "Featured" },
-  { href: "/news?section=specials", label: "Specials" },
-  { href: "/news?section=in-pictures", label: "News In Pictures" },
+  { href: newsDeskPath(), label: "All" },
+  { href: newsDeskPath("opinions"), label: "Opinions" },
+  { href: newsDeskPath("beauty-talks"), label: "Beauty Talks" },
+  { href: newsDeskPath("featured"), label: "Featured" },
+  { href: newsDeskPath("specials"), label: "Specials" },
+  { href: newsDeskPath("in-pictures"), label: "News In Pictures" },
+  { href: "/videos", label: "Angelopedia Exclusive" },
 ];
 
 export const NEWS_FEATURED = {
@@ -792,8 +793,8 @@ export const FOOTER_COLUMNS = [
     heading: "Editorial",
     links: [
       { href: "/news", label: "The Latest" },
-      { href: "/news?section=opinions", label: "Opinions" },
-      { href: "/news?section=beauty-talks", label: "Beauty Talks" },
+      { href: newsDeskPath("opinions"), label: "Opinions" },
+      { href: newsDeskPath("beauty-talks"), label: "Beauty Talks" },
       { href: "/fashion-and-beauty", label: "Fashion and Beauty" },
       { href: PICTURES_HREF, label: "News In Pictures" },
       { href: "/gallery", label: "Photographs" },

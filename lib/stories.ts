@@ -640,3 +640,16 @@ export const MOST_READ_STORIES = MOST_READ_SLUGS.map((slug) => {
 export function storyPath(story: Story) {
   return `/news/${story.slug}`;
 }
+
+const NEWS_DESK_SECTIONS = ["opinions", "beauty-talks", "featured", "specials", "in-pictures"] as const;
+
+export type NewsDeskSection = (typeof NEWS_DESK_SECTIONS)[number];
+
+export function isNewsDeskSection(value: string): value is NewsDeskSection {
+  return (NEWS_DESK_SECTIONS as readonly string[]).includes(value);
+}
+
+export function newsDeskPath(section?: string) {
+  if (!section || !isNewsDeskSection(section)) return "/news";
+  return `/news/${section}`;
+}

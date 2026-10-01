@@ -154,7 +154,7 @@ export function getPicture(slug: string) {
   return bySlug.get(slug);
 }
 
-export const PICTURES_HREF = "/news?section=in-pictures";
+export const PICTURES_HREF = "/news/in-pictures";
 
 export function picturePath(album: { slug: string }) {
   return `/News-In-Picture/${album.slug}`;

@@ -1,31 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getStory, listStories, relatedStories, storyPath } from "@/lib/stories";
+import { relatedStories, storyPath, type Story } from "@/lib/stories";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
 
-type ArticleProps = {
-  params: Promise<{ slug: string }>;
-};
-
-export function generateStaticParams() {
-  return listStories().map((story) => ({ slug: story.slug }));
-}
-
-export async function generateMetadata({ params }: ArticleProps): Promise<Metadata> {
-  const { slug } = await params;
-  const story = getStory(slug);
-  if (!story) return { title: "Story" };
-  return { title: story.title, description: story.dek };
-}
-
-export default async function ArticlePage({ params }: ArticleProps) {
-  const { slug } = await params;
-  const story = getStory(slug);
-  if (!story) notFound();
-
+export function StoryArticle({ story }: { story: Story }) {
   const next = relatedStories(story);
 
   return (
