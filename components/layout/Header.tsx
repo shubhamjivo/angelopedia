@@ -51,6 +51,7 @@ export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [compact, setCompact] = useState(false);
   const [atTop, setAtTop] = useState(true);
+  const headerRef = useRef<HTMLElement>(null);
   const chromeRef = useRef<HTMLDivElement>(null);
   const lastY = useRef(0);
   const raf = useRef(0);
@@ -98,12 +99,22 @@ export function Header() {
   }, [open]);
 
   useEffect(() => {
+    const header = headerRef.current;
     const chrome = chromeRef.current;
-    if (!chrome) return;
+    if (!header || !chrome) return;
     document.documentElement.style.setProperty(
       "--header-h-top",
       `${Math.round(chrome.getBoundingClientRect().height)}px`,
     );
+    const publish = () => {
+      const zoom = Number(getComputedStyle(document.documentElement).zoom) || 1;
+      const height = header.getBoundingClientRect().height / zoom;
+      document.documentElement.style.setProperty("--header-offset", `${height}px`);
+    };
+    publish();
+    const observer = new ResizeObserver(publish);
+    observer.observe(header);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -114,6 +125,7 @@ export function Header() {
       style={{ height: "var(--header-h-top)" }}
     />
     <header
+      ref={headerRef}
       data-compact={compact ? "true" : "false"}
       data-at-top={atTop ? "true" : "false"}
       className={`fixed inset-x-0 top-0 z-50 bg-paper text-ink ${

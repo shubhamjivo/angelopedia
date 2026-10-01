@@ -89,7 +89,7 @@ export default async function NewsPage({ searchParams }: NewsProps) {
     <main>
       <PageHero kicker="Newsroom" title={heading} dek={dek} />
 
-      <nav className="border-y border-hairline">
+      <nav className="sticky top-[var(--header-offset,0px)] z-40 border-y border-hairline bg-paper">
         <Container className="flex h-12 items-center justify-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] text-muted uppercase no-scrollbar">
           {NEWS_FILTERS.map((filter) => {
             const current = filter.href === "/news" ? !activeSection && !query : filter.href === `/news?section=${activeSection}`;

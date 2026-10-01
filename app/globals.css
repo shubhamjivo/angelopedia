@@ -48,6 +48,7 @@
 
   --header-h: 3.5rem;
   --header-h-top: 10.3125rem;
+  --header-offset: var(--header-h-top);
 }
 
 @theme inline {
