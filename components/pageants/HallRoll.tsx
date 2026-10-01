@@ -46,6 +46,7 @@ export function HallRoll({
       {pieces.map((item, index) => {
         const frame = pictureFor(item);
         const facts = hallFacts(item.dek);
+        const year = /^(19|20)\d{2}$/.test(item.kicker.trim());
         return (
           <li
             key={`${item.kicker}-${item.title}`}
@@ -65,10 +66,16 @@ export function HallRoll({
             )}
             <div className="min-w-0 flex-1 px-5 py-5 sm:px-7 sm:py-6">
               <Kicker tone="accent">{label}</Kicker>
-              <p className="mt-3 font-heading text-[30px] font-semibold leading-none text-heading desk:text-[34px]">
-                {item.kicker}
-              </p>
-              <h3 className="mt-1.5 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
+              {year ? (
+                <p className="mt-3 font-heading text-[30px] font-semibold leading-none text-heading desk:text-[34px]">
+                  {item.kicker}
+                </p>
+              ) : null}
+              <h3
+                className={`font-heading font-semibold leading-none text-heading ${
+                  year ? "mt-1.5 text-[22px] desk:text-[26px]" : "mt-3 text-[30px] desk:text-[34px]"
+                }`}
+              >
                 {item.title}
               </h3>
               <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-nav text-[12px] font-medium tracking-[0.08em] text-ink uppercase">

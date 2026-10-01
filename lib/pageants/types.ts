@@ -15,7 +15,16 @@ export type PageantPiece = {
   reactions?: ReactionCounts;
 };
 
-export type PageantLayout = "cards" | "essay" | "news" | "roll" | "portraits" | "results" | "videos";
+export type PageantLayout =
+  | "cards"
+  | "essay"
+  | "news"
+  | "roll"
+  | "portraits"
+  | "results"
+  | "videos"
+  | "photos"
+  | "brief";
 
 export type PageantTab = {
   id: string;

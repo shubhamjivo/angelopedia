@@ -5,6 +5,8 @@ import {
   deskHref,
   heroTitle,
   isEditionTab,
+  isYearKicker,
+  layoutFor,
   navTabs,
   pageantYears,
   pieceYear,
@@ -143,9 +145,14 @@ function resultNote(item: PageantPiece) {
 }
 
 function EssayColumn({ pieces, body }: { pieces: PageantPiece[]; body: string[] }) {
-  const intro = pieces.find((piece) => !pieceYear(piece));
-  const chapters = pieces.filter((piece) => piece !== intro);
+  const chapters = pieces.filter((piece) => isYearKicker(piece.kicker));
+  const prose = pieces.filter((piece) => !isYearKicker(piece.kicker));
+  const intro = prose[0];
+  const rest = prose.slice(1);
+  const introTitle = intro?.title;
+  const shared = introTitle !== undefined && rest.every((piece) => piece.title === introTitle);
   const introFrame = intro ? pictureFor(intro) : undefined;
+  const paragraphs = intro ? [intro.dek, ...(shared ? rest.map((piece) => piece.dek) : [])] : [];
   return (
     <div className="flex flex-col gap-8">
       {intro ? (
@@ -162,11 +169,30 @@ function EssayColumn({ pieces, body }: { pieces: PageantPiece[]; body: string[] 
             <h3 className="font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
               {intro.title}
             </h3>
-            <p className="mt-4 font-body text-[16px] leading-7 text-ink">{intro.dek}</p>
+            <div className="mt-4 flex flex-col gap-5">
+              {paragraphs.map((paragraph, index) => (
+                <p key={`${index}-${paragraph.slice(0, 32)}`} className="font-body text-[16px] leading-7 text-ink">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       ) : null}
       {body.length ? <BodyCopy paragraphs={body} /> : null}
+      {!shared && rest.length ? (
+        <ul className="flex flex-col">
+          {rest.map((item, index) => (
+            <li key={`${item.kicker}-${item.title}-${index}`} className="border-t border-hairline py-6">
+              <Kicker>{item.kicker}</Kicker>
+              <h3 className="mt-2 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
+                {item.title}
+              </h3>
+              <p className="mt-3 font-body text-[16px] leading-7 text-ink">{item.dek}</p>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       {chapters.length ? (
         <ul className="flex flex-col">
           {chapters.map((item) => {
@@ -209,11 +235,13 @@ function NewsColumn({ pieces }: { pieces: PageantPiece[] }) {
         return (
           <li key={`${item.title}-${index}`} className="border-b border-hairline py-5">
             <PieceAnchor href={item.href} className="group flex gap-4">
-              <div className="w-14 shrink-0">
-                <p className="font-heading text-[28px] leading-none text-heading">{date.day}</p>
-                <p className="mt-2 font-nav text-[11px] tracking-[1.2px] text-muted uppercase">{date.month}</p>
-                <p className="font-nav text-[11px] tracking-[1.2px] text-muted">{date.year}</p>
-              </div>
+              {date.day ? (
+                <div className="w-14 shrink-0">
+                  <p className="font-heading text-[28px] leading-none text-heading">{date.day}</p>
+                  <p className="mt-2 font-nav text-[11px] tracking-[1.2px] text-muted uppercase">{date.month}</p>
+                  <p className="font-nav text-[11px] tracking-[1.2px] text-muted">{date.year}</p>
+                </div>
+              ) : null}
               {frame ? (
                 <FrameShot
                   frame={frame}
@@ -495,6 +523,76 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
   );
 }
 
+function PhotoGrid({ pieces }: { pieces: PageantPiece[] }) {
+  return (
+    <ul className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-4">
+      {pieces.map((item, index) => {
+        const frame = pictureFor(item);
+        return (
+          <li key={`${item.title}-${index}`}>
+            <PieceAnchor href={item.href} className="group block">
+              {frame ? (
+                <FrameShot
+                  frame={frame}
+                  className="aspect-[3/4] w-full"
+                  sizes="(max-width: 640px) 46vw, 280px"
+                  priority={index < 3}
+                />
+              ) : (
+                <div className="aspect-[3/4] w-full bg-ink/10" />
+              )}
+              <h3 className="mt-3 font-heading text-[16px] font-semibold leading-[1.3] text-heading group-hover:text-ink">
+                {item.title}
+              </h3>
+              {item.dek && item.dek !== item.title ? (
+                <p className="mt-2 font-body text-[15px] leading-6 text-ink">{item.dek}</p>
+              ) : null}
+            </PieceAnchor>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function filedPeople(pieces: PageantPiece[]) {
+  return pieces.filter((piece) => {
+    if (isYearKicker(piece.kicker)) return true;
+    if (piece.kicker !== "Hall of Fame") return false;
+    return !/^titleholders of/i.test(piece.dek);
+  });
+}
+
+function BriefColumn({
+  pieces,
+  body,
+  scope,
+  name,
+}: {
+  pieces: PageantPiece[];
+  body: string[];
+  scope: string;
+  name: string;
+}) {
+  const people = filedPeople(pieces);
+  const notes = pieces.filter((piece) => !people.includes(piece));
+  const yearly = people.length > 0 && people.every((piece) => isYearKicker(piece.kicker));
+  return (
+    <div className="flex flex-col gap-10">
+      {notes.length ? <EssayColumn pieces={notes} body={body} /> : null}
+      {!notes.length && body.length ? <BodyCopy paragraphs={body} /> : null}
+      {people.length ? (
+        <div>
+          {yearly ? null : <GroupLabel>Hall of Fame</GroupLabel>}
+          <div className={yearly ? undefined : "mt-6"}>
+            <HallRoll pieces={people} scope={scope} name={name} />
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function VideoGrid({ pieces }: { pieces: PageantPiece[] }) {
   return (
     <ul className="grid gap-x-6 gap-y-8 sm:grid-cols-2">
@@ -557,6 +655,8 @@ function DeskColumn({
   if (layout === "portraits") return <PortraitWall pieces={pieces} scope={scope} />;
   if (layout === "results") return <ResultsBoard pieces={pieces} body={body} />;
   if (layout === "videos") return <VideoGrid pieces={pieces} />;
+  if (layout === "photos") return <PhotoGrid pieces={pieces} />;
+  if (layout === "brief") return <BriefColumn pieces={pieces} body={body} scope={scope} name={name} />;
   return (
     <div className="flex flex-col">
       {pieces.length ? <CardGrid pieces={pieces} opening={opening} /> : null}
@@ -621,6 +721,7 @@ export function PageantDesk({
   year?: string;
 }) {
   const current = resolveTab(tabs, tab);
+  const layout = layoutFor(current);
   const years = pageantYears([current]);
   const activeYear = year && years.includes(year) ? year : undefined;
   const visible = activeYear
@@ -671,9 +772,9 @@ export function PageantDesk({
 
             {visible.length || current.body.length ? (
               <DeskColumn
-                layout={current.layout}
+                layout={layout}
                 pieces={visible}
-                body={activeYear && current.layout === "essay" ? [] : current.body}
+                body={activeYear && layout === "essay" ? [] : current.body}
                 opening={opening}
                 scope={basePath}
                 name={name}

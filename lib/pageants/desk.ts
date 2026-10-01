@@ -1,4 +1,5 @@
-import type { PageantPiece, PageantTab } from "@/lib/pageants/types";
+import { pictureFor } from "@/lib/pageants/frames";
+import type { PageantLayout, PageantPiece, PageantTab } from "@/lib/pageants/types";
 
 export const SHORT_LABEL: Record<string, string> = {
   info: "Info",
@@ -52,6 +53,34 @@ export function deskHref(basePath: string, id: string, year?: string) {
   const path = `${basePath}/${sectionSlug(id)}`;
   if (!year) return path;
   return `${path}?${new URLSearchParams({ year }).toString()}`;
+}
+
+export function isYearKicker(kicker: string) {
+  return /^(19|20)\d{2}$/.test(kicker.trim());
+}
+
+export function layoutFor(tab: PageantTab): PageantLayout {
+  if (tab.layout) return tab.layout;
+  switch (tab.id) {
+    case "info":
+    case "edition":
+      return "essay";
+    case "news":
+    case "edition-news":
+      return "news";
+    case "hall":
+      return tab.pieces.some((piece) => isYearKicker(piece.kicker)) ? "roll" : "essay";
+    case "contestants":
+      return tab.pieces.some((piece) => piece.kicker === "Contestant") ? "portraits" : "essay";
+    case "videos":
+      return "videos";
+    case "photos":
+      return tab.pieces.some((piece) => pictureFor(piece)) ? "photos" : "essay";
+    case "winners":
+      return tab.pieces.some((piece) => piece.kicker === "Winner") ? "results" : "brief";
+    default:
+      return "cards";
+  }
 }
 
 export function pieceYear(piece: Pick<PageantPiece, "kicker" | "title">) {
