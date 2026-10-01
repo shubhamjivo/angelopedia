@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { VIDEOS } from "@/lib/content";
+import { ReelStory } from "@/components/home/ReelFrame";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { Kicker } from "@/components/ui/Kicker";
 import { PageHero } from "@/components/ui/PageHero";
+import { VIDEO_SECTIONS, type VideoItem } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: "Videos",
-  description: "Finals, interviews and masterclasses — the pageant world in motion.",
+  description: "Angelopedia exclusive interviews, other interviews, and final videos.",
 };
+
+function meta(item: VideoItem) {
+  return `${item.kicker} · ${item.date}`;
+}
 
 export default function VideosPage() {
   return (
@@ -16,65 +20,56 @@ export default function VideosPage() {
       <PageHero
         kicker="Watch"
         title="Videos"
-        dek="Finals, interviews and masterclasses — the pageant world in motion."
-        dark
+        dek="Angelopedia exclusive interviews, other interviews, and final videos."
       />
 
-      <section id="featured-video" className="bg-footer pb-10">
-        <Container>
-          <div className="relative">
-            <CoverImage
-              src={VIDEOS.featured.image}
-              alt={VIDEOS.featured.title}
-              className="h-[240px] w-full sm:h-[380px] desk:h-[520px]"
-              sizes="100vw"
-              priority
-            />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#c4a35a]/85 to-transparent" />
-            <span
-              aria-hidden
-              className="absolute left-1/2 top-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/80"
-            >
-              <span className="ml-1 border-y-[10px] border-l-[16px] border-y-transparent border-l-white" />
-            </span>
-          </div>
-          <div className="py-8 text-white">
-            <Kicker tone="accent">{VIDEOS.featured.kicker}</Kicker>
-            <h2 className="mt-3 font-heading text-[20px] font-semibold text-white desk:text-[22px]">
-              {VIDEOS.featured.title}
+      {VIDEO_SECTIONS.map((section) => (
+        <section key={section.id} id={section.id} className="border-t border-hairline py-8 desk:py-10">
+          <Container>
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
+              {section.title}
             </h2>
-            <p className="mt-2 font-nav text-[12px] tracking-[1.4px] text-neutral-300 uppercase">
-              {VIDEOS.featured.meta}
-            </p>
-          </div>
-        </Container>
-      </section>
-
-      <section id="all-videos" className="py-8 desk:py-10">
-        <Container>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {VIDEOS.items.map((item) => (
-              <article key={item.title} className="flex flex-col">
-                <div className="relative">
-                  <CoverImage
-                    src={item.image}
-                    alt={item.title}
-                    className="h-[200px] w-full"
-                    sizes="400px"
-                  />
-                  <span className="absolute right-3 bottom-3 bg-black/70 px-2 py-0.5 font-nav text-[11px] text-white">
-                    {item.duration}
-                  </span>
-                </div>
-                <h3 className="mt-3 font-heading text-[16px] font-medium leading-snug text-heading">
-                  {item.title}
-                </h3>
-                <p className="mt-1 font-nav text-[13px] text-muted">{item.meta}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
+            {section.frame === "reel" ? (
+              <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 desk:grid-cols-3 desk:gap-x-8">
+                {section.items.map((item) => (
+                  <li key={item.href}>
+                    <ReelStory item={item} />
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="mt-10 grid sm:grid-cols-2 sm:gap-x-10">
+                {section.items.map((item) => (
+                  <li key={item.href} className="border-b border-hairline">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex items-start gap-3 py-4"
+                    >
+                      <CoverImage
+                        src={item.image}
+                        alt=""
+                        className="h-[64px] w-[64px] shrink-0"
+                        imageClassName="object-cover"
+                        sizes="64px"
+                      />
+                      <span className="min-w-0">
+                        <span className="block font-nav text-[10px] tracking-[1.4px] text-muted uppercase">
+                          {meta(item)}
+                        </span>
+                        <span className="mt-1 block font-heading text-[15px] leading-[1.4] font-medium text-heading group-hover:text-ink">
+                          {item.title}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Container>
+        </section>
+      ))}
     </main>
   );
 }

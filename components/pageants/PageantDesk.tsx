@@ -12,6 +12,7 @@ import {
 } from "@/lib/pageants/desk";
 import { openingFrames, pictureFor, sampleFrame, type Frame } from "@/lib/pageants/frames";
 import type { PageantPiece, PageantTab } from "@/lib/pageants/types";
+import { CountryLine } from "@/components/pageants/CountryFlag";
 import { HallRoll } from "@/components/pageants/HallRoll";
 import { ReactionBar } from "@/components/pageants/ReactionBar";
 import { Container } from "@/components/ui/Container";
@@ -256,7 +257,7 @@ function PortraitWall({ pieces, scope }: { pieces: PageantPiece[]; scope: string
             <h3 className="mt-3 font-heading text-[16px] font-semibold leading-[1.3] text-heading group-hover:text-ink">
               {item.title}
             </h3>
-            <p className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase">{item.dek}</p>
+            <CountryLine text={item.dek} className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase" />
           </>
         );
         return (
@@ -363,7 +364,7 @@ function ResultPortrait({
       <FrameShot frame={frame} className={shotClass} sizes={sizes} priority={priority} />
       {kicker ? <p className="mt-3 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">{kicker}</p> : null}
       <h3 className={nameClass}>{item.title}</h3>
-      <p className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase">{item.dek}</p>
+      <CountryLine text={item.dek} className="mt-1 font-nav text-[11px] tracking-[1.2px] text-ink uppercase" />
       {note ? <p className="mt-2 font-body text-[15px] leading-6 text-ink">{note}</p> : null}
     </>
   );
@@ -394,7 +395,7 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
             <h3 className="mt-3 font-heading text-[22px] font-semibold leading-none text-heading desk:text-[26px]">
               {winner.title}
             </h3>
-            <p className="mt-3 font-nav text-[13px] tracking-[1.6px] text-ink uppercase">{winner.dek}</p>
+            <CountryLine text={winner.dek} className="mt-3 font-nav text-[13px] tracking-[1.6px] text-ink uppercase" />
             {winnerNote ? <p className="mt-4 max-w-[36rem] font-body text-[16px] leading-7 text-ink">{winnerNote}</p> : null}
           </div>
         </div>
