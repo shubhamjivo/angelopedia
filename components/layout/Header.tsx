@@ -98,11 +98,11 @@ export function Header() {
   }, [open]);
 
   useEffect(() => {
-    const el = chromeRef.current;
-    if (!el) return;
+    const chrome = chromeRef.current;
+    if (!chrome) return;
     document.documentElement.style.setProperty(
       "--header-h-top",
-      `${Math.round(el.getBoundingClientRect().height)}px`,
+      `${Math.round(chrome.getBoundingClientRect().height)}px`,
     );
   }, []);
 
@@ -343,7 +343,9 @@ export function Header() {
         >
           <Container className="py-8 lg:py-10">
             <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-              {NAV_LINKS.map((link) => {
+              {NAV_LINKS.flatMap((link) =>
+                link.href === "/other-pageants" ? [...OTHER_PAGEANT_LINKS] : [link],
+              ).map((link) => {
                 const active = isActive(pathname, link.href);
                 return (
                   <li key={link.href}>
@@ -356,21 +358,6 @@ export function Header() {
                     >
                       {link.label}
                     </Link>
-                    {link.href === "/other-pageants" ? (
-                      <ul className="mt-3 flex flex-col gap-2">
-                        {OTHER_PAGEANT_LINKS.map((child) => (
-                          <li key={child.href}>
-                            <Link
-                              href={child.href}
-                              className="font-nav text-[13px] tracking-[1.2px] text-ink uppercase hover:text-heading"
-                              onClick={() => setOpen(false)}
-                            >
-                              {child.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
                   </li>
                 );
               })}

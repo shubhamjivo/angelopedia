@@ -536,7 +536,7 @@ export function PageantDesk({
       />
 
       <nav aria-label="Quick Links" className="border-y border-hairline">
-        <Container className="flex items-center gap-4 overflow-x-auto [justify-content:safe_center] no-scrollbar">
+        <Container className="flex h-12 items-center justify-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] text-muted uppercase no-scrollbar">
           {links.map((item) => {
             const selected = item.id === current.id;
             return (
@@ -544,10 +544,9 @@ export function PageantDesk({
                 key={item.id}
                 href={deskHref(basePath, item.id, activeYear)}
                 aria-current={selected ? "page" : undefined}
-                className="relative shrink-0 py-4 font-nav text-[13px] font-semibold leading-[13px] tracking-[1.66px] text-ink uppercase"
+                className={selected ? "text-ink" : "hover:text-ink"}
               >
                 {heroTitle(item.id)}
-                {selected ? <span aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-ink" /> : null}
               </Link>
             );
           })}

@@ -23,12 +23,35 @@ const EDITION_TAB_IDS = new Set([
   "edition-news",
 ]);
 
+const SECTION_SLUG: Record<string, string> = {
+  info: "info",
+  news: "news",
+  hall: "hall-of-fame",
+  contestants: "contestants",
+  winners: "winners",
+  photos: "photo-gallery",
+  videos: "video-gallery",
+  edition: "edition",
+  "edition-news": "edition-news",
+};
+
+const ID_BY_SLUG = Object.fromEntries(
+  Object.entries(SECTION_SLUG).map(([id, slug]) => [slug, id]),
+);
+
+export function sectionSlug(id: string) {
+  return SECTION_SLUG[id] ?? id;
+}
+
+export function tabFromSection(value: string) {
+  if (SECTION_SLUG[value]) return value;
+  return ID_BY_SLUG[value] ?? null;
+}
+
 export function deskHref(basePath: string, id: string, year?: string) {
-  const params = new URLSearchParams();
-  if (id !== "info") params.set("tab", id);
-  if (year) params.set("year", year);
-  const query = params.toString();
-  return query ? `${basePath}?${query}` : basePath;
+  const path = `${basePath}/${sectionSlug(id)}`;
+  if (!year) return path;
+  return `${path}?${new URLSearchParams({ year }).toString()}`;
 }
 
 export function pieceYear(piece: Pick<PageantPiece, "kicker" | "title">) {
