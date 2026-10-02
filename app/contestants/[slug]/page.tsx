@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContestantPage() {
   return (
     <main>
-      <section id="profile" className="py-10 desk:py-16">
+      <section id="profile" className="py-8 desk:py-10">
         <Container className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <figure>
             <CoverImage
@@ -52,7 +52,7 @@ export default function ContestantPage() {
         </Container>
       </section>
 
-      <section id="the-story" className="py-8">
+      <section id="the-story" className="py-8 desk:py-10">
         <Container className="max-w-[720px]">
           <Kicker>The Story</Kicker>
           <div className="article-body mt-6">
@@ -63,7 +63,7 @@ export default function ContestantPage() {
         </Container>
       </section>
 
-      <section id="milestones" className="py-12">
+      <section id="milestones" className="py-8 desk:py-10">
         <Container className="max-w-[720px]">
           <Kicker>Milestones</Kicker>
           <ol className="mt-6 flex flex-col">

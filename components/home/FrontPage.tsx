@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MOST_READ, POLLS } from "@/lib/content";
+import { MOST_READ } from "@/lib/content";
 import { NEWS_IN_PICTURES, PICTURES_HREF, picturePath } from "@/lib/pictures";
 import {
   EDITION_LABEL,
@@ -14,7 +14,6 @@ import { Kicker } from "@/components/ui/Kicker";
 
 export function FrontPage() {
   const wire = LATEST_DESK;
-  const poll = POLLS[0];
 
   return (
     <section id="the-latest" className="border-t border-hairline py-8 desk:py-10">
@@ -160,7 +159,7 @@ export function FrontPage() {
                 </Link>
               </div>
               <ul role="list" className="mt-4 grid grid-cols-2 gap-x-3 gap-y-5">
-                {NEWS_IN_PICTURES.map((album, index) => (
+                {NEWS_IN_PICTURES.map((album) => (
                   <li key={album.slug}>
                     <Link href={picturePath(album)} className="group block">
                       <CoverImage

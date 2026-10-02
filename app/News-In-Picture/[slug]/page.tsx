@@ -24,7 +24,7 @@ export default async function PictureAlbumPage({ params }: AlbumProps) {
 
   return (
     <main>
-      <PictureFeed startSlug={slug} />
+      <PictureFeed albums={NEWS_IN_PICTURES} startSlug={slug} />
     </main>
   );
 }

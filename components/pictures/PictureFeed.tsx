@@ -2,19 +2,18 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { NEWS_IN_PICTURES, PICTURES_HREF, picturePath, type PictureAlbum } from "@/lib/pictures";
+import { PICTURES_HREF, picturePath, type PictureAlbum } from "@/lib/pictures";
 import { SITE_NAME } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 
-function feedFrom(startSlug: string): PictureAlbum[] {
-  const start = NEWS_IN_PICTURES.findIndex((album) => album.slug === startSlug);
-  if (start < 0) return NEWS_IN_PICTURES;
-  return [...NEWS_IN_PICTURES.slice(start), ...NEWS_IN_PICTURES.slice(0, start)];
+function feedFrom(albums: PictureAlbum[], startSlug: string): PictureAlbum[] {
+  const start = albums.findIndex((album) => album.slug === startSlug);
+  if (start < 0) return albums;
+  return [...albums.slice(start), ...albums.slice(0, start)];
 }
 
-function Story({ album, first }: { album: PictureAlbum; first: boolean }) {
-  const number = NEWS_IN_PICTURES.findIndex((item) => item.slug === album.slug) + 1;
+function Story({ album, number, first }: { album: PictureAlbum; number: number; first: boolean }) {
   const Title = first ? "h1" : "h2";
 
   return (
@@ -63,8 +62,8 @@ function Story({ album, first }: { album: PictureAlbum; first: boolean }) {
   );
 }
 
-export function PictureFeed({ startSlug }: { startSlug: string }) {
-  const albums = feedFrom(startSlug);
+export function PictureFeed({ albums: all, startSlug }: { albums: PictureAlbum[]; startSlug: string }) {
+  const albums = feedFrom(all, startSlug);
   const [count, setCount] = useState(1);
   const [loading, setLoading] = useState(false);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -138,7 +137,12 @@ export function PictureFeed({ startSlug }: { startSlug: string }) {
   return (
     <>
       {shown.map((album, index) => (
-        <Story key={album.slug} album={album} first={index === 0} />
+        <Story
+          key={album.slug}
+          album={album}
+          number={all.findIndex((item) => item.slug === album.slug) + 1}
+          first={index === 0}
+        />
       ))}
       <div ref={sentinel} className="pb-10 text-center" aria-live="polite">
         {loading ? (

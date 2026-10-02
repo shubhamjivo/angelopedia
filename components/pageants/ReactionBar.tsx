@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import type { ReactionCounts } from "@/lib/pageants/types";
 
 const KINDS = ["like", "dislike", "love", "flower"] as const;
@@ -15,16 +15,48 @@ const LABELS: Record<Kind, string> = {
 
 const STORAGE_KEY = "angelopedia-reactions";
 
-function readStore(): Record<string, Kind[]> {
+// Reactions are kept per browser until the CMS has an endpoint for them.
+// useSyncExternalStore reads localStorage without a hydration mismatch and keeps
+// every bar for the same item in sync (including across tabs).
+const listeners = new Set<() => void>();
+let memory: string | null = null; // fallback when storage is blocked
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  window.addEventListener("storage", listener);
+  return () => {
+    listeners.delete(listener);
+    window.removeEventListener("storage", listener);
+  };
+}
+
+function readRaw() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as Record<string, unknown>;
+    return localStorage.getItem(STORAGE_KEY);
+  } catch {
+    return memory;
+  }
+}
+
+function parseStore(raw: string | null): Record<string, Kind[]> {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as unknown;
     if (!parsed || typeof parsed !== "object") return {};
     return parsed as Record<string, Kind[]>;
   } catch {
     return {};
   }
+}
+
+function writeStore(store: Record<string, Kind[]>) {
+  memory = JSON.stringify(store);
+  try {
+    localStorage.setItem(STORAGE_KEY, memory);
+  } catch {
+    // Storage is blocked; the choice lasts until reload.
+  }
+  listeners.forEach((listener) => listener());
 }
 
 function formatCount(value: number) {
@@ -84,26 +116,16 @@ export function ReactionBar({
   counts: ReactionCounts;
   layout?: "row" | "grid";
 }) {
-  const [chosen, setChosen] = useState<Kind[]>([]);
-
-  useEffect(() => {
-    const stored = readStore()[id];
-    setChosen(Array.isArray(stored) ? stored.filter((kind) => KINDS.includes(kind)) : []);
-  }, [id]);
+  const raw = useSyncExternalStore(subscribe, readRaw, () => null);
+  const stored = parseStore(raw)[id];
+  const chosen = Array.isArray(stored) ? stored.filter((kind) => KINDS.includes(kind)) : [];
 
   function toggle(kind: Kind) {
-    setChosen((current) => {
-      const next = current.includes(kind) ? current.filter((item) => item !== kind) : [...current, kind];
-      try {
-        const store = readStore();
-        if (next.length) store[id] = next;
-        else delete store[id];
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
-      } catch {
-        // The count still updates for this view when storage is blocked.
-      }
-      return next;
-    });
+    const store = parseStore(readRaw());
+    const next = chosen.includes(kind) ? chosen.filter((item) => item !== kind) : [...chosen, kind];
+    if (next.length) store[id] = next;
+    else delete store[id];
+    writeStore(store);
   }
 
   const buttons = KINDS.map((kind, index) => {

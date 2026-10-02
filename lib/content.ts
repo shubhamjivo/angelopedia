@@ -36,72 +36,6 @@ export const MOSAIC = [
   },
 ];
 
-export const LATEST_FEATURED = {
-  kicker: "Crowning",
-  title: "Inês Perestrello Is Crowned Miss Grand Portugal 2024",
-  dek: "The Lisbon-born titleholder closed the night with a walk that filled the hall — and an interview on literacy that drew the evening’s only standing ovation.",
-  byline: "Story by Angelopedia · Photographs by Angelopedia Studio",
-  date: "15 Jul 2024",
-  href: "/news/ines-perestrello-miss-grand-portugal",
-  image: "/images/ines.jpg",
-};
-
-export const LATEST_SIDE = [
-  {
-    title: "Grace Sugawara, Miss Earth Japan Hokkaido, Is a Beauty with a Brain",
-    href: "/news/grace-sugawara",
-    image: "/images/grace.jpg",
-    kicker: "Featured",
-    date: "26 Jul 2024",
-    byline: "Story by Angelopedia",
-  },
-  {
-    title: "Krishnah Gravidez, a Strong Contender of Miss World Philippines 2024",
-    href: "/news/krishnah-gravidez",
-    image: "/images/krishnah.jpg",
-    kicker: "Miss World",
-    date: "17 Jul 2024",
-    byline: "Story by Angelopedia",
-  },
-  {
-    title: "Suzana Renaud’s Journey to First Runner-Up at Miss Universe Thailand",
-    href: "/news/suzana-renaud",
-    image: "/images/suzana.jpg",
-    kicker: "Miss Universe",
-    date: "14 Jul 2024",
-    byline: "Story by Angelopedia",
-  },
-  {
-    title: "Harashta Haifa Zahra Sets New Milestones as Miss Supranational 2024",
-    href: "/news/harashta-zahra",
-    image: "/images/harashta.jpg",
-    kicker: "Miss Supranational",
-    date: "12 Jul 2024",
-    byline: "Story by Angelopedia",
-  },
-];
-
-export const OPINIONS = [
-  {
-    title: "Two Big Four Finals on One Night Is a Gamble",
-    href: "/news/bangkok-unveils-the-impact-arena-stage",
-    image: "/images/instagram/mu-fatima.jpg",
-    byline: "26 Sep 2026 · Irina Silva",
-  },
-  {
-    title: "What Joheirry Mola’s Winning Answer Asked of the Crown",
-    href: "/news/prague-confirmed-host-73rd-miss-world",
-    image: "/images/instagram/mw-joheirry.jpg",
-    byline: "6 Sep 2026 · Camilla Saurez",
-  },
-  {
-    title: "Fátima Bosch, Ten Months into a Disputed Reign",
-    href: "/news/the-year-of-grace",
-    image: "/images/instagram/mu-fatima.jpg",
-    byline: "21 Sep 2026 · Camilla Saurez",
-  },
-];
-
 export type BigFourTitleholder = {
   name: string;
   year: number;
@@ -334,73 +268,6 @@ export const NEWS_FILTERS = [
   { href: "/videos", label: "Angelopedia Exclusive" },
 ];
 
-export const NEWS_FEATURED = {
-  slug: "bangkok-unveils-the-impact-arena-stage",
-  kicker: "Breaking",
-  title: "Bangkok Unveils the Impact Arena Stage for Miss Universe's 75th Anniversary",
-  dek: "A 360-degree runway, a live orchestra and the largest broadcast footprint in pageant history — Thailand intends to make the diamond jubilee unforgettable.",
-  byline: "By Nared Suksawat · 22 September 2026",
-  image: "/images/news-bangkok.jpg",
-  href: "/news/bangkok-unveils-the-impact-arena-stage",
-};
-
-export const NEWS_FEED = [
-  {
-    slug: "prague-confirmed-host-73rd-miss-world",
-    kicker: "Miss World",
-    title: "Prague Confirmed as Host City for the 73rd Miss World Festival",
-    dek: "The Czech capital beat bids from three continents; organisers promise a month-long festival of arts, sport and the Beauty with a Purpose gala.",
-    date: "20 September 2026",
-    image: "/images/news-prague.png",
-    href: "/news/prague-confirmed-host-73rd-miss-world",
-  },
-  {
-    slug: "isabelle-fontaine-crowned-miss-france",
-    kicker: "National",
-    title: "Isabelle Fontaine Crowned Miss France — A Story Written in Lyon",
-    dek: "The 24-year-old architect closed the show with an interview answer on literacy that drew the evening's only standing ovation.",
-    date: "19 September 2026",
-    image: "/images/news-isabelle.png",
-    href: "/news/isabelle-fontaine-crowned-miss-france",
-  },
-  {
-    slug: "from-advocacy-to-artistry",
-    kicker: "Miss Earth",
-    title: "From Advocacy to Artistry: The New Face of Environmental Pageantry",
-    dek: "Miss Earth's 2026 cycle introduces a project-based advocacy score. Delegates will be judged on measurable impact, not on a manifesto alone.",
-    date: "18 September 2026",
-    image: "/images/news-earth.png",
-    href: "/news/from-advocacy-to-artistry",
-  },
-  {
-    slug: "why-the-interview-round-now-decides",
-    kicker: "Opinion",
-    title: "Why the Interview Round Now Decides Every Major Crown",
-    dek: "Gowns dazzle and walks command, but the last five international titles were all won at a table, under a single spotlight, in ninety seconds.",
-    date: "17 September 2026",
-    image: "/images/news-opinion.png",
-    href: "/news/why-the-interview-round-now-decides",
-  },
-  {
-    slug: "quiet-luxury-of-pageant-beauty",
-    kicker: "Beauty Talks",
-    title: "The Quiet Luxury of Pageant Beauty: Less Shimmer, More Skin",
-    dek: "Backstage artists from three continents on the decade's biggest shift — and the five products they will not board a plane without.",
-    date: "16 September 2026",
-    image: "/images/news-beauty.png",
-    href: "/news/quiet-luxury-of-pageant-beauty",
-  },
-  {
-    slug: "forty-two-frames-from-coronation-night",
-    kicker: "In Pictures",
-    title: "Forty-Two Frames from Coronation Night",
-    dek: "Our photographers had the wings, the runway and the confetti drop. This is the night in full, from first look to final walk.",
-    date: "15 September 2026",
-    image: "/images/gallery-1.jpg",
-    href: "/news/forty-two-frames-from-coronation-night",
-  },
-];
-
 export const MOST_READ = MOST_READ_STORIES.map((story) => ({
   title: story.title,
   href: storyPath(story),
@@ -417,121 +284,6 @@ export const FOLLOW_PAGEANTS = [
   { href: "/pageants", label: "Miss USA" },
   { href: "/pageants", label: "Binibining Pilipinas" },
   { href: "/pageants", label: "Miss Venezuela" },
-];
-
-export const ARTICLE = {
-  slug: "the-year-of-grace",
-  kicker: "The Cover · Miss Universe",
-  title: "The Year of Grace: Inside the Road to Miss Universe 2026",
-  dek: "Seventy-five years after the first crown, the world's most-watched pageant reinvents itself for a new generation — and 130 nations are answering the call.",
-  byline: "By Amara Castellanos",
-  credit: "Photography L. Devereux",
-  date: "July 17, 2026",
-  hero: "/images/news-bangkok.jpg",
-  inline: "/images/article-inline.jpg",
-  caption: "Barrasquilla, day twelve — the opening number takes shape",
-  tags: ["Miss Universe", "2026 Season", "Thailand", "Cover Story"],
-  paragraphs: [
-    "Bangkok in July is a city rehearsing. In the vast cool dark of the Impact Arena, carpenters are building a runway shaped like a lotus in first bloom; in a hotel ballroom across the river, a choreographer counts to eight in three languages at once. Everyone here is preparing for November, when one hundred and thirty women will arrive carrying the hopes of one hundred and thirty nations — and the 75th anniversary of the most-watched pageant on earth will begin.",
-    "It is tempting to describe Miss Universe as unchanged — the crown, the sash, the single impossible question. But the institution turning seventy-five this year is quietly unrecognisable. The swimsuit score is gone. The age ceiling is gone. The interview, once a formality, is now the axis on which every campaign turns.",
-  ],
-  quote: {
-    text: "We are not choosing a face. We are choosing a voice that a billion people will hear.",
-    credit: "Anuchit Vorachai · Executive Producer, MU 2026",
-  },
-  more: [
-    "The numbers tell the story of the new era. Applications to national franchises rose forty percent this cycle. The average delegate now arrives with a university degree, a founded organisation, and a media following that would flatter a mid-sized broadcaster. The pageant, in return, has professionalised: contracted stylists, media training, and a year-long calendar that treats the titleholder less like an ornament and more like a head of state on tour.",
-    "What has not changed is the walk. Ten steps, a turn, ten steps more. Every woman who has ever worn the crown describes the same silence — the moment the music drops away and the arena holds its breath. In November, in Bangkok, one hundred and thirty women will chase that silence. One will own it.",
-  ],
-};
-
-export const READ_NEXT = [
-  {
-    kicker: "The Long Read",
-    title: "Beyond the Sash: How a Crown Became a Career",
-    href: "/news/beyond-the-sash",
-    image: "/images/news-isabelle.png",
-  },
-  {
-    kicker: "Profile",
-    title: "Isabelle Fontaine: A Story Written in Lyon",
-    href: "/news/isabelle-fontaine-crowned-miss-france",
-    image: "/images/news-isabelle.png",
-  },
-  {
-    kicker: "Opinion",
-    title: "Why the Interview Round Decides Every Crown",
-    href: "/news/why-the-interview-round-now-decides",
-    image: "/images/adline.jpg",
-  },
-];
-
-export const UNIVERSE_STATS = [
-  { value: "74", label: "Editions held" },
-  { value: "130", label: "Nations competing" },
-  { value: "1B+", label: "Broadcast reach" },
-  { value: "Nov 24", label: "Finale · San Juan" },
-];
-
-export const UNIVERSE_TIMELINE = [
-  {
-    date: "Jul",
-    title: "National Finals — 68 of 130 delegates now crowned, from Paris to Manila",
-    place: "Worldwide",
-  },
-  {
-    date: "Sep",
-    title: "Delegate Reveal — the full class of 2026 announced",
-    place: "Digital",
-  },
-  {
-    date: "Nov 21",
-    title: "National Costume — the first show of Miss Universe week",
-    place: "San Juan",
-  },
-  {
-    date: "Nov 22",
-    title: "Preliminary Competition — closed-door interviews and the runway",
-    place: "San Juan",
-  },
-  {
-    date: "Nov 24",
-    title: "The 75th Miss Universe — live finale and coronation",
-    place: "José Miguel Agrelot Coliseum",
-  },
-];
-
-export const DECADE_OF_QUEENS = [
-  { name: "Fátima Bosch", meta: "Mexico · 2025", image: "/images/instagram/mu-fatima.jpg" },
-  { name: "Victoria Kjær Theilvig", meta: "Denmark · 2024", image: "/images/titleholders/mu-2024-victoria.jpg" },
-  { name: "Sheynnis Palacios", meta: "Nicaragua · 2023", image: "/images/titleholders/mu-2023-sheynnis.jpg" },
-  { name: "R'Bonney Gabriel", meta: "United States · 2022", image: "/images/titleholders/mu-2022-rbonney.jpg" },
-  { name: "Harnaaz Sandhu", meta: "India · 2021", image: "/images/titleholders/mu-2021-harnaaz.jpg" },
-  { name: "Andrea Meza", meta: "Mexico · 2020", image: "/images/queens-5.png" },
-];
-
-export const UNIVERSE_NEWS = [
-  {
-    kicker: "Breaking",
-    title: "San Juan Sets 24 November for the 75th Miss Universe",
-    date: "26 September 2026",
-    href: "/news/bangkok-unveils-the-impact-arena-stage",
-    image: "/images/news-bangkok.jpg",
-  },
-  {
-    kicker: "The Cover",
-    title: "The Year of Grace: Inside the Road to Miss Universe 2026",
-    date: "21 September 2026",
-    href: "/news/the-year-of-grace",
-    image: "/images/queens-1.png",
-  },
-  {
-    kicker: "Dispatches",
-    title: "Kaziah Liz Mejo of Kerala Is Miss Universe India 2026",
-    date: "19 September 2026",
-    href: "/news/isabelle-fontaine-crowned-miss-france",
-    image: "/images/news-isabelle.png",
-  },
 ];
 
 export const CONTESTANT = {
@@ -625,7 +377,14 @@ export const GALLERIES = [
   },
 ];
 
-export const POLLS = [
+export type Poll = {
+  kicker: string;
+  question: string;
+  options: string[];
+  note: string;
+};
+
+export const POLLS: Poll[] = [
   {
     kicker: "Poll of the month · 46,213 votes",
     question: "Which continent takes the Miss Universe 2026 crown?",
@@ -725,57 +484,6 @@ export const PAGEANT_DIRECTORY = [
     ],
   },
 ];
-
-export const PAGEANT_HUBS = {
-  "/miss-universe": {
-    kicker: "Pageant Hub · Est. 1952",
-    title: "Miss Universe",
-    dek: "Confidently beautiful, seventy-five years on.",
-    reigning: {
-      name: "Fátima Bosch",
-      title: "Miss Universe 2025 · Mexico",
-      copy: "Crowned in Bangkok, the Tabasco-born titleholder is Mexico’s fourth Miss Universe — and the woman the 75th anniversary will send on the road.",
-      image: "/images/instagram/mu-fatima.jpg",
-      caption: "Photograph · @fatimaboschfdz on Instagram",
-    },
-  },
-  "/miss-world": {
-    kicker: "Pageant Hub · Est. 1951",
-    title: "Miss World",
-    dek: "Beauty with a purpose, seventy-three years on.",
-    reigning: {
-      name: "Joheirry Mola",
-      title: "Miss World 2026 · Dominican Republic",
-      copy: "Crowned in Nha Trang on 5 September 2026, the Santo Domingo model and teacher is the second Miss World from her country — forty-four years after Mariasela Álvarez.",
-      image: "/images/instagram/mw-joheirry.jpg",
-      caption: "Photograph · @joheirry_mola on Instagram",
-    },
-  },
-  "/miss-earth": {
-    kicker: "Pageant Hub · Est. 2001",
-    title: "Miss Earth",
-    dek: "Beauties for a cause — the environmental pageant.",
-    reigning: {
-      name: "Natálie Puškinová",
-      title: "Miss Earth 2025 · Czech Republic",
-      copy: "Crowned in Manila on the pageant’s silver anniversary, she is the Czech Republic’s second Miss Earth — and the current face of Beauties for a Cause.",
-      image: "/images/instagram/me-natalie-desert.jpg",
-      caption: "Photograph · @nataliepuskin on Instagram",
-    },
-  },
-  "/miss-international": {
-    kicker: "Pageant Hub · Est. 1960",
-    title: "Miss International",
-    dek: "The festival of beauty and goodwill.",
-    reigning: {
-      name: "Catalina Duque",
-      title: "Miss International 2025 · Colombia",
-      copy: "Crowned in Tokyo on 27 November 2025, she is Colombia’s fourth Miss International — the country’s first in twenty-one years.",
-      image: "/images/instagram/mi-catalina.jpg",
-      caption: "Photograph · @missinternationalofficial on Instagram",
-    },
-  },
-} as const;
 
 export const FOOTER_COLUMNS = [
   {

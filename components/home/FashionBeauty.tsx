@@ -1,49 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperInstance } from "swiper";
 import "swiper/css";
+import { CarouselArrow } from "@/components/ui/CarouselArrow";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
-import { FASHION_HREF, GOWNS, gownPath } from "@/lib/fashion";
+import { useCarousel } from "@/components/ui/useCarousel";
+import { FASHION_HREF, gownPath, type Gown } from "@/lib/fashion";
 
-function GownArrow({ direction }: { direction: "prev" | "next" }) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      width="14"
-      height="14"
-      aria-hidden="true"
-      className={direction === "prev" ? "rotate-180" : undefined}
-    >
-      <path
-        d="M6 3.2 11.2 8 6 12.8"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-export function FashionBeauty() {
-  const swiperRef = useRef<SwiperInstance | null>(null);
-  const [index, setIndex] = useState(0);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-  const count = String(GOWNS.length).padStart(2, "0");
-
-  function sync(instance: SwiperInstance) {
-    setIndex(instance.activeIndex);
-    setAtStart(instance.isBeginning);
-    setAtEnd(instance.isEnd);
-  }
+export function FashionBeauty({ gowns }: { gowns: Gown[] }) {
+  const { index, atStart, atEnd, prev, next, swiperProps } = useCarousel();
+  const count = String(gowns.length).padStart(2, "0");
 
   return (
     <section
@@ -71,32 +41,26 @@ export function FashionBeauty() {
               type="button"
               aria-label="Previous gown"
               disabled={atStart}
-              onClick={() => swiperRef.current?.slidePrev()}
+              onClick={prev}
               className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
             >
-              <GownArrow direction="prev" />
+              <CarouselArrow direction="prev" />
             </button>
             <button
               type="button"
               aria-label="Next gown"
               disabled={atEnd}
-              onClick={() => swiperRef.current?.slideNext()}
+              onClick={next}
               className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
             >
-              <GownArrow direction="next" />
+              <CarouselArrow direction="next" />
             </button>
           </div>
         </div>
 
         <Swiper
           modules={[A11y]}
-          onSwiper={(instance) => {
-            swiperRef.current = instance;
-            sync(instance);
-          }}
-          onSlideChange={sync}
-          onResize={sync}
-          onBreakpoint={sync}
+          {...swiperProps}
           slidesPerView={1}
           spaceBetween={16}
           speed={450}
@@ -111,7 +75,7 @@ export function FashionBeauty() {
           }}
           className="fashion-gowns mt-10 w-full"
         >
-          {GOWNS.map((gown) => (
+          {gowns.map((gown) => (
             <SwiperSlide key={gown.slug}>
               <article className="min-w-0">
                 <Link href={gownPath(gown)} className="group block">

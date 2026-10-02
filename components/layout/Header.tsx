@@ -407,7 +407,7 @@ export function Header() {
         >
           <Container className="py-8 lg:py-10">
             <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-              {NAV_LINKS.flatMap((link) =>
+              {NAV_LINKS.flatMap<{ href: string; label: string }>((link) =>
                 link.href === "/other-pageants" ? [...OTHER_PAGEANT_LINKS] : [link],
               ).map((link) => {
                 const active = isActive(pathname, link.href);

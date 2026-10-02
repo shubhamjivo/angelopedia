@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { POLLS } from "@/lib/content";
 import { Kicker } from "@/components/ui/Kicker";
+import type { Poll } from "@/lib/content";
 
-export function Polls() {
+export function Polls({ polls }: { polls: Poll[] }) {
   const [selected, setSelected] = useState<Record<number, string>>({});
 
   return (
     <div className="flex flex-col gap-8">
-      {POLLS.map((poll, index) => (
+      {polls.map((poll, index) => (
         <form
           key={poll.question}
           className="border border-hairline p-6 desk:p-8"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Polls } from "@/components/play/Polls";
-import { LEADERBOARD } from "@/lib/content";
+import { LEADERBOARD, POLLS } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Kicker } from "@/components/ui/Kicker";
 import { PageHero } from "@/components/ui/PageHero";
@@ -21,10 +21,10 @@ export default function PlayPage() {
         dek="Have your say in this month’s polls, and predict the next crown to climb the leaderboard."
       />
 
-      <section id="polls" className="pb-16">
+      <section id="polls" className="py-8 desk:py-10">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start">
           <div className="flex flex-col gap-8">
-            <Polls />
+            <Polls polls={POLLS} />
             <div className="bg-footer p-8 text-white desk:p-10">
               <Kicker tone="accent">The Prediction Game</Kicker>
               <h2 className="mt-3 font-heading text-[22px] font-semibold leading-tight text-white">

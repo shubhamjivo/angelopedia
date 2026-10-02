@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { BigFour } from "@/components/home/BigFour";
 import { FashionBeauty } from "@/components/home/FashionBeauty";
-import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { FrontPage } from "@/components/home/FrontPage";
 import { SectionBoard } from "@/components/home/SectionBoard";
 import { HeroMosaic } from "@/components/home/HeroMosaic";
 import { VoteCta } from "@/components/home/VoteCta";
 import { WatchNow } from "@/components/home/WatchNow";
+import { GOWNS } from "@/lib/fashion";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { EXCLUSIVE_INTERVIEWS, FINAL_VIDEOS, HOME_RAIL_COUNT, OTHER_INTERVIEWS } from "@/lib/videos";
 
 export const metadata: Metadata = {
   title: {
@@ -23,9 +24,13 @@ export default function Home() {
       <FrontPage />
       <SectionBoard />
       <BigFour />
-      <FashionBeauty />
+      <FashionBeauty gowns={GOWNS} />
       {/* <GalleryPreview /> */}
-      <WatchNow />
+      <WatchNow
+        exclusive={EXCLUSIVE_INTERVIEWS}
+        otherInterviews={OTHER_INTERVIEWS.slice(0, HOME_RAIL_COUNT)}
+        finalVideos={FINAL_VIDEOS.slice(0, HOME_RAIL_COUNT)}
+      />
       <VoteCta />
     </main>
   );

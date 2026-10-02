@@ -1,86 +1,22 @@
-"use client";
-
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperInstance } from "swiper";
-import "swiper/css";
-import { ReelStory } from "@/components/home/ReelFrame";
+import { ExclusiveCarousel } from "@/components/home/ExclusiveCarousel";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
-import {
-  EXCLUSIVE_INTERVIEWS,
-  FINAL_VIDEOS,
-  HOME_RAIL_COUNT,
-  OTHER_INTERVIEWS,
-  type VideoItem,
-} from "@/lib/videos";
-
-function InterviewArrow({ direction }: { direction: "prev" | "next" }) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      width="14"
-      height="14"
-      aria-hidden="true"
-      className={direction === "prev" ? "rotate-180" : undefined}
-    >
-      <path
-        d="M6 3.2 11.2 8 6 12.8"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function SlideButton({
-  direction,
-  disabled,
-  onClick,
-}: {
-  direction: "prev" | "next";
-  disabled: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      aria-label={direction === "prev" ? "Previous interview" : "Next interview"}
-      disabled={disabled}
-      onClick={onClick}
-      className={`absolute top-1/2 z-10 grid size-10 -translate-y-1/2 place-items-center rounded-full bg-paper text-heading shadow-md transition-opacity hover:text-accent disabled:pointer-events-none disabled:opacity-0 ${
-        direction === "prev" ? "left-3" : "right-3"
-      }`}
-    >
-      <InterviewArrow direction={direction} />
-    </button>
-  );
-}
+import type { VideoItem } from "@/lib/videos";
 
 function meta(item: VideoItem) {
   return `${item.kicker} · ${item.date}`;
 }
 
-export function WatchNow() {
-  const swiperRef = useRef<SwiperInstance | null>(null);
-  const [index, setIndex] = useState(0);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-  const count = String(EXCLUSIVE_INTERVIEWS.length).padStart(2, "0");
-  const otherInterviews = OTHER_INTERVIEWS.slice(0, HOME_RAIL_COUNT);
-  const finalVideos = FINAL_VIDEOS.slice(0, HOME_RAIL_COUNT);
-
-  function sync(instance: SwiperInstance) {
-    setIndex(instance.activeIndex);
-    setAtStart(instance.isBeginning);
-    setAtEnd(instance.isEnd);
-  }
-
+export function WatchNow({
+  exclusive,
+  otherInterviews,
+  finalVideos,
+}: {
+  exclusive: VideoItem[];
+  otherInterviews: VideoItem[];
+  finalVideos: VideoItem[];
+}) {
   return (
     <section id="angelopedia-exclusive" className="border-t border-hairline bg-paper py-8 text-ink desk:py-10">
       <Container>
@@ -98,47 +34,7 @@ export function WatchNow() {
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 desk:grid-cols-4 desk:items-stretch desk:gap-0">
           <div className="min-w-0 desk:col-span-3 desk:pr-4">
-            <div className="relative">
-              <SlideButton direction="prev" disabled={atStart} onClick={() => swiperRef.current?.slidePrev()} />
-              <SlideButton direction="next" disabled={atEnd} onClick={() => swiperRef.current?.slideNext()} />
-              <p
-                className="absolute top-3 right-3 z-10 bg-ink/80 px-2.5 py-1 font-nav text-[10px] tracking-[1.6px] text-white uppercase"
-                aria-live="polite"
-              >
-                {String(index + 1).padStart(2, "0")} / {count}
-              </p>
-              <Swiper
-                aria-roledescription="carousel"
-                aria-label="Angelopedia exclusive interviews"
-                modules={[A11y]}
-                onSwiper={(instance) => {
-                  swiperRef.current = instance;
-                  sync(instance);
-                }}
-                onSlideChange={sync}
-                onResize={sync}
-                onBreakpoint={sync}
-                slidesPerView={1}
-                spaceBetween={16}
-                speed={450}
-                watchOverflow
-                breakpoints={{
-                  720: { slidesPerView: 2, spaceBetween: 20 },
-                  1440: { slidesPerView: 3, spaceBetween: 24 },
-                }}
-                a11y={{
-                  prevSlideMessage: "Previous interview",
-                  nextSlideMessage: "Next interview",
-                }}
-                className="exclusive-reels w-full"
-              >
-                {EXCLUSIVE_INTERVIEWS.map((item) => (
-                  <SwiperSlide key={item.href}>
-                    <ReelStory item={item} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+            <ExclusiveCarousel items={exclusive} />
           </div>
 
           <aside className="flex flex-col gap-10 border-t border-hairline pt-8 desk:col-span-1 desk:border-t-0 desk:border-l desk:pt-0 desk:pl-4">
