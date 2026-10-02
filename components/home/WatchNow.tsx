@@ -38,6 +38,30 @@ function InterviewArrow({ direction }: { direction: "prev" | "next" }) {
   );
 }
 
+function SlideButton({
+  direction,
+  disabled,
+  onClick,
+}: {
+  direction: "prev" | "next";
+  disabled: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={direction === "prev" ? "Previous interview" : "Next interview"}
+      disabled={disabled}
+      onClick={onClick}
+      className={`absolute top-1/2 z-10 grid size-10 -translate-y-1/2 place-items-center rounded-full bg-paper text-heading shadow-md transition-opacity hover:text-accent disabled:pointer-events-none disabled:opacity-0 ${
+        direction === "prev" ? "left-3" : "right-3"
+      }`}
+    >
+      <InterviewArrow direction={direction} />
+    </button>
+  );
+}
+
 function meta(item: VideoItem) {
   return `${item.kicker} · ${item.date}`;
 }
@@ -74,60 +98,47 @@ export function WatchNow() {
 
         <div className="mt-10 grid grid-cols-1 items-start gap-8 desk:grid-cols-4 desk:items-stretch desk:gap-0">
           <div className="min-w-0 desk:col-span-3 desk:pr-4">
-            <div className="mb-4 flex items-center justify-end gap-3">
-              <p className="font-nav text-[11px] tracking-[1.8px] text-ink uppercase" aria-live="polite">
+            <div className="relative">
+              <SlideButton direction="prev" disabled={atStart} onClick={() => swiperRef.current?.slidePrev()} />
+              <SlideButton direction="next" disabled={atEnd} onClick={() => swiperRef.current?.slideNext()} />
+              <p
+                className="absolute top-3 right-3 z-10 bg-ink/80 px-2.5 py-1 font-nav text-[10px] tracking-[1.6px] text-white uppercase"
+                aria-live="polite"
+              >
                 {String(index + 1).padStart(2, "0")} / {count}
               </p>
-              <button
-                type="button"
-                aria-label="Previous interview"
-                disabled={atStart}
-                onClick={() => swiperRef.current?.slidePrev()}
-                className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
+              <Swiper
+                aria-roledescription="carousel"
+                aria-label="Angelopedia exclusive interviews"
+                modules={[A11y]}
+                onSwiper={(instance) => {
+                  swiperRef.current = instance;
+                  sync(instance);
+                }}
+                onSlideChange={sync}
+                onResize={sync}
+                onBreakpoint={sync}
+                slidesPerView={1}
+                spaceBetween={16}
+                speed={450}
+                watchOverflow
+                breakpoints={{
+                  720: { slidesPerView: 2, spaceBetween: 20 },
+                  1440: { slidesPerView: 3, spaceBetween: 24 },
+                }}
+                a11y={{
+                  prevSlideMessage: "Previous interview",
+                  nextSlideMessage: "Next interview",
+                }}
+                className="exclusive-reels w-full"
               >
-                <InterviewArrow direction="prev" />
-              </button>
-              <button
-                type="button"
-                aria-label="Next interview"
-                disabled={atEnd}
-                onClick={() => swiperRef.current?.slideNext()}
-                className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
-              >
-                <InterviewArrow direction="next" />
-              </button>
+                {EXCLUSIVE_INTERVIEWS.map((item) => (
+                  <SwiperSlide key={item.href}>
+                    <ReelStory item={item} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-            <Swiper
-              aria-roledescription="carousel"
-              aria-label="Angelopedia exclusive interviews"
-              modules={[A11y]}
-              onSwiper={(instance) => {
-                swiperRef.current = instance;
-                sync(instance);
-              }}
-              onSlideChange={sync}
-              onResize={sync}
-              onBreakpoint={sync}
-              slidesPerView={1}
-              spaceBetween={16}
-              speed={450}
-              watchOverflow
-              breakpoints={{
-                720: { slidesPerView: 2, spaceBetween: 20 },
-                1440: { slidesPerView: 3, spaceBetween: 24 },
-              }}
-              a11y={{
-                prevSlideMessage: "Previous interview",
-                nextSlideMessage: "Next interview",
-              }}
-              className="exclusive-reels w-full"
-            >
-              {EXCLUSIVE_INTERVIEWS.map((item) => (
-                <SwiperSlide key={item.href}>
-                  <ReelStory item={item} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
           </div>
 
           <aside className="flex flex-col gap-10 border-t border-hairline pt-8 desk:col-span-1 desk:border-t-0 desk:border-l desk:pt-0 desk:pl-4">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { PageantDesk } from "@/components/pageants/PageantDesk";
-import { deskHref, sectionSlug, tabFromSection } from "@/lib/pageants/desk";
+import { deskHref, resolveDeskSection, tabFromSection } from "@/lib/pageants/sections";
 import type { PageantTab } from "@/lib/pageants/types";
 
 export function deskMetadata(tabs: PageantTab[], section?: string): Metadata {
@@ -30,15 +30,12 @@ export function DeskRoute({
   tab?: string;
   year?: string;
 }) {
-  const requested = section ?? (tab ? tabFromSection(tab) ?? undefined : undefined);
-  const id = requested ? tabFromSection(requested) : "info";
+  const { id, canonical } = resolveDeskSection(section, tab);
   const current = id ? tabs.find((item) => item.id === id) : undefined;
   if (!current) notFound();
 
-  const canonical = sectionSlug(current.id);
-  if (section !== canonical || tab) {
-    permanentRedirect(deskHref(basePath, current.id, year));
-  }
+  // `proxy.ts` normally redirects first; this is the fallback.
+  if (!canonical) permanentRedirect(deskHref(basePath, current.id, year));
 
   return (
     <PageantDesk
