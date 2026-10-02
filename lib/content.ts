@@ -819,3 +819,10 @@ export const SOCIAL_LINKS = [
   { href: "https://www.youtube.com/@angelopedia", label: "YouTube" },
   { href: "https://x.com/angelopedia", label: "X" },
 ];
+
+export const HEADER_SOCIAL = [
+  { href: "https://www.facebook.com/angelo.pedia", label: "Facebook" },
+  { href: "https://twitter.com/AngelopediaNews", label: "Twitter" },
+  { href: "https://www.pinterest.com/angelopedianews", label: "Pinterest" },
+  { href: "https://www.youtube.com/channel/UCnV5wmGZhQMgEcHMjv_Xu8w", label: "YouTube" },
+] as const;

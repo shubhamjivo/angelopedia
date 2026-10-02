@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { HEADER_SOCIAL } from "@/lib/content";
 import { NAV_LINKS, OTHER_PAGEANT_LINKS } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
@@ -26,6 +27,42 @@ function OtherPageantMenu({ onNavigate }: { onNavigate?: () => void }) {
         </Link>
       ))}
     </div>
+  );
+}
+
+function SocialIcon({ label }: { label: (typeof HEADER_SOCIAL)[number]["label"] }) {
+  const common = {
+    viewBox: "0 0 24 24",
+    width: 14,
+    height: 14,
+    fill: "currentColor",
+    "aria-hidden": true as const,
+  };
+  if (label === "Facebook") {
+    return (
+      <svg {...common}>
+        <path d="M14.5 8.5V6.8c0-.5.3-.6.6-.6h1.4V4h-2.2C12 4 11.2 5.7 11.2 6.9V8.5H9.2V11h2v9h2.8v-9h2.1l.2-2.5h-2.3z" />
+      </svg>
+    );
+  }
+  if (label === "Twitter") {
+    return (
+      <svg {...common}>
+        <path d="M14.7 4h2.4l-5.2 6 6.1 8h-4.8l-3.8-4.9L5.6 18H3.2l5.6-6.4L3 4h4.9l3.4 4.5L14.7 4zm-.8 12.6h1.3L6.2 5.3H4.8l9.1 11.3z" />
+      </svg>
+    );
+  }
+  if (label === "Pinterest") {
+    return (
+      <svg {...common}>
+        <path d="M12 3C7.6 3 5 6.1 5 9.6c0 2.1 1.2 4.7 3.1 5.5.3.1.5 0 .6-.3l.2-.9c.1-.2 0-.3-.1-.5-.4-.5-.7-1.3-.7-2.1 0-2.7 2-5.1 5.2-5.1 2.8 0 4.4 1.7 4.4 4 0 3-1.3 5.5-3.3 5.5-1.1 0-1.9-.9-1.6-2l.6-2.4c.2-.8.6-1.6.6-2.2 0-.5-.3-.9-.8-.9-.7 0-1.2.7-1.2 1.6 0 .6.2 1 .2 1l-1.8 7.6c-.2.7-.1 1.6 0 2.2.1-.1 1.6-2.1 2.1-4 .2.4 1.1 1.2 2.3 1.2 3.5 0 5.9-3.2 5.9-7.4C19.7 6.1 16.6 3 12 3z" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <path d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C19.2 5.4 12 5.4 12 5.4s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.2 3.3-6.2 3.3z" />
+    </svg>
   );
 }
 
@@ -138,14 +175,29 @@ export function Header() {
             atTop ? "max-h-8 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="hidden border-b border-hairline sm:block">
-            <Container className="flex h-8 items-center">
+          <div className="border-b border-hairline">
+            <Container className="flex h-8 items-center justify-between">
               <Link
                 href="/#newsletter"
                 className="font-nav text-[11px] tracking-[1.6px] text-muted uppercase hover:text-ink"
               >
                 Newsletter
               </Link>
+              <ul className="flex items-center gap-3">
+                {HEADER_SOCIAL.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={item.label}
+                      className="flex size-5 items-center justify-center text-muted hover:text-ink"
+                    >
+                      <SocialIcon label={item.label} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </Container>
           </div>
         </div>
