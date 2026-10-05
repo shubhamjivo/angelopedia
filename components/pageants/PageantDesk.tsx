@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { FOLLOW_PAGEANTS, MOST_READ } from "@/lib/content";
 import {
+  activeDeskYear,
   deskHref,
   heroTitle,
   isEditionTab,
@@ -746,11 +747,9 @@ export function PageantDesk({
 }) {
   const current = resolveTab(tabs, tab);
   const layout = layoutFor(current);
-  // Info is the evergreen overview: no year filter. Every other section offers
-  // the years filed anywhere on the desk outside Info.
-  const filterable = current.id !== "info";
-  const years = filterable ? pageantYears(tabs.filter((item) => item.id !== "info")) : [];
-  const activeYear = year && years.includes(year) ? year : undefined;
+  // Every section, Info included, offers the years filed anywhere on the desk.
+  const years = pageantYears(tabs);
+  const activeYear = activeDeskYear(tabs, year);
   const visible = activeYear
     ? current.pieces.filter((piece) => pieceYear(piece) === activeYear)
     : current.pieces;
@@ -762,8 +761,8 @@ export function PageantDesk({
   return (
     <main>
       <PageHero
-        kicker={edition ? editionName : name}
-        title={heroTitle(current.id)}
+        kicker={edition && !activeYear ? editionName : name}
+        title={heroTitle(current.id, activeYear)}
         dek={current.dek}
       />
 
@@ -771,17 +770,17 @@ export function PageantDesk({
         aria-label="Quick Links"
         className="sticky top-[var(--header-offset,0px)] z-40 border-y border-hairline bg-paper"
       >
-        <Container className="flex h-12 items-center justify-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] text-muted uppercase no-scrollbar">
+        <Container className="flex h-12 items-center gap-6 overflow-x-auto font-nav text-[11px] tracking-[2px] whitespace-nowrap text-muted uppercase no-scrollbar lg:justify-center">
           {links.map((item) => {
             const selected = item.id === current.id;
             return (
               <Link
                 key={item.id}
-                href={deskHref(basePath, item.id, item.id === "info" ? undefined : activeYear)}
+                href={deskHref(basePath, item.id, activeYear)}
                 aria-current={selected ? "page" : undefined}
                 className={selected ? "text-ink" : "hover:text-ink"}
               >
-                {heroTitle(item.id)}
+                {heroTitle(item.id, activeYear)}
               </Link>
             );
           })}

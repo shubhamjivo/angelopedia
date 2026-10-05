@@ -8,11 +8,11 @@ type PageProps = {
   searchParams: Promise<{ tab?: string; year?: string }>;
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { country, pageant, section } = await params;
   const desk = getNationalDesk(country, pageant);
   if (!desk) return { title: "Country Pageants" };
-  return deskMetadata(desk.tabs, section?.[0]);
+  return deskMetadata(desk.tabs, section?.[0], (await searchParams).year);
 }
 
 export default async function NationalPageantPage({ params, searchParams }: PageProps) {

@@ -13,11 +13,11 @@ export function generateStaticParams() {
   return INTERNATIONAL_PAGEANTS.map((pageant) => ({ slug: pageant.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { slug, section } = await params;
   const desk = getDesk(slug);
   if (!desk) return { title: "Other Pageants" };
-  return deskMetadata(desk.tabs, section?.[0]);
+  return deskMetadata(desk.tabs, section?.[0], (await searchParams).year);
 }
 
 export default async function InternationalPageantPage({ params, searchParams }: PageProps) {

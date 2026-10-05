@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { PageantDesk } from "@/components/pageants/PageantDesk";
+import { activeDeskYear, yearLabel } from "@/lib/pageants/desk";
 import { deskHref, resolveDeskSection, tabFromSection } from "@/lib/pageants/sections";
 import type { PageantTab } from "@/lib/pageants/types";
 
-export function deskMetadata(tabs: PageantTab[], section?: string): Metadata {
+export function deskMetadata(tabs: PageantTab[], section?: string, year?: string): Metadata {
   const id = section ? tabFromSection(section) : null;
   const current = tabs.find((tab) => tab.id === (id ?? tabs[0]?.id));
   return {
-    title: current?.label ?? "Pageant",
+    title: current ? yearLabel(current.label, activeDeskYear(tabs, year)) : "Pageant",
     description: current?.dek,
   };
 }

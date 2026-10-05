@@ -74,6 +74,19 @@ export function pageantYears(tabs: PageantTab[]) {
   return [...years].sort((a, b) => Number(b) - Number(a));
 }
 
+/** The requested year, when it is one the desk actually has filed. */
+export function activeDeskYear(tabs: PageantTab[], year?: string) {
+  return year && pageantYears(tabs).includes(year) ? year : undefined;
+}
+
+/** Puts the filtered year into a tab label: "Miss Universe 2021 : Contestants" → "Miss Universe 2019 : Contestants". */
+export function yearLabel(label: string, year?: string) {
+  if (!year) return label;
+  if (/\b(19|20)\d{2}\b/.test(label)) return label.replace(/\b(19|20)\d{2}\b/, year);
+  const [head, ...rest] = label.split(" : ");
+  return rest.length ? `${head} ${year} : ${rest.join(" : ")}` : `${label} ${year}`;
+}
+
 export function resolveTab(tabs: PageantTab[], tab?: string) {
   if (tab) {
     const match = tabs.find((item) => item.id === tab);
@@ -94,6 +107,7 @@ export function isEditionTab(id: string) {
   return EDITION_TAB_IDS.has(id);
 }
 
-export function heroTitle(id: string) {
-  return SHORT_LABEL[id] ?? "Info";
+export function heroTitle(id: string, year?: string) {
+  const title = SHORT_LABEL[id] ?? "Info";
+  return year ? `${title} ${year}` : title;
 }
