@@ -41,8 +41,7 @@ export default function PollsPage() {
                   <CoverImage
                     src={poll.image}
                     alt={poll.question}
-                    className="aspect-[3/2] w-full"
-                    imageClassName="object-top"
+                    className="aspect-[4/3] w-full"
                     sizes="(max-width: 640px) 100vw, 440px"
                     priority={index < 3}
                   />
