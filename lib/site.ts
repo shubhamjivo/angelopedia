@@ -53,6 +53,12 @@ export const ROUTES = [
       "Miss Grand International, Miss Supranational and Miss Intercontinental — the crowns beyond the Big Four.",
   },
   {
+    href: "/videos",
+    label: "Interviews",
+    title: "Interviews",
+    description: "Angelopedia exclusive interviews, other interviews, and final videos.",
+  },
+  {
     href: "/pageants",
     label: "Pageants A–Z",
     title: "Pageants A–Z",
@@ -65,12 +71,6 @@ export const ROUTES = [
   //   title: "The Gallery",
   //   description:
   //     "Runways, coronations and the quiet moments backstage — through our photographers’ lenses.",
-  // },
-  // {
-  //   href: "/videos",
-  //   label: "Videos",
-  //   title: "Videos",
-  //   description: "Finals, interviews and masterclasses — the pageant world in motion.",
   // },
   {
     href: "/play",
@@ -91,7 +91,29 @@ export const OTHER_PAGEANT_LINKS = [
   { href: "/other-pageants/miss-intercontinental", label: "Miss Intercontinental" },
 ] as const;
 
+export const CONTINENT_LINKS = [
+  { href: "/pageants/asia", label: "Asia" },
+  { href: "/pageants/south-america", label: "South America" },
+  { href: "/pageants/north-america", label: "North America" },
+  { href: "/pageants/europe", label: "Europe" },
+  { href: "/pageants/africa", label: "Africa" },
+  { href: "/pageants/oceania", label: "Oceania" },
+] as const;
+
+export const PLAY_LINKS = [
+  { href: "/Prediction-Game-for-Beauty-Pageants", label: "Prediction Game" },
+  { href: "/Polls", label: "Polls" },
+] as const;
+
+export const NAV_SUBMENUS: Record<
+  string,
+  { all: string; links: readonly { href: string; label: string }[]; also?: readonly string[] }
+> = {
+  "/other-pageants": { all: "All pageants", links: OTHER_PAGEANT_LINKS },
+  "/play": { all: "Play Zone", links: PLAY_LINKS, also: ["/Prediction-Game"] },
+};
+
 export const UTILITY_LINKS = [
-  { href: "/play", label: "Prediction Game" },
+  { href: "/Prediction-Game-for-Beauty-Pageants", label: "Prediction Game" },
   { href: "/#newsletter", label: "Newsletter" },
 ] as const;

@@ -5,18 +5,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HEADER_SOCIAL } from "@/lib/content";
-import { NAV_LINKS, OTHER_PAGEANT_LINKS } from "@/lib/site";
+import { NAV_LINKS, NAV_SUBMENUS } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
-function isActive(pathname: string, href: string) {
+function isActive(pathname: string, href: string): boolean {
   if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(`${href}/`);
+  if (pathname === href || pathname.startsWith(`${href}/`)) return true;
+  // A parent stays lit on submenu pages that live outside its own path.
+  const submenu = NAV_SUBMENUS[href];
+  if (!submenu) return false;
+  const outside = [...submenu.links.map((child) => child.href), ...(submenu.also ?? [])];
+  return outside.some((path) => !path.startsWith(`${href}/`) && (pathname === path || pathname.startsWith(`${path}/`)));
 }
 
-function OtherPageantMenu({ onNavigate }: { onNavigate?: () => void }) {
+function SubMenu({ links, onNavigate }: { links: readonly { href: string; label: string }[]; onNavigate?: () => void }) {
   return (
     <div className="flex flex-col border border-hairline bg-paper py-2 shadow-[0_8px_24px_rgba(65,64,66,0.08)]">
-      {OTHER_PAGEANT_LINKS.map((child) => (
+      {links.map((child) => (
         <Link
           key={child.href}
           href={child.href}
@@ -288,7 +293,8 @@ export function Header() {
                 {NAV_LINKS.map((link) => {
                   const active = isActive(pathname, link.href);
                   const className = `relative py-2 hover:text-heading ${active ? "text-heading" : "text-ink"}`;
-                  if (link.href !== "/other-pageants") {
+                  const submenu = NAV_SUBMENUS[link.href];
+                  if (!submenu) {
                     return (
                       <Link
                         key={link.href}
@@ -313,7 +319,7 @@ export function Header() {
                         {active ? <span className="absolute inset-x-0 bottom-0 h-px bg-ink" /> : null}
                       </Link>
                       <div className="invisible absolute top-full left-1/2 z-50 -translate-x-1/2 pt-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                        <OtherPageantMenu />
+                        <SubMenu links={submenu.links} />
                       </div>
                     </div>
                   );
@@ -327,7 +333,8 @@ export function Header() {
               >
                 {NAV_LINKS.map((link) => {
                   const active = isActive(pathname, link.href);
-                  if (link.href !== "/other-pageants") {
+                  const submenu = NAV_SUBMENUS[link.href];
+                  if (!submenu) {
                     return (
                       <Link
                         key={link.href}
@@ -340,25 +347,25 @@ export function Header() {
                     );
                   }
                   return (
-                    <details key={link.href} className="relative shrink-0">
+                    <details key={link.href} name="nav-submenu" className="relative shrink-0">
                       <summary
                         className={`flex cursor-pointer list-none items-center gap-1 py-2 whitespace-nowrap marker:content-none [&::-webkit-details-marker]:hidden ${
                           active ? "text-heading" : "text-ink"
                         }`}
                       >
-                        Other Pageants
+                        {link.label}
                         <span aria-hidden className="font-nav text-[9px]">
                           ▾
                         </span>
                       </summary>
                       <div className="fixed inset-x-4 z-50 border border-hairline bg-paper py-2 shadow-[0_8px_24px_rgba(65,64,66,0.08)]" style={{ top: "var(--header-h-top)" }}>
                         <Link
-                          href="/other-pageants"
+                          href={link.href}
                           className="block px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] text-ink uppercase hover:text-heading"
                         >
-                          All pageants
+                          {submenu.all}
                         </Link>
-                        {OTHER_PAGEANT_LINKS.map((child) => (
+                        {submenu.links.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
@@ -408,7 +415,7 @@ export function Header() {
           <Container className="py-8 lg:py-10">
             <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
               {NAV_LINKS.flatMap<{ href: string; label: string }>((link) =>
-                link.href === "/other-pageants" ? [...OTHER_PAGEANT_LINKS] : [link],
+                link.href === "/other-pageants" ? [...NAV_SUBMENUS[link.href].links] : [link],
               ).map((link) => {
                 const active = isActive(pathname, link.href);
                 return (

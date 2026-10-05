@@ -1,0 +1,2339 @@
+[
+  {
+    "slug": "asia",
+    "name": "Asia",
+    "countries": [
+      {
+        "name": "Bangladesh",
+        "pageants": [
+          {
+            "name": "Miss Universe Bangladesh",
+            "href": "/Beauty-Pageants-Info/Bangladesh/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bangladesh/Miss-Universe-Bangladesh/1322"
+          }
+        ]
+      },
+      {
+        "name": "Cambodia",
+        "pageants": [
+          {
+            "name": "Miss Cambodia",
+            "href": "/Beauty-Pageants-Info/Cambodia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Cambodia/Miss-Cambodia/1284"
+          },
+          {
+            "name": "Miss Universe Cambodia",
+            "href": "/Beauty-Pageants-Info/Cambodia/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Cambodia/Miss-Universe-Cambodia/1316"
+          },
+          {
+            "name": "Miss World Cambodia",
+            "href": "/Beauty-Pageants-Info/Cambodia/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Cambodia/Miss-World-Cambodia/1323"
+          }
+        ]
+      },
+      {
+        "name": "India",
+        "pageants": [
+          {
+            "name": "Femina Miss India",
+            "href": "/Beauty-Pageants-Info/India/Femina-Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/India/Femina-Miss-India/50"
+          },
+          {
+            "name": "Miss Diva Universe",
+            "href": "/Beauty-Pageants-Info/India/Miss-Diva",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/India/Miss-Diva-Universe/64"
+          },
+          {
+            "name": "Miss Earth India",
+            "href": "/Beauty-Pageants-Info/India/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/India/Miss-Earth-India/235"
+          }
+        ]
+      },
+      {
+        "name": "Indonesia",
+        "pageants": [
+          {
+            "name": "Miss Grand Indonesia",
+            "href": "/Beauty-Pageants-Info/Indonesia/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Indonesia/Miss-Grand-Indonesia/1300"
+          },
+          {
+            "name": "Miss Indonesia",
+            "href": "/Beauty-Pageants-Info/Indonesia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Indonesia/Miss-Indonesia/144"
+          },
+          {
+            "name": "Puteri Indonesia",
+            "href": "/Beauty-Pageants-Info/Indonesia/Puteri",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Indonesia/Puteri-Indonesia/141"
+          }
+        ]
+      },
+      {
+        "name": "Israel",
+        "pageants": [
+          {
+            "name": "Miss Israel",
+            "href": "/Beauty-Pageants-Info/Israel/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Israel/Miss-Israel/165"
+          }
+        ]
+      },
+      {
+        "name": "Japan",
+        "pageants": [
+          {
+            "name": "Miss Earth Japan",
+            "href": "/Beauty-Pageants-Info/Japan/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Japan/Miss-Earth-Japan/1301"
+          },
+          {
+            "name": "Miss Grand Japan",
+            "href": "/Beauty-Pageants-Info/Japan/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Japan/Miss-Grand-Japan/1285"
+          },
+          {
+            "name": "Miss Supranational Japan",
+            "href": "/Beauty-Pageants-Info/Japan/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Japan/Miss-Supranational-Japan/244"
+          },
+          {
+            "name": "Miss Universe Japan",
+            "href": "/Beauty-Pageants-Info/Japan/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Japan/Miss-Universe-Japan/157"
+          },
+          {
+            "name": "Miss World Japan",
+            "href": "/Beauty-Pageants-Info/Japan/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Japan/Miss-World-Japan/1271"
+          }
+        ]
+      },
+      {
+        "name": "Laos",
+        "pageants": [
+          {
+            "name": "Miss Grand Laos",
+            "href": "/Beauty-Pageants-Info/Laos/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Laos/Miss-Grand-Laos/1265"
+          },
+          {
+            "name": "Miss Universe Laos",
+            "href": "/Beauty-Pageants-Info/Laos/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Laos/Miss-Universe-Laos/1273"
+          }
+        ]
+      },
+      {
+        "name": "Lebanon",
+        "pageants": [
+          {
+            "name": "Miss Lebanon",
+            "href": "/Beauty-Pageants-Info/Lebanon/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Lebanon/Miss-Lebanon/97"
+          }
+        ]
+      },
+      {
+        "name": "Malaysia",
+        "pageants": [
+          {
+            "name": "Miss Malaysia Earth",
+            "href": "/Beauty-Pageants-Info/Malaysia/Miss-Malaysia-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malaysia/Miss-Malaysia-Earth/40"
+          },
+          {
+            "name": "Miss Malaysia World",
+            "href": "/Beauty-Pageants-Info/Malaysia/Miss-Malaysia-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malaysia/Miss-Malaysia-World/60"
+          },
+          {
+            "name": "Miss Universe Malaysia",
+            "href": "/Beauty-Pageants-Info/Malaysia/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malaysia/Miss-Universe-Malaysia/143"
+          }
+        ]
+      },
+      {
+        "name": "Myanmar",
+        "pageants": [
+          {
+            "name": "Miss Earth Myanmar",
+            "href": "/Beauty-Pageants-Info/Myanmar/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Myanmar/Miss-Earth-Myanmar/1262"
+          },
+          {
+            "name": "Miss Golden Land Myanmar",
+            "href": "/Beauty-Pageants-Info/Myanmar/Miss-Golden-Land",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Myanmar/Miss-Golden-Land-Myanmar/166"
+          },
+          {
+            "name": "Miss Myanmar International",
+            "href": "/Beauty-Pageants-Info/Myanmar/Miss-Myanmar-International",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Myanmar/Miss-Myanmar-International/53"
+          },
+          {
+            "name": "Miss Myanmar World",
+            "href": "/Beauty-Pageants-Info/Myanmar/Miss-Myanmar-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Myanmar/Miss-Myanmar-World/71"
+          },
+          {
+            "name": "Miss Universe Myanmar",
+            "href": "/Beauty-Pageants-Info/Myanmar/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Myanmar/Miss-Universe-Myanmar/31"
+          }
+        ]
+      },
+      {
+        "name": "Nepal",
+        "pageants": [
+          {
+            "name": "Miss Grand Nepal",
+            "href": "/Beauty-Pageants-Info/Nepal/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Nepal/Miss-Grand-Nepal/1305"
+          },
+          {
+            "name": "Miss Nepal",
+            "href": "/Beauty-Pageants-Info/Nepal/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Nepal/Miss-Nepal/156"
+          }
+        ]
+      },
+      {
+        "name": "Philippines",
+        "pageants": [
+          {
+            "name": "Binibining Pilipinas",
+            "href": "/Beauty-Pageants-Info/Philippines/Binibining",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Binibining-Pilipinas/138"
+          },
+          {
+            "name": "Miss Bikini Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Bikini",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Bikini-Philippines/180"
+          },
+          {
+            "name": "Miss Global Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Global",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Global-Philippines/1266"
+          },
+          {
+            "name": "Miss Grand Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Grand-Philippines/47"
+          },
+          {
+            "name": "Miss Philippines Earth",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Philippines",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Philippines-Earth/7"
+          },
+          {
+            "name": "Miss Scuba Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Scuba",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Scuba-Philippines/1292"
+          },
+          {
+            "name": "Miss Tourism Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-Tourism",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-Tourism-Philippines/1268"
+          },
+          {
+            "name": "Miss World Philippines",
+            "href": "/Beauty-Pageants-Info/Philippines/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Miss-World-Philippines/65"
+          },
+          {
+            "name": "Mutya ng Pilipinas",
+            "href": "/Beauty-Pageants-Info/Philippines/Mutya-ng",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Philippines/Mutya-ng-Pilipinas/208"
+          }
+        ]
+      },
+      {
+        "name": "Singapore",
+        "pageants": [
+          {
+            "name": "Miss Singapore World",
+            "href": "/Beauty-Pageants-Info/Singapore/Miss-Singapore",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Singapore/Miss-Singapore-World/75"
+          },
+          {
+            "name": "Miss Universe Singapore",
+            "href": "/Beauty-Pageants-Info/Singapore/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Singapore/Miss-Universe-Singapore/49"
+          }
+        ]
+      },
+      {
+        "name": "South Korea",
+        "pageants": [
+          {
+            "name": "Miss Korea",
+            "href": "/Beauty-Pageants-Info/South-Korea/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/South-Korea/Miss-Korea/33"
+          }
+        ]
+      },
+      {
+        "name": "Sri Lanka",
+        "pageants": [
+          {
+            "name": "Miss Earth Sri Lanka",
+            "href": "/Beauty-Pageants-Info/Sri-Lanka/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Sri-Lanka/Miss-Earth-Sri-Lanka/43"
+          },
+          {
+            "name": "Miss Universe Sri Lanka",
+            "href": "/Beauty-Pageants-Info/Sri-Lanka/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Sri-Lanka/Miss-Universe-Sri-Lanka/55"
+          }
+        ]
+      },
+      {
+        "name": "Thailand",
+        "pageants": [
+          {
+            "name": "Miss Grand Thailand",
+            "href": "/Beauty-Pageants-Info/Thailand/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Thailand/Miss-Grand-Thailand/172"
+          },
+          {
+            "name": "Miss International Thailand",
+            "href": "/Beauty-Pageants-Info/Thailand/Miss-International",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Thailand/Miss-International-Thailand/220"
+          },
+          {
+            "name": "Miss Supranational Thailand",
+            "href": "/Beauty-Pageants-Info/Thailand/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Thailand/Miss-Supranational-Thailand/1282"
+          },
+          {
+            "name": "Miss Thailand World",
+            "href": "/Beauty-Pageants-Info/Thailand/Miss-Thailand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Thailand/Miss-Thailand-World/21"
+          },
+          {
+            "name": "Miss Universe Thailand",
+            "href": "/Beauty-Pageants-Info/Thailand/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Thailand/Miss-Universe-Thailand/9"
+          }
+        ]
+      },
+      {
+        "name": "Turkey",
+        "pageants": [
+          {
+            "name": "Miss Turkey",
+            "href": "/Beauty-Pageants-Info/Turkey/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Turkey/Miss-Turkey/187"
+          }
+        ]
+      },
+      {
+        "name": "Vietnam",
+        "pageants": [
+          {
+            "name": "Miss Supranational Vietnam",
+            "href": "/Beauty-Pageants-Info/Vietnam/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Vietnam/Miss-Supranational-Vietnam/1310"
+          },
+          {
+            "name": "Miss Universe Vietnam",
+            "href": "/Beauty-Pageants-Info/Vietnam/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Vietnam/Miss-Universe-Vietnam/229"
+          },
+          {
+            "name": "Miss World Vietnam",
+            "href": "/Beauty-Pageants-Info/Vietnam/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Vietnam/Miss-World-Vietnam/136"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss World Philippines 2021",
+        "country": "Philippines",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Philippines/Miss-World-Philippines-2021/21067"
+      },
+      {
+        "title": "Binibining Pilipinas 2021",
+        "country": "Philippines",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Philippines/Binibining-Pilipinas-2021/21083"
+      },
+      {
+        "title": "Miss Earth Myanmar 2021",
+        "country": "Myanmar",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Myanmar/Miss-Earth-Myanmar-2021/21060"
+      },
+      {
+        "title": "Miss Universe Bangladesh 2020",
+        "country": "Bangladesh",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Bangladesh/Miss-Universe-Bangladesh-2020/21061"
+      },
+      {
+        "title": "Miss Universe Malaysia 2020",
+        "country": "Malaysia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Malaysia/Miss-Universe-Malaysia-2020/21055"
+      },
+      {
+        "title": "Miss Universe Vietnam 2019",
+        "country": "Vietnam",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Vietnam/Miss-Universe-Vietnam-2019/21047"
+      },
+      {
+        "title": "Miss World Cambodia 2019",
+        "country": "Cambodia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Cambodia/Miss-World-Cambodia-2019/21045"
+      },
+      {
+        "title": "Miss Universe Bangladesh 2019",
+        "country": "Bangladesh",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Bangladesh/Miss-Universe-Bangladesh-2019/21044"
+      },
+      {
+        "title": "Miss Singapore World 2019",
+        "country": "Singapore",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Singapore/Miss-Singapore-World-2019/21040"
+      },
+      {
+        "title": "Miss Universe Singapore 2019",
+        "country": "Singapore",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Singapore/Miss-Universe-Singapore-2019/21036"
+      },
+      {
+        "title": "Miss World Philippines 2019",
+        "country": "Philippines",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Philippines/Miss-World-Philippines-2019/21068"
+      },
+      {
+        "title": "Miss Universe Laos 2019",
+        "country": "Laos",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Laos/Miss-Universe-Laos-2019/21027"
+      }
+    ],
+    "news": [
+      {
+        "title": "Meet Beauty with Brain: Grace Sugawara Miss Earth Japan Hokkaido 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-Japan-Meet-Beauty-with-Brain-Grace-Sugawara-Miss-Earth-Japan-Hokkaido-2024/57764"
+      },
+      {
+        "title": "Host Countries Announced for Miss Grand International 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Grand-International-2024-Host-Countries-Announced-Cambodia-Thailand-Finale-Date/57763"
+      },
+      {
+        "title": "Miss Universe Nepal 2023 Jane Dipika Garrett Drops a Motivational Video!",
+        "href": "https://www.angelopedia.com/news/Meet-Gorgeous-Jane-Dipika-Garrett-Miss-Universe-Nepal-2023-Motivation-Video-Miss-Universe-Nepal-2024/57762"
+      },
+      {
+        "title": "Anudi Gunasekara crowned Miss World Sri Lanka 2024",
+        "href": "https://www.angelopedia.com/news/Anudi-Gunasekara-Crowned-Miss-World-Sri-Lanka-2024-Winner-Delegate-Miss-World-2024/57759"
+      },
+      {
+        "title": "Miss International 2023 Andrea Rubio to enter Miss Nepal 2024 finale",
+        "href": "https://www.angelopedia.com/news/Miss-International-2023-Andrea-Rubio-Coming-Nepal-Attend-Miss-Nepal-2024-Grand-Finale/57757"
+      },
+      {
+        "title": "Meet Divyanshi Batra Femina Miss India Uttar Pradesh 2024 for Miss India 2024",
+        "href": "https://www.angelopedia.com/news/Divyanshi-Batra-Crowned-Femina-Miss-India-Uttar-Pradesh-2024-Winner-Miss-India-Uttar-Pradesh-2024/57754"
+      },
+      {
+        "title": "Xuhe Hou crowned Miss Universe China 2025",
+        "href": "https://www.angelopedia.com/news/Winner-Miss-Universe-China-Xuhe-Hou-crowned-Miss-Universe-China-2025/57753"
+      },
+      {
+        "title": "Vanessa Tiara Tay crowned Miss International Singapore 2024",
+        "href": "https://www.angelopedia.com/news/Miss-International-Singapore-2024-Crowned-Vanessa-Tiara-Tay-Winner-Representative-Delegates-Miss-International-2024/57750"
+      },
+      {
+        "title": "Nada Koussa crowned Miss Lebanon 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Lebanon-2024-Crowned-Nada-Koussa-Winner-Miss-Universe-Lebanon-2024-Finale-Results/57747"
+      },
+      {
+        "title": "Jesseca Long crowned Miss Planet Singapore 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Planet-Singapore-Winner-Jesseca-Long-Crowned-Miss-Planet-Singapore-2024/57745"
+      },
+      {
+        "title": "Our Top 5 Favourites of Miss Earth Japan 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-Japan-Our-Top-5-Favourites-for-Miss-Earth-Japan-2024-Opinion/57737"
+      },
+      {
+        "title": "Miss Earth Japan 2024 Meet the Delegates",
+        "href": "https://www.angelopedia.com/news/Meet-The-Finalists-for-Miss-Earth-Japan-2024-Delegates-Contestants-Date-Time-Venue/57734"
+      }
+    ]
+  },
+  {
+    "slug": "south-america",
+    "name": "South America",
+    "countries": [
+      {
+        "name": "Argentina",
+        "pageants": [
+          {
+            "name": "Miss Mundo Argentina",
+            "href": "/Beauty-Pageants-Info/Argentina/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Argentina/Miss-Mundo-Argentina/193"
+          }
+        ]
+      },
+      {
+        "name": "Bolivia",
+        "pageants": [
+          {
+            "name": "Miss Bolivia",
+            "href": "/Beauty-Pageants-Info/Bolivia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bolivia/Miss-Bolivia/1269"
+          }
+        ]
+      },
+      {
+        "name": "Brazil",
+        "pageants": [
+          {
+            "name": "Miss Brazil",
+            "href": "/Beauty-Pageants-Info/Brazil/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Brazil/Miss-Brazil/90"
+          },
+          {
+            "name": "Miss Earth Brazil",
+            "href": "/Beauty-Pageants-Info/Brazil/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Brazil/Miss-Earth-Brazil/1283"
+          },
+          {
+            "name": "Miss Grand Brasil",
+            "href": "/Beauty-Pageants-Info/Brazil/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Brazil/Miss-Grand-Brasil/1315"
+          },
+          {
+            "name": "Miss Mundo Brasil",
+            "href": "/Beauty-Pageants-Info/Brazil/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Brazil/Miss-Mundo-Brasil/45"
+          }
+        ]
+      },
+      {
+        "name": "Chile",
+        "pageants": [
+          {
+            "name": "Miss Earth Chile",
+            "href": "/Beauty-Pageants-Info/Chile/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Chile/Miss-Earth-Chile/228"
+          },
+          {
+            "name": "Miss Mundo Chile",
+            "href": "/Beauty-Pageants-Info/Chile/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Chile/Miss-Mundo-Chile/1263"
+          },
+          {
+            "name": "Miss Supranational Chile",
+            "href": "/Beauty-Pageants-Info/Chile/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Chile/Miss-Supranational-Chile/184"
+          },
+          {
+            "name": "Miss Universo Chile",
+            "href": "/Beauty-Pageants-Info/Chile/Miss-Universo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Chile/Miss-Universo-Chile/128"
+          }
+        ]
+      },
+      {
+        "name": "Colombia",
+        "pageants": [
+          {
+            "name": "Miss Colombia",
+            "href": "/Beauty-Pageants-Info/Colombia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Colombia/Miss-Colombia/124"
+          },
+          {
+            "name": "Miss Earth Colombia",
+            "href": "/Beauty-Pageants-Info/Colombia/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Colombia/Miss-Earth-Colombia/62"
+          },
+          {
+            "name": "Miss Mundo Colombia",
+            "href": "/Beauty-Pageants-Info/Colombia/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Colombia/Miss-Mundo-Colombia/219"
+          }
+        ]
+      },
+      {
+        "name": "Ecuador",
+        "pageants": [
+          {
+            "name": "Miss Earth Ecuador",
+            "href": "/Beauty-Pageants-Info/Ecuador/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ecuador/Miss-Earth-Ecuador/52"
+          },
+          {
+            "name": "Miss Ecuador",
+            "href": "/Beauty-Pageants-Info/Ecuador/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ecuador/Miss-Ecuador/149"
+          },
+          {
+            "name": "Miss World Ecuador",
+            "href": "/Beauty-Pageants-Info/Ecuador/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ecuador/Miss-World-Ecuador/94"
+          }
+        ]
+      },
+      {
+        "name": "Guyana",
+        "pageants": [
+          {
+            "name": "Miss Universe Guyana",
+            "href": "/Beauty-Pageants-Info/Guyana/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Guyana/Miss-Universe-Guyana/119"
+          }
+        ]
+      },
+      {
+        "name": "Paraguay",
+        "pageants": [
+          {
+            "name": "Miss Grand Paraguay",
+            "href": "/Beauty-Pageants-Info/Paraguay/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Paraguay/Miss-Grand-Paraguay/1298"
+          },
+          {
+            "name": "Miss Supranational Paraguay",
+            "href": "/Beauty-Pageants-Info/Paraguay/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Paraguay/Miss-Supranational-Paraguay/1321"
+          },
+          {
+            "name": "Miss Universe Paraguay",
+            "href": "/Beauty-Pageants-Info/Paraguay/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Paraguay/Miss-Universe-Paraguay/1277"
+          },
+          {
+            "name": "Miss World Paraguay",
+            "href": "/Beauty-Pageants-Info/Paraguay/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Paraguay/Miss-World-Paraguay/1276"
+          }
+        ]
+      },
+      {
+        "name": "Peru",
+        "pageants": [
+          {
+            "name": "Miss Earth Peru",
+            "href": "/Beauty-Pageants-Info/Peru/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Peru/Miss-Earth-Peru/152"
+          },
+          {
+            "name": "Miss Peru Universo",
+            "href": "/Beauty-Pageants-Info/Peru/Miss-Peru",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Peru/Miss-Peru-Universo/176"
+          },
+          {
+            "name": "Miss World Peru",
+            "href": "/Beauty-Pageants-Info/Peru/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Peru/Miss-World-Peru/115"
+          }
+        ]
+      },
+      {
+        "name": "Uruguay",
+        "pageants": [
+          {
+            "name": "Miss Universo Uruguay",
+            "href": "/Beauty-Pageants-Info/Uruguay/Miss-Universo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Uruguay/Miss-Universo-Uruguay/171"
+          }
+        ]
+      },
+      {
+        "name": "Venezuela",
+        "pageants": [
+          {
+            "name": "Miss Earth Venezuela",
+            "href": "/Beauty-Pageants-Info/Venezuela/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Venezuela/Miss-Earth-Venezuela/1278"
+          },
+          {
+            "name": "Miss Supranational Venezuela",
+            "href": "/Beauty-Pageants-Info/Venezuela/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Venezuela/Miss-Supranational-Venezuela/1328"
+          },
+          {
+            "name": "Miss Venezuela",
+            "href": "/Beauty-Pageants-Info/Venezuela/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Venezuela/Miss-Venezuela/100"
+          },
+          {
+            "name": "Miss Venezuela Mundo",
+            "href": "/Beauty-Pageants-Info/Venezuela/Miss-Venezuela",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Venezuela/Miss-Venezuela-Mundo/42"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss Supranational Venezuela 2021",
+        "country": "Venezuela",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Venezuela/Miss-Supranational-Venezuela-2021/21069"
+      },
+      {
+        "title": "Miss Peru Universo 2019",
+        "country": "Peru",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Peru/Miss-Peru-Universo-2019/21041"
+      },
+      {
+        "title": "Miss Earth Colombia 2019",
+        "country": "Colombia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Colombia/Miss-Earth-Colombia-2019/21031"
+      },
+      {
+        "title": "Miss Supranational Paraguay 2019",
+        "country": "Paraguay",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Paraguay/Miss-Supranational-Paraguay-2019/21030"
+      },
+      {
+        "title": "Miss Ecuador 2019",
+        "country": "Ecuador",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Ecuador/Miss-Ecuador-2019/21001"
+      },
+      {
+        "title": "Miss Bolivia 2019",
+        "country": "Bolivia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Bolivia/Miss-Bolivia-2019/21019"
+      },
+      {
+        "title": "Miss Earth Brazil 2019",
+        "country": "Brazil",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Brazil/Miss-Earth-Brazil-2019/21010"
+      },
+      {
+        "title": "Miss Brazil 2019",
+        "country": "Brazil",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Brazil/Miss-Brazil-2019/20982"
+      },
+      {
+        "title": "Miss Grand Brasil 2019",
+        "country": "Brazil",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Brazil/Miss-Grand-Brasil-2019/20973"
+      },
+      {
+        "title": "Miss Grand Paraguay 2019",
+        "country": "Paraguay",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Paraguay/Miss-Grand-Paraguay-2019/20981"
+      },
+      {
+        "title": "Miss Venezuela 2018",
+        "country": "Venezuela",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Venezuela/Miss-Venezuela-2018/20968"
+      },
+      {
+        "title": "Miss Colombia 2019",
+        "country": "Colombia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Colombia/Miss-Colombia-2019/20967"
+      }
+    ],
+    "news": [
+      {
+        "title": "Ariana Blaize crowned Miss Universe Guyana 2024",
+        "href": "https://www.angelopedia.com/news/Ariana-Blaize-Crowned-Miss-Universe-Guyana-2024-Winner-Delegates-Miss-Universe-2024/57740"
+      },
+      {
+        "title": "Michelle Chase to represent Paraguay at Miss Planet International 2024",
+        "href": "https://www.angelopedia.com/news/Michelle-Chase-Represent-Paraguay-At-Miss-Planet-International-2024/57739"
+      },
+      {
+        "title": "Miss Universe Ecuador 2024 Mara Topic Verduga visit France",
+        "href": "https://www.angelopedia.com/news/Mara-Topic-Verduga-Visit-France-for-Inauguration-of-Casa-Ecuador-Paris-2024/57715"
+      },
+      {
+        "title": "Tatiana Calmell Celebrates 30th Birthday as Miss Universe Peru 2024",
+        "href": "https://www.angelopedia.com/news/Celebrating-Birthday-of-Tatiana-Calmell-Miss-Universe-Peru-2024-Winner-Miss-Peru-2024/57714"
+      },
+      {
+        "title": "Romina Lozano to Represent Peru at Miss Charm International 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Charm-Peru-2024-Romina-Lozano-to-Represent-Peru-at-Miss-Charm-International-2024-Los-Angeles/57680"
+      },
+      {
+        "title": "Meet the contestants of Miss Brasil Mundo 2024",
+        "href": "https://www.angelopedia.com/news/Meet-the-Contestants-of-Miss-Brasil-Mundo-2024-Finalists-Contestants-Miss-World-Brasil-2024/57677"
+      },
+      {
+        "title": "Akisha Albert Appointed for Miss Grand Curaçao 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Grand-Curacao-Akisha-Albert-Appointed-for-Miss-Grand-Curacao-2024/57671"
+      },
+      {
+        "title": "Carolina Granier to represent Bolivia at Miss Grand International 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Grand-Bolivia-2024-Carolina-Granier-Zalles-Represent-Bolivia-Miss-Grand-International-2024/57669"
+      },
+      {
+        "title": "Emilia Dides crowned Miss Universe Chile 2024",
+        "href": "https://www.angelopedia.com/news/Emilia-Dides-Crowned-Miss-Universe-Chile-2024-Miss-Universo-Chile-2024-Winner/57628"
+      },
+      {
+        "title": "Meet the contestants of Miss Universe Guyana 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Guyana-2024-Meet-the-contestants-Delegates-Finalists-Representatives-Guyana/57602"
+      },
+      {
+        "title": "‘I wake up each day with the purpose’: In Conversation with Miss World Ecuador ’24, Sandra Alvarado",
+        "href": "https://www.angelopedia.com/news/Miss-World-Ecuador-2024-Sandra-Alvarado-Exclusive-Interview-Angelopedia/57598"
+      },
+      {
+        "title": "Camila Ribera Roca crowned Miss International Bolivia 2024",
+        "href": "https://www.angelopedia.com/news/Miss-International-Bolivia-2024-Camila-Ribera-Roca-Crowned-Winner-Representative-Miss-Bolivia-2024/57596"
+      }
+    ]
+  },
+  {
+    "slug": "north-america",
+    "name": "North America",
+    "countries": [
+      {
+        "name": "Aruba",
+        "pageants": [
+          {
+            "name": "Miss Aruba",
+            "href": "/Beauty-Pageants-Info/Aruba/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Aruba/Miss-Aruba/59"
+          }
+        ]
+      },
+      {
+        "name": "Barbados",
+        "pageants": [
+          {
+            "name": "Miss Universe Barbados",
+            "href": "/Beauty-Pageants-Info/Barbados/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Barbados/Miss-Universe-Barbados/251"
+          }
+        ]
+      },
+      {
+        "name": "Bermuda",
+        "pageants": [
+          {
+            "name": "The Miss Bermuda",
+            "href": "/Beauty-Pageants-Info/Bermuda/The-Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bermuda/The-Miss-Bermuda/26"
+          }
+        ]
+      },
+      {
+        "name": "British Virgin Islands",
+        "pageants": [
+          {
+            "name": "Miss British Virgin Islands",
+            "href": "/Beauty-Pageants-Info/British-Virgin-Islands/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/British-Virgin-Islands/Miss-British-Virgin-Islands/205"
+          }
+        ]
+      },
+      {
+        "name": "Canada",
+        "pageants": [
+          {
+            "name": "Miss Earth Canada",
+            "href": "/Beauty-Pageants-Info/Canada/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Canada/Miss-Earth-Canada/211"
+          },
+          {
+            "name": "Miss Grand Canada",
+            "href": "/Beauty-Pageants-Info/Canada/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Canada/Miss-Grand-Canada/1327"
+          },
+          {
+            "name": "Miss Universe Canada",
+            "href": "/Beauty-Pageants-Info/Canada/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Canada/Miss-Universe-Canada/183"
+          },
+          {
+            "name": "Miss World Canada",
+            "href": "/Beauty-Pageants-Info/Canada/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Canada/Miss-World-Canada/1302"
+          }
+        ]
+      },
+      {
+        "name": "Cayman Islands",
+        "pageants": [
+          {
+            "name": "Miss Cayman Islands",
+            "href": "/Beauty-Pageants-Info/Cayman-Islands/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Cayman-Islands/Miss-Cayman-Islands/140"
+          }
+        ]
+      },
+      {
+        "name": "Costa Rica",
+        "pageants": [
+          {
+            "name": "Miss Costa Rica",
+            "href": "/Beauty-Pageants-Info/Costa-Rica/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Costa-Rica/Miss-Costa-Rica/182"
+          }
+        ]
+      },
+      {
+        "name": "Curaçao",
+        "pageants": [
+          {
+            "name": "Miss Universe Curacao",
+            "href": "/Beauty-Pageants-Info/Curacao/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Cura%C3%A7ao/Miss-Universe-Curacao/19"
+          }
+        ]
+      },
+      {
+        "name": "Dominican Republic",
+        "pageants": [
+          {
+            "name": "Miss Earth Dominican Republic",
+            "href": "/Beauty-Pageants-Info/Dominican-Republic/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Dominican-Republic/Miss-Earth-Dominican-Republic/226"
+          },
+          {
+            "name": "Miss Mundo Dominicana",
+            "href": "/Beauty-Pageants-Info/Dominican-Republic/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Dominican-Republic/Miss-Mundo-Dominicana/67"
+          }
+        ]
+      },
+      {
+        "name": "Guatemala",
+        "pageants": [
+          {
+            "name": "Miss Universe Guatemala",
+            "href": "/Beauty-Pageants-Info/Guatemala/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Guatemala/Miss-Universe-Guatemala/1279"
+          }
+        ]
+      },
+      {
+        "name": "Haiti",
+        "pageants": [
+          {
+            "name": "Miss Haiti",
+            "href": "/Beauty-Pageants-Info/Haiti/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Haiti/Miss-Haiti/66"
+          },
+          {
+            "name": "Miss World Haiti",
+            "href": "/Beauty-Pageants-Info/Haiti/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Haiti/Miss-World-Haiti/1304"
+          }
+        ]
+      },
+      {
+        "name": "Honduras",
+        "pageants": [
+          {
+            "name": "Miss Honduras Universe",
+            "href": "/Beauty-Pageants-Info/Honduras/Miss-Honduras",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Honduras/Miss-Honduras-Universe/1324"
+          },
+          {
+            "name": "Miss Mundo Honduras",
+            "href": "/Beauty-Pageants-Info/Honduras/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Honduras/Miss-Mundo-Honduras/203"
+          }
+        ]
+      },
+      {
+        "name": "Jamaica",
+        "pageants": [
+          {
+            "name": "Miss Universe Jamaica",
+            "href": "/Beauty-Pageants-Info/Jamaica/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Jamaica/Miss-Universe-Jamaica/214"
+          },
+          {
+            "name": "Miss World Jamaica",
+            "href": "/Beauty-Pageants-Info/Jamaica/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Jamaica/Miss-World-Jamaica/34"
+          }
+        ]
+      },
+      {
+        "name": "Mexico",
+        "pageants": [
+          {
+            "name": "Mexicana Universal",
+            "href": "/Beauty-Pageants-Info/Mexico/Mexicana",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Mexico/Mexicana-Universal/1297"
+          },
+          {
+            "name": "Miss Earth Mexico",
+            "href": "/Beauty-Pageants-Info/Mexico/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Mexico/Miss-Earth-Mexico/87"
+          },
+          {
+            "name": "Miss World Mexico",
+            "href": "/Beauty-Pageants-Info/Mexico/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Mexico/Miss-World-Mexico/254"
+          },
+          {
+            "name": "Nuestra Belleza Mexico",
+            "href": "/Beauty-Pageants-Info/Mexico/Nuestra-Belleza",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Mexico/Nuestra-Belleza-Mexico/98"
+          }
+        ]
+      },
+      {
+        "name": "Nicaragua",
+        "pageants": [
+          {
+            "name": "Miss Grand Nicaragua",
+            "href": "/Beauty-Pageants-Info/Nicaragua/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Nicaragua/Miss-Grand-Nicaragua/1332"
+          },
+          {
+            "name": "Miss Mundo Nicaragua",
+            "href": "/Beauty-Pageants-Info/Nicaragua/Miss-Mundo",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Nicaragua/Miss-Mundo-Nicaragua/233"
+          },
+          {
+            "name": "Miss Nicaragua",
+            "href": "/Beauty-Pageants-Info/Nicaragua/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Nicaragua/Miss-Nicaragua/146"
+          }
+        ]
+      },
+      {
+        "name": "Panama",
+        "pageants": [
+          {
+            "name": "Miss Earth Panama",
+            "href": "/Beauty-Pageants-Info/Panama/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Panama/Miss-Earth-Panama/1331"
+          },
+          {
+            "name": "Senorita Panama",
+            "href": "/Beauty-Pageants-Info/Panama/Senorita",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Panama/Senorita-Panama/18"
+          }
+        ]
+      },
+      {
+        "name": "Puerto Rico",
+        "pageants": [
+          {
+            "name": "Miss Mundo de Puerto Rico",
+            "href": "/Beauty-Pageants-Info/Puerto-Rico/Miss-Mundo-de",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Puerto-Rico/Miss-Mundo-de-Puerto-Rico/48"
+          },
+          {
+            "name": "Miss Universe Puerto Rico",
+            "href": "/Beauty-Pageants-Info/Puerto-Rico/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Puerto-Rico/Miss-Universe-Puerto-Rico/106"
+          }
+        ]
+      },
+      {
+        "name": "Saint Lucia",
+        "pageants": [
+          {
+            "name": "Miss World Saint Lucia",
+            "href": "/Beauty-Pageants-Info/Saint-Lucia/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Saint-Lucia/Miss-World-Saint-Lucia/246"
+          }
+        ]
+      },
+      {
+        "name": "Trinidad and Tobago",
+        "pageants": [
+          {
+            "name": "Miss World Trinidad and Tobago",
+            "href": "/Beauty-Pageants-Info/Trinidad-and-Tobago/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Trinidad-and-Tobago/Miss-World-Trinidad-and-Tobago/178"
+          }
+        ]
+      },
+      {
+        "name": "United States of America",
+        "pageants": [
+          {
+            "name": "Miss America",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-America",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-America/74"
+          },
+          {
+            "name": "Miss Earth United States",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-Earth-United",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-Earth-United-States/32"
+          },
+          {
+            "name": "Miss Eco USA",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-Eco",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-Eco-USA/1330"
+          },
+          {
+            "name": "Miss Grand United States",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-Grand-United",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-Grand-United-States/1267"
+          },
+          {
+            "name": "Miss Supranational USA",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-Supranational-USA/1329"
+          },
+          {
+            "name": "Miss Teen USA",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-Teen",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-Teen-USA/44"
+          },
+          {
+            "name": "Miss US International",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-US",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-US-International/189"
+          },
+          {
+            "name": "Miss USA",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-USA",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-USA/16"
+          },
+          {
+            "name": "Miss World America",
+            "href": "/Beauty-Pageants-Info/United-States-of-America/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/United-States-of-America/Miss-World-America/192"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss USA 2021",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-USA-2021/21077"
+      },
+      {
+        "title": "Miss Earth Panama 2021",
+        "country": "Panama",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Panama/Miss-Earth-Panama-2021/21076"
+      },
+      {
+        "title": "Miss Nicaragua 2021",
+        "country": "Nicaragua",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Nicaragua/Miss-Nicaragua-2021/21073"
+      },
+      {
+        "title": "Miss Grand Nicaragua 2021",
+        "country": "Nicaragua",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Nicaragua/Miss-Grand-Nicaragua-2021/21081"
+      },
+      {
+        "title": "Miss Grand Canada 2021",
+        "country": "Canada",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Canada/Miss-Grand-Canada-2021/21066"
+      },
+      {
+        "title": "Miss Grand United States 2021",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-Grand-United-States-2021/21070"
+      },
+      {
+        "title": "Miss Supranational USA 2021",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-Supranational-USA-2021/21071"
+      },
+      {
+        "title": "Miss Eco USA 2021",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-Eco-USA-2021/21072"
+      },
+      {
+        "title": "Miss Nicaragua 2020",
+        "country": "Nicaragua",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Nicaragua/Miss-Nicaragua-2020/21058"
+      },
+      {
+        "title": "Miss USA 2020",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-USA-2020/21053"
+      },
+      {
+        "title": "Miss America 2020",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-America-2020/21052"
+      },
+      {
+        "title": "Miss Teen USA 2020",
+        "country": "United States of America",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/United-States-of-America/Miss-Teen-USA-2020/21057"
+      }
+    ],
+    "news": [
+      {
+        "title": "Rachel Silvera crowned Miss Universe Jamaica 2024",
+        "href": "https://www.angelopedia.com/news/Rachel-Silvera-Crowned-Miss-Universe-Jamaica-2024-Winner-Finale-Results-Miss-Universe-2024/57755"
+      },
+      {
+        "title": "Skye Faucher crowned Miss Universe Saint Lucia 2024",
+        "href": "https://www.angelopedia.com/news/Winner-Miss-Universe-Saint-Lucia-Skye-Faucher-Crowned-Miss-Universe-Saint-Lucia-2024/57752"
+      },
+      {
+        "title": "Ashley Callingbull crowned Miss Universe Canada 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Canada-2024-Crowned-Ashley-Callingbull-Winner-Finale-Results-Runners-Up/57748"
+      },
+      {
+        "title": "Raynae Tynes crowned Miss Universe Turks and Caicos 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Turks-And-Caicos-Winner-Raynae-Tynes-Crowned-Miss-Universe-Turks-And-Caicos-2024/57746"
+      },
+      {
+        "title": "Adacia Adonis crowned Miss International British Virgin Islands 2024",
+        "href": "https://www.angelopedia.com/news/Adacia-Adonis-Crowned-Miss-British-Virgin-Islands-2024-Winner-Finale-Results-Venue/57744"
+      },
+      {
+        "title": "Miss USA 2024 Live Blog & Full Results",
+        "href": "https://www.angelopedia.com/news/Miss-USA-2024-Live-Stream-Broadcast-Finale-Results-Winner-Miss-USA/57741"
+      },
+      {
+        "title": "Alysa Cook crowned Miss U.S. International 2024",
+        "href": "https://www.angelopedia.com/news/Miss-US-International-2024-Winner-Alysa-Cook-Crowned-Delegates-Representative-Miss-International-2024/57738"
+      },
+      {
+        "title": "Tamania Gaudreault to represent Haiti at Miss Planet International 2024",
+        "href": "https://www.angelopedia.com/news/Tamania-Gaudreault-to-Represent-Haiti-at-Miss-Planet-International-2024-Winner-Representative/57723"
+      },
+      {
+        "title": "Turks & Caicos Welcomes Sheynnis Palacios Miss Universe 2023 for Coronation Event",
+        "href": "https://www.angelopedia.com/news/Turks-And-Caicos-Welcomes-Sheynnis-Palacios-Miss-Universe-2023/57718"
+      },
+      {
+        "title": "Carolina Mía Gómez Cumba Appoint Miss Charm Puerto Rico 2024",
+        "href": "https://www.angelopedia.com/news/Carolina-Mia-Gomez-Cumba-Winner-Appoint-Miss-Charm-Puerto-Rico-2024-Finale-Results/57670"
+      },
+      {
+        "title": "Morgan Miles to represent Belize at Miss Earth 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-Morgan-Miles-to-Represent-Belize-at-Miss-Earth-2024-Miss-Earth-2024/57657"
+      },
+      {
+        "title": "Meet the Delegates of Miss Universe Mexico 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Mexico-Meet-the-Delegates-of-Miss-Universe-Mexico-2024/57652"
+      }
+    ]
+  },
+  {
+    "slug": "europe",
+    "name": "Europe",
+    "countries": [
+      {
+        "name": "Albania",
+        "pageants": [
+          {
+            "name": "Miss Universe Albania",
+            "href": "/Beauty-Pageants-Info/Albania/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Albania/Miss-Universe-Albania/101"
+          }
+        ]
+      },
+      {
+        "name": "Austria",
+        "pageants": [
+          {
+            "name": "Miss Austria",
+            "href": "/Beauty-Pageants-Info/Austria/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Austria/Miss-Austria/25"
+          }
+        ]
+      },
+      {
+        "name": "Belarus",
+        "pageants": [
+          {
+            "name": "Miss Belarus",
+            "href": "/Beauty-Pageants-Info/Belarus/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Belarus/Miss-Belarus/243"
+          }
+        ]
+      },
+      {
+        "name": "Belgium",
+        "pageants": [
+          {
+            "name": "Miss Belgium",
+            "href": "/Beauty-Pageants-Info/Belgium/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Belgium/Miss-Belgium/134"
+          }
+        ]
+      },
+      {
+        "name": "Bosnia and Herzegovina",
+        "pageants": [
+          {
+            "name": "Miss Earth Bosnia and Herzegovina",
+            "href": "/Beauty-Pageants-Info/Bosnia-and-Herzegovina/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bosnia-and-Herzegovina/Miss-Earth-Bosnia-and-Herzegovina/188"
+          }
+        ]
+      },
+      {
+        "name": "Bulgaria",
+        "pageants": [
+          {
+            "name": "Miss Bulgaria",
+            "href": "/Beauty-Pageants-Info/Bulgaria/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bulgaria/Miss-Bulgaria/132"
+          },
+          {
+            "name": "Miss Universe Bulgaria",
+            "href": "/Beauty-Pageants-Info/Bulgaria/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bulgaria/Miss-Universe-Bulgaria/122"
+          },
+          {
+            "name": "Miss World and Universe Bulgaria",
+            "href": "/Beauty-Pageants-Info/Bulgaria/Miss-World-and-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Bulgaria/Miss-World-and-Universe-Bulgaria/1287"
+          }
+        ]
+      },
+      {
+        "name": "Croatia",
+        "pageants": [
+          {
+            "name": "Miss Croatia World",
+            "href": "/Beauty-Pageants-Info/Croatia/Miss-Croatia",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Croatia/Miss-Croatia-World/82"
+          },
+          {
+            "name": "Miss Universe Croatia",
+            "href": "/Beauty-Pageants-Info/Croatia/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Croatia/Miss-Universe-Croatia/185"
+          }
+        ]
+      },
+      {
+        "name": "Czech Republic",
+        "pageants": [
+          {
+            "name": "Czech Miss",
+            "href": "/Beauty-Pageants-Info/Czech-Republic/Czech",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Czech-Republic/Czech-Miss/147"
+          },
+          {
+            "name": "Miss Ceske Republiky",
+            "href": "/Beauty-Pageants-Info/Czech-Republic/Miss-Ceske",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Czech-Republic/Miss-Ceske-Republiky/1326"
+          },
+          {
+            "name": "Miss Czech Republic",
+            "href": "/Beauty-Pageants-Info/Czech-Republic/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Czech-Republic/Miss-Czech-Republic/1299"
+          }
+        ]
+      },
+      {
+        "name": "Denmark",
+        "pageants": [
+          {
+            "name": "Miss Universe Denmark",
+            "href": "/Beauty-Pageants-Info/Denmark/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Denmark/Miss-Universe-Denmark/200"
+          },
+          {
+            "name": "Miss World Denmark",
+            "href": "/Beauty-Pageants-Info/Denmark/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Denmark/Miss-World-Denmark/96"
+          }
+        ]
+      },
+      {
+        "name": "Finland",
+        "pageants": [
+          {
+            "name": "Miss Suomi",
+            "href": "/Beauty-Pageants-Info/Finland/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Finland/Miss-Suomi/160"
+          }
+        ]
+      },
+      {
+        "name": "France",
+        "pageants": [
+          {
+            "name": "Miss France",
+            "href": "/Beauty-Pageants-Info/France/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/France/Miss-France/68"
+          }
+        ]
+      },
+      {
+        "name": "Germany",
+        "pageants": [
+          {
+            "name": "Miss Germany",
+            "href": "/Beauty-Pageants-Info/Germany/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Germany/Miss-Germany/159"
+          },
+          {
+            "name": "Miss Universe Germany",
+            "href": "/Beauty-Pageants-Info/Germany/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Germany/Miss-Universe-Germany/61"
+          }
+        ]
+      },
+      {
+        "name": "Gibraltar",
+        "pageants": [
+          {
+            "name": "Miss Gibraltar",
+            "href": "/Beauty-Pageants-Info/Gibraltar/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Gibraltar/Miss-Gibraltar/13"
+          }
+        ]
+      },
+      {
+        "name": "Greece",
+        "pageants": [
+          {
+            "name": "Star Hellas",
+            "href": "/Beauty-Pageants-Info/Greece/Star",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Greece/Star-Hellas/1314"
+          }
+        ]
+      },
+      {
+        "name": "Hungary",
+        "pageants": [
+          {
+            "name": "Miss International Hungary",
+            "href": "/Beauty-Pageants-Info/Hungary/Miss-International",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Hungary/Miss-International-Hungary/54"
+          },
+          {
+            "name": "Miss World Hungary",
+            "href": "/Beauty-Pageants-Info/Hungary/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Hungary/Miss-World-Hungary/39"
+          }
+        ]
+      },
+      {
+        "name": "Iceland",
+        "pageants": [
+          {
+            "name": "Miss Universe Iceland",
+            "href": "/Beauty-Pageants-Info/Iceland/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Iceland/Miss-Universe-Iceland/1308"
+          },
+          {
+            "name": "Miss World Iceland",
+            "href": "/Beauty-Pageants-Info/Iceland/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Iceland/Miss-World-Iceland/1280"
+          }
+        ]
+      },
+      {
+        "name": "Ireland",
+        "pageants": [
+          {
+            "name": "Miss Ireland",
+            "href": "/Beauty-Pageants-Info/Ireland/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ireland/Miss-Ireland/37"
+          },
+          {
+            "name": "Miss Universe Ireland",
+            "href": "/Beauty-Pageants-Info/Ireland/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ireland/Miss-Universe-Ireland/108"
+          }
+        ]
+      },
+      {
+        "name": "Italy",
+        "pageants": [
+          {
+            "name": "Miss Italia",
+            "href": "/Beauty-Pageants-Info/Italy/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Italy/Miss-Italia/221"
+          },
+          {
+            "name": "Miss World Italy",
+            "href": "/Beauty-Pageants-Info/Italy/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Italy/Miss-World-Italy/15"
+          }
+        ]
+      },
+      {
+        "name": "Kosovo",
+        "pageants": [
+          {
+            "name": "Miss Universe Kosovo",
+            "href": "/Beauty-Pageants-Info/Kosovo/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Kosovo/Miss-Universe-Kosovo/104"
+          }
+        ]
+      },
+      {
+        "name": "Latvia",
+        "pageants": [
+          {
+            "name": "Miss Latvia",
+            "href": "/Beauty-Pageants-Info/Latvia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Latvia/Miss-Latvia/247"
+          }
+        ]
+      },
+      {
+        "name": "Lithuania",
+        "pageants": [
+          {
+            "name": "Miss Lithuania",
+            "href": "/Beauty-Pageants-Info/Lithuania/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Lithuania/Miss-Lithuania/79"
+          }
+        ]
+      },
+      {
+        "name": "Malta",
+        "pageants": [
+          {
+            "name": "Miss Earth Malta",
+            "href": "/Beauty-Pageants-Info/Malta/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malta/Miss-Earth-Malta/150"
+          },
+          {
+            "name": "Miss Malta",
+            "href": "/Beauty-Pageants-Info/Malta/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malta/Miss-Malta/168"
+          },
+          {
+            "name": "Miss Universe Malta",
+            "href": "/Beauty-Pageants-Info/Malta/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malta/Miss-Universe-Malta/248"
+          },
+          {
+            "name": "Miss World Malta",
+            "href": "/Beauty-Pageants-Info/Malta/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Malta/Miss-World-Malta/162"
+          }
+        ]
+      },
+      {
+        "name": "Netherlands",
+        "pageants": [
+          {
+            "name": "Miss Earth Netherlands",
+            "href": "/Beauty-Pageants-Info/Netherlands/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Netherlands/Miss-Earth-Netherlands/241"
+          },
+          {
+            "name": "Miss Grand Netherlands",
+            "href": "/Beauty-Pageants-Info/Netherlands/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Netherlands/Miss-Grand-Netherlands/242"
+          },
+          {
+            "name": "Miss Intercontinental Netherlands",
+            "href": "/Beauty-Pageants-Info/Netherlands/Miss-Intercontinental",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Netherlands/Miss-Intercontinental-Netherlands/1307"
+          },
+          {
+            "name": "Miss Nederland",
+            "href": "/Beauty-Pageants-Info/Netherlands/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Netherlands/Miss-Nederland/154"
+          },
+          {
+            "name": "Miss World Nederland",
+            "href": "/Beauty-Pageants-Info/Netherlands/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Netherlands/Miss-World-Nederland/260"
+          }
+        ]
+      },
+      {
+        "name": "Norway",
+        "pageants": [
+          {
+            "name": "Miss Universe Norway",
+            "href": "/Beauty-Pageants-Info/Norway/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Norway/Miss-Universe-Norway/24"
+          }
+        ]
+      },
+      {
+        "name": "Poland",
+        "pageants": [
+          {
+            "name": "Miss Egzotica International",
+            "href": "/Beauty-Pageants-Info/Poland/Miss-Egzotica",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Poland/Miss-Egzotica-International/256"
+          },
+          {
+            "name": "Miss Polonia",
+            "href": "/Beauty-Pageants-Info/Poland/Miss-Polonia",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Poland/Miss-Polonia/131"
+          },
+          {
+            "name": "Miss Polski",
+            "href": "/Beauty-Pageants-Info/Poland/Miss-Polski",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Poland/Miss-Polski/126"
+          },
+          {
+            "name": "Miss World Poland",
+            "href": "/Beauty-Pageants-Info/Poland/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Poland/Miss-World-Poland/231"
+          }
+        ]
+      },
+      {
+        "name": "Portugal",
+        "pageants": [
+          {
+            "name": "Miss Portuguesa",
+            "href": "/Beauty-Pageants-Info/Portugal/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Portugal/Miss-Portuguesa/1303"
+          },
+          {
+            "name": "Miss Queen Portugal",
+            "href": "/Beauty-Pageants-Info/Portugal/Miss-Queen",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Portugal/Miss-Queen-Portugal/179"
+          },
+          {
+            "name": "Miss Universe Portugal",
+            "href": "/Beauty-Pageants-Info/Portugal/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Portugal/Miss-Universe-Portugal/92"
+          }
+        ]
+      },
+      {
+        "name": "Romania",
+        "pageants": [
+          {
+            "name": "Miss Universe Romania",
+            "href": "/Beauty-Pageants-Info/Romania/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Romania/Miss-Universe-Romania/1289"
+          }
+        ]
+      },
+      {
+        "name": "Russia",
+        "pageants": [
+          {
+            "name": "Miss Russia",
+            "href": "/Beauty-Pageants-Info/Russia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Russia/Miss-Russia/142"
+          }
+        ]
+      },
+      {
+        "name": "Serbia",
+        "pageants": []
+      },
+      {
+        "name": "Slovakia",
+        "pageants": [
+          {
+            "name": "Miss Slovensko",
+            "href": "/Beauty-Pageants-Info/Slovakia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Slovakia/Miss-Slovensko/148"
+          },
+          {
+            "name": "Miss Universe Slovenskej Republiky",
+            "href": "/Beauty-Pageants-Info/Slovakia/Miss-Universe-Slovenskej",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Slovakia/Miss-Universe-Slovenskej-Republiky/145"
+          }
+        ]
+      },
+      {
+        "name": "Slovenia",
+        "pageants": [
+          {
+            "name": "Miss Earth Slovenia",
+            "href": "/Beauty-Pageants-Info/Slovenia/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Slovenia/Miss-Earth-Slovenia/1311"
+          },
+          {
+            "name": "Miss Universe Slovenia",
+            "href": "/Beauty-Pageants-Info/Slovenia/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Slovenia/Miss-Universe-Slovenia/111"
+          },
+          {
+            "name": "Miss World Slovenia",
+            "href": "/Beauty-Pageants-Info/Slovenia/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Slovenia/Miss-World-Slovenia/70"
+          }
+        ]
+      },
+      {
+        "name": "Spain",
+        "pageants": [
+          {
+            "name": "Miss Earth Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Miss-Earth-Spain/112"
+          },
+          {
+            "name": "Miss Grand Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Miss-Grand-Spain/1320"
+          },
+          {
+            "name": "Miss International Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Miss-International",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Miss-International-Spain/191"
+          },
+          {
+            "name": "Miss Universe Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Miss-Universe-Spain/51"
+          },
+          {
+            "name": "Miss World Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Miss-World-Spain/69"
+          },
+          {
+            "name": "Showstars Spain",
+            "href": "/Beauty-Pageants-Info/Spain/Showstars",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Spain/Showstars-Spain/259"
+          }
+        ]
+      },
+      {
+        "name": "Sweden",
+        "pageants": [
+          {
+            "name": "Miss Universe Sweden",
+            "href": "/Beauty-Pageants-Info/Sweden/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Sweden/Miss-Universe-Sweden/199"
+          },
+          {
+            "name": "Miss World Sweden",
+            "href": "/Beauty-Pageants-Info/Sweden/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Sweden/Miss-World-Sweden/167"
+          }
+        ]
+      },
+      {
+        "name": "Switzerland",
+        "pageants": [
+          {
+            "name": "Miss Earth Schweiz",
+            "href": "/Beauty-Pageants-Info/Switzerland/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Switzerland/Miss-Earth-Schweiz/163"
+          }
+        ]
+      },
+      {
+        "name": "Ukraine",
+        "pageants": [
+          {
+            "name": "Miss Ukraine",
+            "href": "/Beauty-Pageants-Info/Ukraine/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ukraine/Miss-Ukraine/1272"
+          },
+          {
+            "name": "Miss Ukraine Universe",
+            "href": "/Beauty-Pageants-Info/Ukraine/Miss-Ukraine",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ukraine/Miss-Ukraine-Universe/232"
+          },
+          {
+            "name": "Queen of Ukraine for Miss Earth",
+            "href": "/Beauty-Pageants-Info/Ukraine/Queen-of-Ukraine-for-Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Ukraine/Queen-of-Ukraine-for-Miss-Earth/161"
+          }
+        ]
+      },
+      {
+        "name": "England",
+        "pageants": [
+          {
+            "name": "Miss England",
+            "href": "/Beauty-Pageants-Info/England/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/England/Miss-England/22"
+          }
+        ]
+      },
+      {
+        "name": "Great Britain",
+        "pageants": [
+          {
+            "name": "Miss Universe Great Britain",
+            "href": "/Beauty-Pageants-Info/Great-Britain/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Great-Britain/Miss-Universe-Great-Britain/190"
+          }
+        ]
+      },
+      {
+        "name": "Scotland",
+        "pageants": [
+          {
+            "name": "Miss Scotland",
+            "href": "/Beauty-Pageants-Info/Scotland/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Scotland/Miss-Scotland/218"
+          }
+        ]
+      },
+      {
+        "name": "Northern Ireland",
+        "pageants": [
+          {
+            "name": "Miss Earth Northern Ireland",
+            "href": "/Beauty-Pageants-Info/Northern-Ireland/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Northern-Ireland/Miss-Earth-Northern-Ireland/196"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss Suomi 2021",
+        "country": "Finland",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Finland/Miss-Suomi-2021/21065"
+      },
+      {
+        "title": "Miss Earth Netherlands 2021",
+        "country": "Netherlands",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Netherlands/Miss-Earth-Netherlands-2021/21078"
+      },
+      {
+        "title": "Miss Intercontinental Netherlands 2021",
+        "country": "Netherlands",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Netherlands/Miss-Intercontinental-Netherlands-2021/21079"
+      },
+      {
+        "title": "Miss Universe Albania 2021",
+        "country": "Albania",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Albania/Miss-Universe-Albania-2021/21082"
+      },
+      {
+        "title": "Miss Ceske Republiky 2020",
+        "country": "Czech Republic",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Czech-Republic/Miss-Ceske-Republiky-2020/21062"
+      },
+      {
+        "title": "Miss Belgium 2020",
+        "country": "Belgium",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Belgium/Miss-Belgium-2020/21050"
+      },
+      {
+        "title": "Miss Malta 2020",
+        "country": "Malta",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Malta/Miss-Malta-2020/21054"
+      },
+      {
+        "title": "Miss France 2020",
+        "country": "France",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/France/Miss-France-2020/21049"
+      },
+      {
+        "title": "Miss Ukraine Universe 2019",
+        "country": "Ukraine",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Ukraine/Miss-Ukraine-Universe-2019/21043"
+      },
+      {
+        "title": "Miss World Slovenia 2019",
+        "country": "Slovenia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Slovenia/Miss-World-Slovenia-2019/21006"
+      },
+      {
+        "title": "Miss Suomi 2019",
+        "country": "Finland",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Finland/Miss-Suomi-2019/21034"
+      },
+      {
+        "title": "Miss Earth Netherlands 2019",
+        "country": "Netherlands",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Netherlands/Miss-Earth-Netherlands-2019/21028"
+      }
+    ],
+    "news": [
+      {
+        "title": "Celebrating a Milestone: Happy 73rd Anniversary, Miss World!",
+        "href": "https://www.angelopedia.com/news/Celebration-Miss-World-Happy-73rd-Birthday-Anniversary-Miss-World-Julia-Morley/57761"
+      },
+      {
+        "title": "Ana Luísa Silva crowned Miss Princess of the Globe Portugal 2024",
+        "href": "https://www.angelopedia.com/news/Ana-Silva-Crowned-Miss-Globe-Portugal-2024-Winner-Finale-Results-Miss-Portuguesa-2024/57760"
+      },
+      {
+        "title": "Inês Perestrello crowned Miss Grand Portugal 2024",
+        "href": "https://www.angelopedia.com/news/Ines-Perestrello-Crowned-Miss-Grand-Portugal-2024-Winner-Finalist-Miss-Portuguesa-2024/57758"
+      },
+      {
+        "title": "Victoria Amerson to represent Austria at Miss Planet International 2024",
+        "href": "https://www.angelopedia.com/news/Winner-Victoria-Amerson-Crowned-Miss-Planet-International-Austria-2024-Finalist/57756"
+      },
+      {
+        "title": "Maria Amélia Baptista crowned Miss World Portugal 2024",
+        "href": "https://www.angelopedia.com/news/Miss-World-Portugal-2024-Crowned-Maria-Amelia-Baptista-Winner-Miss-Portuguesa-2024/57749"
+      },
+      {
+        "title": "Meet the Finalists for Miss Universe Gibraltar 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Gibraltar-2024-Delegates-Meet-the-Finalists-Contestants-Finale-Venue/57735"
+      },
+      {
+        "title": "Meet the contestant of Miss Universe Spain 2024",
+        "href": "https://www.angelopedia.com/news/Meet-the-Contestant-of-Miss-Universe-Spain-2024-Finalist-Delegates-Miss-Universe-Espana-2024/57726"
+      },
+      {
+        "title": "Paula Pérez - From Miss World to Miss Universe!",
+        "href": "https://www.angelopedia.com/news/Paula-Perez-From-Miss-World-to-Miss-Universe-Miss-Mundo-Spain-2022/57725"
+      },
+      {
+        "title": "Zoja Ulaga crowned Miss Earth Slovenia 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-Slovenia-2024-Winner-Zoja-Ulaga-Crowned-Finalist-Delegate-Miss-Earth-2024/57724"
+      },
+      {
+        "title": "Miss World Portugal Finalists Explore the Wonders of Coimbra",
+        "href": "https://www.angelopedia.com/news/Miss-World-Portugal-2024-Finalists-kicks-off-with-a-visit-to-the-Coimbra-Finale-Venue/57719"
+      },
+      {
+        "title": "Saartje Langstraat to represent Netherland at Miss Charm 2024 in Los Angeles",
+        "href": "https://www.angelopedia.com/news/Netherland-Saartje-Langstraat-to-Represent-Netherland-at-Miss-Charm-2024-Los-Angeles/57717"
+      },
+      {
+        "title": "Meet the 12 Finalists Competing for Miss World Portugal 2024",
+        "href": "https://www.angelopedia.com/news/Meet-the-Contestants-of-Miss-World-Portugal-2024-Delegates-Finalists-Miss-Portuguesa-2024/57713"
+      }
+    ]
+  },
+  {
+    "slug": "africa",
+    "name": "Africa",
+    "countries": [
+      {
+        "name": "Angola",
+        "pageants": [
+          {
+            "name": "Miss Angola",
+            "href": "/Beauty-Pageants-Info/Angola/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Angola/Miss-Angola/133"
+          },
+          {
+            "name": "Miss World Angola",
+            "href": "/Beauty-Pageants-Info/Angola/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Angola/Miss-World-Angola/1312"
+          }
+        ]
+      },
+      {
+        "name": "Egypt",
+        "pageants": [
+          {
+            "name": "Miss Egypt",
+            "href": "/Beauty-Pageants-Info/Egypt/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Egypt/Miss-Egypt/57"
+          },
+          {
+            "name": "Miss Egypt World",
+            "href": "/Beauty-Pageants-Info/Egypt/Miss-Egypt",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Egypt/Miss-Egypt-World/253"
+          }
+        ]
+      },
+      {
+        "name": "Gabon",
+        "pageants": [
+          {
+            "name": "Miss Gabon",
+            "href": "/Beauty-Pageants-Info/Gabon/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Gabon/Miss-Gabon/169"
+          }
+        ]
+      },
+      {
+        "name": "Kenya",
+        "pageants": [
+          {
+            "name": "Miss Earth Kenya",
+            "href": "/Beauty-Pageants-Info/Kenya/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Kenya/Miss-Earth-Kenya/103"
+          },
+          {
+            "name": "Miss Universe Kenya",
+            "href": "/Beauty-Pageants-Info/Kenya/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Kenya/Miss-Universe-Kenya/121"
+          }
+        ]
+      },
+      {
+        "name": "Morocco",
+        "pageants": [
+          {
+            "name": "Miss Maroc",
+            "href": "/Beauty-Pageants-Info/Morocco/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Morocco/Miss-Maroc/181"
+          }
+        ]
+      },
+      {
+        "name": "Namibia",
+        "pageants": [
+          {
+            "name": "Miss Namibia",
+            "href": "/Beauty-Pageants-Info/Namibia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Namibia/Miss-Namibia/210"
+          }
+        ]
+      },
+      {
+        "name": "Reunion Island",
+        "pageants": [
+          {
+            "name": "Miss Earth Reunion Island",
+            "href": "/Beauty-Pageants-Info/Reunion-Island/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Reunion-Island/Miss-Earth-Reunion-Island/240"
+          }
+        ]
+      },
+      {
+        "name": "South Africa",
+        "pageants": [
+          {
+            "name": "Miss Earth South Africa",
+            "href": "/Beauty-Pageants-Info/South-Africa/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/South-Africa/Miss-Earth-South-Africa/249"
+          },
+          {
+            "name": "Miss Grand South Africa",
+            "href": "/Beauty-Pageants-Info/South-Africa/Miss-Grand",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/South-Africa/Miss-Grand-South-Africa/1306"
+          },
+          {
+            "name": "Miss South Africa",
+            "href": "/Beauty-Pageants-Info/South-Africa/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/South-Africa/Miss-South-Africa/153"
+          },
+          {
+            "name": "Miss Supranational South Africa",
+            "href": "/Beauty-Pageants-Info/South-Africa/Miss-Supranational",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/South-Africa/Miss-Supranational-South-Africa/1317"
+          }
+        ]
+      },
+      {
+        "name": "Tanzania",
+        "pageants": [
+          {
+            "name": "Miss Tanzania",
+            "href": "/Beauty-Pageants-Info/Tanzania/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Tanzania/Miss-Tanzania/107"
+          }
+        ]
+      },
+      {
+        "name": "Tunisia",
+        "pageants": [
+          {
+            "name": "Miss Tunisie",
+            "href": "/Beauty-Pageants-Info/Tunisia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Tunisia/Miss-Tunisie/164"
+          }
+        ]
+      },
+      {
+        "name": "Uganda",
+        "pageants": [
+          {
+            "name": "Miss Earth Uganda",
+            "href": "/Beauty-Pageants-Info/Uganda/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Uganda/Miss-Earth-Uganda/1274"
+          },
+          {
+            "name": "Miss Uganda",
+            "href": "/Beauty-Pageants-Info/Uganda/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Uganda/Miss-Uganda/116"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss South Africa 2021",
+        "country": "South Africa",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/South-Africa/Miss-South-Africa-2021/21084"
+      },
+      {
+        "title": "Miss Universe Kenya 2019",
+        "country": "Kenya",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Kenya/Miss-Universe-Kenya-2019/21039"
+      },
+      {
+        "title": "Miss Angola 2019",
+        "country": "Angola",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Angola/Miss-Angola-2019/21042"
+      },
+      {
+        "title": "Miss Tanzania 2019",
+        "country": "Tanzania",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Tanzania/Miss-Tanzania-2019/21033"
+      },
+      {
+        "title": "Miss South Africa 2019",
+        "country": "South Africa",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/South-Africa/Miss-South-Africa-2019/21026"
+      },
+      {
+        "title": "Miss Supranational South Africa 2019",
+        "country": "South Africa",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/South-Africa/Miss-Supranational-South-Africa-2019/21002"
+      },
+      {
+        "title": "Miss Namibia 2019",
+        "country": "Namibia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Namibia/Miss-Namibia-2019/21021"
+      },
+      {
+        "title": "Miss World Angola 2018",
+        "country": "Angola",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Angola/Miss-World-Angola-2018/20956"
+      },
+      {
+        "title": "Miss Uganda 2018",
+        "country": "Uganda",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Uganda/Miss-Uganda-2018/20933"
+      },
+      {
+        "title": "Miss Grand South Africa 2018",
+        "country": "South Africa",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/South-Africa/Miss-Grand-South-Africa-2018/20928"
+      },
+      {
+        "title": "Miss Namibia 2018",
+        "country": "Namibia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Namibia/Miss-Namibia-2018/20907"
+      },
+      {
+        "title": "Miss South Africa 2018",
+        "country": "South Africa",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/South-Africa/Miss-South-Africa-2018/20898"
+      }
+    ],
+    "news": [
+      {
+        "title": "Gugulethu Mosibudi Mayisela crowned Miss Eco South Africa 2024",
+        "href": "https://www.angelopedia.com/news/Winner-Gugulethu-Mosibudi-Mayisela-Crowned-Miss-Eco-South-Africa-2024/57743"
+      },
+      {
+        "title": "Meet the Contestants of Miss Grand Nigeria 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Grand-Nigeria-Contestants-Meet-the-Contestants-Competing-for-Miss-Grand-Nigeria-2024/57742"
+      },
+      {
+        "title": "Shuntell Ezomo crowned Miss Earth Nigeria 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-Nigeria-2024-Shuntell-Ezomo-Crowned-Winner-Delegate-Miss-Earth-2024/57711"
+      },
+      {
+        "title": "Winifred Esi Sam crowned Miss Earth Ghana 2024",
+        "href": "https://www.angelopedia.com/news/Winifred-Esi-Sam-Crowned-Miss-Earth-Ghana-2024-Winner-Finale-Results/57709"
+      },
+      {
+        "title": "Mary Kermon crowned Miss Earth Liberia 2024",
+        "href": "https://www.angelopedia.com/news/Mary-Kermon-Crowned-Miss-Earth-Liberia-2024-Winner-Finale-Delegate-Miss-Earth-2024/57707"
+      },
+      {
+        "title": "Faith Sikuku Wanyama crowned Miss Earth Kenya 2024",
+        "href": "https://www.angelopedia.com/news/Faith-Sikuku-Wanyama-Crowned-Miss-Earth-Kenya-2024-Winner-Delegates-Miss-Earth-2024/57704"
+      },
+      {
+        "title": "Belindé Schreuder crowned Miss International South Africa 2024",
+        "href": "https://www.angelopedia.com/news/Belinde-Schreuder-Crowned-Miss-International-South-Africa-2024-Winner-Delegates-Miss-International-2024/57703"
+      },
+      {
+        "title": "Messry Lung'atso Emerging as a Strong Contender for Miss Earth Kenya 2024",
+        "href": "https://www.angelopedia.com/news/Messry-Mercyline-Lungatso-Strong-Contender-Competing-Miss-Earth-Kenya-2024-Feature/57676"
+      },
+      {
+        "title": "Meet the Stunning Contestants of Miss Earth Nigeria 2024",
+        "href": "https://www.angelopedia.com/news/Meet-the-Contestants-of-Miss-Earth-Nigeria-2024-Delegates-Finalists-Beauty-Queen-Nigeria/57673"
+      },
+      {
+        "title": "Meet the contestants of Miss Universe Egypt 2024",
+        "href": "https://www.angelopedia.com/news/Meet-the-Delegates-Miss-Universe-Egypt-2024-Contestants-Finalists-Egypt-Finale/57672"
+      },
+      {
+        "title": "Fatou Bintou Gueye crowned Miss Universe Senegal 2024",
+        "href": "https://www.angelopedia.com/news/Fatou-Bintou-Gueye-Crowned-Miss-Universe-Senegal-2024-Winner-Miss-Senegal-2024-Runner-Up/57668"
+      },
+      {
+        "title": "Mame Fama Gaye crowned Miss Senegal 2024",
+        "href": "https://www.angelopedia.com/news/Winner-Mame-Fama-Gaye-crowned-Miss-Senegal-2024-Miss-World-Senegal-2024/57658"
+      }
+    ]
+  },
+  {
+    "slug": "oceania",
+    "name": "Oceania",
+    "countries": [
+      {
+        "name": "Australia",
+        "pageants": [
+          {
+            "name": "Miss Australasian",
+            "href": "/Beauty-Pageants-Info/Australia/Miss",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Australia/Miss-Australasian/173"
+          },
+          {
+            "name": "Miss Earth Australia",
+            "href": "/Beauty-Pageants-Info/Australia/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Australia/Miss-Earth-Australia/76"
+          },
+          {
+            "name": "Miss Universe Australia",
+            "href": "/Beauty-Pageants-Info/Australia/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Australia/Miss-Universe-Australia/14"
+          }
+        ]
+      },
+      {
+        "name": "Fiji",
+        "pageants": [
+          {
+            "name": "Miss World Fiji",
+            "href": "/Beauty-Pageants-Info/Fiji/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Fiji/Miss-World-Fiji/28"
+          }
+        ]
+      },
+      {
+        "name": "Guam",
+        "pageants": [
+          {
+            "name": "Miss Earth Guam",
+            "href": "/Beauty-Pageants-Info/Guam/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Guam/Miss-Earth-Guam/80"
+          },
+          {
+            "name": "Miss Universe Guam",
+            "href": "/Beauty-Pageants-Info/Guam/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Guam/Miss-Universe-Guam/113"
+          },
+          {
+            "name": "Miss World Guam",
+            "href": "/Beauty-Pageants-Info/Guam/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/Guam/Miss-World-Guam/63"
+          }
+        ]
+      },
+      {
+        "name": "New Zealand",
+        "pageants": [
+          {
+            "name": "Miss Earth New Zealand",
+            "href": "/Beauty-Pageants-Info/New-Zealand/Miss-Earth",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/New-Zealand/Miss-Earth-New-Zealand/1260"
+          },
+          {
+            "name": "Miss Universe New Zealand",
+            "href": "/Beauty-Pageants-Info/New-Zealand/Miss-Universe",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/New-Zealand/Miss-Universe-New-Zealand/83"
+          },
+          {
+            "name": "Miss World New Zealand",
+            "href": "/Beauty-Pageants-Info/New-Zealand/Miss-World",
+            "source": "https://www.angelopedia.com/Beauty-Pageants-Info/New-Zealand/Miss-World-New-Zealand/6"
+          }
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "title": "Miss Universe Australia 2019",
+        "country": "Australia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Australia/Miss-Universe-Australia-2019/20990"
+      },
+      {
+        "title": "Miss Universe Guam 2018",
+        "country": "Guam",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Guam/Miss-Universe-Guam-2018/20924"
+      },
+      {
+        "title": "Miss Universe New Zealand 2018",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-Universe-New-Zealand-2018/20923"
+      },
+      {
+        "title": "Miss Earth Australia 2017",
+        "country": "Australia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Australia/Miss-Earth-Australia-2017/20835"
+      },
+      {
+        "title": "Miss Universe New Zealand 2017",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-Universe-New-Zealand-2017/10786"
+      },
+      {
+        "title": "Miss Universe Australia 2017",
+        "country": "Australia",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Australia/Miss-Universe-Australia-2017/10787"
+      },
+      {
+        "title": "Miss World Fiji 2017",
+        "country": "Fiji",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Fiji/Miss-World-Fiji-2017/756"
+      },
+      {
+        "title": "Miss World New Zealand 2017",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-World-New-Zealand-2017/10767"
+      },
+      {
+        "title": "Miss Earth New Zealand 2017",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-Earth-New-Zealand-2017/10765"
+      },
+      {
+        "title": "Miss World Guam 2016",
+        "country": "Guam",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/Guam/Miss-World-Guam-2016/712"
+      },
+      {
+        "title": "Miss Universe New Zealand 2016",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-Universe-New-Zealand-2016/693"
+      },
+      {
+        "title": "Miss World New Zealand 2016",
+        "country": "New Zealand",
+        "href": "https://www.angelopedia.com/Beauty-Pageant-Info/New-Zealand/Miss-World-New-Zealand-2016/660"
+      }
+    ],
+    "news": [
+      {
+        "title": "Meet the Finalists for Miss Grand Australia 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Grand-Australia-2024-Meet-the-Finalists-Delegates-Contestants-Miss-Grand-International-2024/57736"
+      },
+      {
+        "title": "Samantha Poole represent New Zealand at Miss International 2024",
+        "href": "https://www.angelopedia.com/news/Miss-International-New-Zealand-Samantha-Poole-Represent-Miss-International-New-Zealand-2024/57698"
+      },
+      {
+        "title": "Sakhile Zie Dube Appointed for Miss Zimbabwe 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Zimbabwe-Appoints-Sakhile-Zie-Dube-for-Miss-Universe-Zimbabwe-2024/57486"
+      },
+      {
+        "title": "Meet the Contestants of Miss Universe Australia 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-Australia-Meet-the-28-Contestants-Miss-Universe-Australia-2024/57478"
+      },
+      {
+        "title": "Rosevellaryn Odile Everleilani crowned Miss Global Samoa 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Global-Samoa-2024-Winner-Rosevellaryn-Odile-Everleilani-Finale-Results-Miss-Global-2024/57467"
+      },
+      {
+        "title": "Angela Rowson Crowned Miss Earth New Zealand 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Earth-New-Zealand-2024-Winner-Angela-Rowson-Finale-Delegates/57457"
+      },
+      {
+        "title": "Meghan Kenney replaces Emma Gribble to represent New Zealand at Miss Supranational 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Supranational-New-Zealand-Meghan-Kenney-Replacement-New-Zealand-Delegates-Miss-Supranational-2024/57414"
+      },
+      {
+        "title": "Know more about Franki Russell Miss Universe New Zealand 2024 for Miss Universe 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-New-Zealand-2024-Winner-Franki-Russell-New-Zealand-Miss-Universe/57398"
+      },
+      {
+        "title": "Franki Russell appointed Miss Universe New Zealand 2024",
+        "href": "https://www.angelopedia.com/news/Miss-Universe-New-Zealand-2024-Winner-Franki-Russell-Appointment-Delegates-Contestants-Miss-Universe-2024/57388"
+      },
+      {
+        "title": "Know more about Miss World Australia 2023 Jasmine Stringer for 72nd Miss World",
+        "href": "https://www.angelopedia.com/news/Miss-World-Australia-2023-Jasmine-Stringer-Winner-Delegate-Miss-World-Featured/57371"
+      },
+      {
+        "title": "71st Miss World Continental Queens of Beauty – Kristen Wright of Australia (Oceania)",
+        "href": "https://www.angelopedia.com/news/71ST-Miss-World-Continental-Winner-Kristen-Wright-Australia-Oceania-Finale-Results-Miss-World/57368"
+      },
+      {
+        "title": "71st Miss World – Best Fashion Designer Award Winners",
+        "href": "https://www.angelopedia.com/news/71ST-Miss-World-Best-Fashion-Designer-Award-Winners-India-USA-Ethiopia-Czech-Republic-Results/57335"
+      }
+    ]
+  }
+]

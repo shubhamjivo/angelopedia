@@ -265,7 +265,6 @@ export const NEWS_FILTERS = [
   { href: newsDeskPath("featured"), label: "Featured" },
   { href: newsDeskPath("specials"), label: "Specials" },
   { href: newsDeskPath("in-pictures"), label: "News In Pictures" },
-  { href: "/videos", label: "Angelopedia Exclusive" },
 ];
 
 export const MOST_READ = MOST_READ_STORIES.map((story) => ({

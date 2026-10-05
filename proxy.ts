@@ -6,7 +6,7 @@ import { deskHref, resolveDeskSection } from "@/lib/pageants/sections";
 // permanentRedirect() from the page throws mid-render, which trips React's dev
 // performance tracks ("'…Page' cannot have a negative time stamp").
 const DESK_PATH =
-  /^(\/miss-(?:world|universe|earth|international)|\/other-pageants\/[^/]+)(?:\/([^/]+))?$/;
+  /^(\/miss-(?:world|universe|earth|international)|\/other-pageants\/[^/]+|\/Beauty-Pageants-Info\/[^/]+\/[^/]+)(?:\/([^/]+))?$/;
 
 export function proxy(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
@@ -28,5 +28,6 @@ export const config = {
     "/miss-earth/:path*",
     "/miss-international/:path*",
     "/other-pageants/:slug/:path*",
+    "/Beauty-Pageants-Info/:country/:pageant/:path*",
   ],
 };

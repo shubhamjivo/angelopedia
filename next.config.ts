@@ -2,7 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [],
+    remotePatterns: [
+      // National pageant desks reuse portraits and news thumbs from the live site.
+      { protocol: "https", hostname: "www.angelopedia.com" },
+      { protocol: "https", hostname: "i.ytimg.com" },
+    ],
   },
   async redirects() {
     return [

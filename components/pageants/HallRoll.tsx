@@ -15,6 +15,9 @@ function hallFacts(dek: string) {
       height: parts[2].replace(/\s*cm\s*/i, "").trim(),
     };
   }
+  if (parts.length === 2 && /^\d+\s*years?$/i.test(parts[1])) {
+    return { country: parts[0], age: parts[1].replace(/\s*years?\s*/i, "").trim(), height: "" };
+  }
   const comma = dek.match(/^(.+?),\s*(\d+)\s*years?\s*(\d+)\s*cm/i);
   if (comma) return { country: comma[1], age: comma[2], height: comma[3] };
   return { country: dek, age: "", height: "" };

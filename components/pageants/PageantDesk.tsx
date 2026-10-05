@@ -404,6 +404,7 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
   const continents = pieces.filter((piece) => piece.kicker === "Continental Queen");
   const top6 = pieces.filter((piece) => piece.kicker === "Top 6");
   const top13 = pieces.filter((piece) => piece.kicker === "Top 13");
+  const placements = pieces.filter((piece) => piece.kicker === "Placement");
   const frames = resultFrames(pieces);
   const winnerFrame = winner ? frames.get(winner.title) : undefined;
   const winnerNote = winner ? resultNote(winner) : null;
@@ -505,6 +506,29 @@ function ResultsBoard({ pieces, body }: { pieces: PageantPiece[]; body: string[]
               if (!frame) return null;
               return (
                 <li key={`${item.title}-${item.dek}`}>
+                  <ResultPortrait
+                    item={item}
+                    frame={frame}
+                    note={resultNote(item)}
+                    nameClass={cardName}
+                    shotClass="aspect-[5/6] w-full"
+                    sizes="(max-width: 640px) 46vw, 220px"
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ) : null}
+      {placements.length ? (
+        <div>
+          <GroupLabel>Other Placements</GroupLabel>
+          <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 desk:grid-cols-4">
+            {placements.map((item) => {
+              const frame = frames.get(item.title);
+              if (!frame) return null;
+              return (
+                <li key={`${item.title}-${item.byline}`}>
                   <ResultPortrait
                     item={item}
                     frame={frame}
@@ -722,7 +746,10 @@ export function PageantDesk({
 }) {
   const current = resolveTab(tabs, tab);
   const layout = layoutFor(current);
-  const years = pageantYears([current]);
+  // Info is the evergreen overview: no year filter. Every other section offers
+  // the years filed anywhere on the desk outside Info.
+  const filterable = current.id !== "info";
+  const years = filterable ? pageantYears(tabs.filter((item) => item.id !== "info")) : [];
   const activeYear = year && years.includes(year) ? year : undefined;
   const visible = activeYear
     ? current.pieces.filter((piece) => pieceYear(piece) === activeYear)
@@ -750,7 +777,7 @@ export function PageantDesk({
             return (
               <Link
                 key={item.id}
-                href={deskHref(basePath, item.id, activeYear)}
+                href={deskHref(basePath, item.id, item.id === "info" ? undefined : activeYear)}
                 aria-current={selected ? "page" : undefined}
                 className={selected ? "text-ink" : "hover:text-ink"}
               >
@@ -783,7 +810,7 @@ export function PageantDesk({
           </div>
 
           <div className="contents lg:order-2 lg:flex lg:w-[280px] lg:shrink-0 lg:flex-col lg:gap-10">
-            {years.length > 1 ? (
+            {years.length ? (
               <YearBox basePath={basePath} tabId={current.id} years={years} active={activeYear} />
             ) : null}
             <aside className="order-3 flex w-full flex-col gap-10 lg:order-none">

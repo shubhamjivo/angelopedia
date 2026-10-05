@@ -36,7 +36,7 @@ export default function PlayPage() {
                 to the 2027 finale.
               </p>
               <Link
-                href="/play"
+                href="/Prediction-Game-for-Beauty-Pageants"
                 className="mt-8 inline-flex h-11 items-center border border-white px-6 font-nav text-[11px] tracking-[2px] uppercase hover:bg-white hover:text-footer"
               >
                 Play the Prediction Game
