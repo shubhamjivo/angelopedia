@@ -27,7 +27,7 @@ function Empty() {
   );
 }
 
-/** Opinions — a text-first comment page: one lead column on a dark band, then numbered columns. */
+/** Opinions — a text-first comment page: one lead column on a dark band, then dated columns. */
 export function OpinionsDesk({ stories }: { stories: Story[] }) {
   const [lead, ...rest] = stories;
   if (!lead) return <Empty />;
@@ -61,23 +61,29 @@ export function OpinionsDesk({ stories }: { stories: Story[] }) {
         <Container>
           <h2 className={TITLE}>More Opinions</h2>
           <ol className="mt-10 grid gap-x-16 md:grid-cols-2">
-            {rest.map((story, index) => (
-              <li key={story.slug} className="flex gap-5 border-t border-hairline py-7">
-                <span className="w-10 shrink-0 font-heading text-[30px] leading-none text-accent">
-                  {String(index + 2).padStart(2, "0")}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <Kicker>{story.kicker}</Kicker>
-                  <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
-                    <Link href={storyPath(story)} className="hover:text-ink">
-                      {story.title}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 line-clamp-3 font-body text-[15px] leading-6 text-neutral-500">{story.dek}</p>
-                  <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">{byline(story)}</p>
-                </div>
-              </li>
-            ))}
+            {rest.map((story) => {
+              const [day, month, year] = story.date.split(" ");
+              return (
+                <li key={story.slug} className="flex gap-5 border-t border-hairline py-7">
+                  <div className="w-16 shrink-0">
+                    <p className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">{day}</p>
+                    <p className="mt-2 font-nav text-[10px] font-medium tracking-[1.4px] text-accent uppercase">
+                      {month?.slice(0, 3)} {year}
+                    </p>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <Kicker>{story.kicker}</Kicker>
+                    <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
+                      <Link href={storyPath(story)} className="hover:text-ink">
+                        {story.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-2 line-clamp-3 font-body text-[15px] leading-6 text-neutral-500">{story.dek}</p>
+                    <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">By {story.author}</p>
+                  </div>
+                </li>
+              );
+            })}
           </ol>
         </Container>
       </section>

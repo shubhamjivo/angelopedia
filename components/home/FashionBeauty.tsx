@@ -15,24 +15,17 @@ export function FashionBeauty({
 }) {
   return (
     <section id="fashion-and-beauty" className="border-t border-hairline bg-paper py-8 text-ink desk:py-10">
-      <Container className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,2.4fr)_minmax(0,1fr)] lg:gap-10">
-        <div className="bg-ink/5 p-6 sm:p-10">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
-              Fashion and Beauty
-            </h2>
-            <Link
-              href={FASHION_HREF}
-              className="font-nav text-[11px] tracking-[1.8px] text-accent uppercase hover:text-ink"
-            >
-              All gowns
-            </Link>
-          </div>
-          <p className="mt-4 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">
-            The gowns, looks and faces of the Miss season
-          </p>
+      <Container>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
+            Fashion and Beauty
+          </h2>
+          <Link href={FASHION_HREF} className="font-nav text-[11px] tracking-[1.8px] text-accent uppercase hover:text-ink">
+            All gowns
+          </Link>
+        </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-8">
+        <div className="mt-10 grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             <article className="min-w-0">
               <Link href={lead.href} className="group block">
                 <CoverImage
@@ -74,11 +67,8 @@ export function FashionBeauty({
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
 
-        <aside>
-          <ul className="flex flex-col">
+          <ul className="flex min-w-0 flex-col md:col-span-2 lg:col-span-1">
             {rail.map((item) => (
               <li key={item.href} className="border-b border-hairline py-6 first:pt-0">
                 <Link href={item.href} className="group block">
@@ -105,7 +95,7 @@ export function FashionBeauty({
               </li>
             ))}
           </ul>
-        </aside>
+        </div>
       </Container>
     </section>
   );
