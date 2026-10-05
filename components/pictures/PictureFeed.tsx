@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { PICTURES_HREF, picturePath, type PictureAlbum } from "@/lib/pictures";
 import { SITE_NAME } from "@/lib/site";
+import { StoryFeedback } from "@/components/news/StoryFeedback";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 
@@ -57,6 +58,12 @@ function Story({ album, number, first }: { album: PictureAlbum; number: number; 
             <p className="mt-5 font-body text-[16px] leading-7 text-ink">{album.dek}</p>
           </div>
         </div>
+
+        <StoryFeedback
+          id={`pictures:${album.slug}`}
+          title={album.title}
+          className="mt-10 max-w-[720px] border-t border-hairline pt-8"
+        />
       </Container>
     </section>
   );

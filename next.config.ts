@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // The Play Zone hub was folded into the Prediction Game page.
+      { source: "/play", destination: "/Prediction-Game-for-Beauty-Pageants", permanent: true },
       // Legacy angelopedia.com picture index URLs.
       { source: "/News-In-Picture", destination: "/news/in-pictures", permanent: true },
       { source: "/News-In-Pictures", destination: "/news/in-pictures", permanent: true },

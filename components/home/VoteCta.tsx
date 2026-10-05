@@ -17,7 +17,7 @@ export function VoteCta() {
           </p>
         </div>
         <Link
-          href="/play"
+          href="/Prediction-Game-for-Beauty-Pageants"
           className="inline-flex h-12 shrink-0 items-center border border-white px-8 font-nav text-[13px] tracking-[1.5px] text-white uppercase hover:bg-white hover:text-ink"
         >
           Cast your vote

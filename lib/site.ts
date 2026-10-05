@@ -73,11 +73,10 @@ export const ROUTES = [
   //     "Runways, coronations and the quiet moments backstage — through our photographers’ lenses.",
   // },
   {
-    href: "/play",
+    href: "/Prediction-Game-for-Beauty-Pageants",
     label: "Play Zone",
-    title: "Vote & Predict",
-    description:
-      "Have your say in this month’s polls, and predict the next crown to climb the leaderboard.",
+    title: "Prediction Game",
+    description: "Vote for your top favourites before the finale, and see how every past prediction game closed.",
   },
 ] as const;
 
@@ -107,10 +106,10 @@ export const PLAY_LINKS = [
 
 export const NAV_SUBMENUS: Record<
   string,
-  { all: string; links: readonly { href: string; label: string }[]; also?: readonly string[] }
+  { all?: string; links: readonly { href: string; label: string }[]; also?: readonly string[] }
 > = {
   "/other-pageants": { all: "All pageants", links: OTHER_PAGEANT_LINKS },
-  "/play": { all: "Play Zone", links: PLAY_LINKS, also: ["/Prediction-Game"] },
+  "/Prediction-Game-for-Beauty-Pageants": { links: PLAY_LINKS, also: ["/Prediction-Game"] },
 };
 
 export const UTILITY_LINKS = [

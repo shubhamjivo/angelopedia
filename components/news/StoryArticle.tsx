@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { relatedStories, storyPath, type Story } from "@/lib/stories";
+import { StoryFeedback } from "@/components/news/StoryFeedback";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
@@ -98,6 +99,12 @@ export function StoryArticle({ story }: { story: Story }) {
           </div>
         </Container>
       </article>
+
+      <section id="feedback" className="border-t border-hairline py-8 desk:py-10">
+        <Container className="max-w-[720px]">
+          <StoryFeedback id={`story:${story.slug}`} title={story.title} />
+        </Container>
+      </section>
 
       <section id="read-next" className="border-t border-hairline py-8 desk:py-10">
         <Container>

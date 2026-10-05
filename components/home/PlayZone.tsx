@@ -18,7 +18,7 @@ export function PlayZone({ game, polls }: { game?: OpenGame; polls: ArchivePoll[
           <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
             Play Zone
           </h2>
-          <Link href="/play" className="font-nav text-[11px] tracking-[1.8px] text-accent uppercase hover:text-ink">
+          <Link href={PREDICTION_PATH} className="font-nav text-[11px] tracking-[1.8px] text-accent uppercase hover:text-ink">
             Vote &amp; predict
           </Link>
         </div>

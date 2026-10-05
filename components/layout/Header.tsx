@@ -359,12 +359,14 @@ export function Header() {
                         </span>
                       </summary>
                       <div className="fixed inset-x-4 z-50 border border-hairline bg-paper py-2 shadow-[0_8px_24px_rgba(65,64,66,0.08)]" style={{ top: "var(--header-h-top)" }}>
-                        <Link
-                          href={link.href}
-                          className="block px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] text-ink uppercase hover:text-heading"
-                        >
-                          {submenu.all}
-                        </Link>
+                        {submenu.all ? (
+                          <Link
+                            href={link.href}
+                            className="block px-4 py-2.5 font-nav text-[11px] tracking-[1.4px] text-ink uppercase hover:text-heading"
+                          >
+                            {submenu.all}
+                          </Link>
+                        ) : null}
                         {submenu.links.map((child) => (
                           <Link
                             key={child.href}

@@ -511,7 +511,7 @@ export const FOOTER_COLUMNS = [
   {
     heading: "Angelopedia",
     links: [
-      { href: "/play", label: "Play Zone" },
+      { href: "/Prediction-Game-for-Beauty-Pageants", label: "Play Zone" },
       { href: "/about", label: "About Us" },
       { href: "/contact", label: "Contact" },
       { href: "/advertise", label: "Advertise" },

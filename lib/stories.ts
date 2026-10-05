@@ -227,7 +227,7 @@ const STORIES: Story[] = [
       "Three stories are doing the work in the early market. The host city always flatters its own region, and Bangkok’s anniversary stage will be kind to a delegate who can use the room. Europe’s recent interview form is the second story. The third is specific: a French architect whose final answer at home already travelled further than her gown.",
       "None of this is a crowning. It is a map of where attention sits six weeks out, which is the only honest prediction a desk can print. The table in November will throw at least one of these stories out.",
     ],
-    links: [{ href: "/play", label: "Cast a vote in this month’s poll" }],
+    links: [{ href: "/Polls", label: "Cast a vote in this month’s poll" }],
   },
   {
     slug: "evening-gown-the-last-look",
