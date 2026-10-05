@@ -1,105 +1,111 @@
-"use client";
-
 import Link from "next/link";
-import { A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { CarouselArrow } from "@/components/ui/CarouselArrow";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
-import { useCarousel } from "@/components/ui/useCarousel";
-import { FASHION_HREF, gownPath, type Gown } from "@/lib/fashion";
+import { FASHION_HREF, type FashionItem } from "@/lib/fashion";
 
-export function FashionBeauty({ gowns }: { gowns: Gown[] }) {
-  const { index, atStart, atEnd, prev, next, swiperProps } = useCarousel();
-  const count = String(gowns.length).padStart(2, "0");
-
+export function FashionBeauty({
+  lead,
+  picks,
+  rail,
+}: {
+  lead: FashionItem;
+  picks: FashionItem[];
+  rail: FashionItem[];
+}) {
   return (
-    <section
-      id="fashion-and-beauty"
-      className="border-t border-hairline bg-paper py-8 text-ink desk:py-10"
-      aria-roledescription="carousel"
-      aria-label="Fashion and Beauty"
-    >
-      <Container>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
-            Fashion and Beauty
-          </h2>
-          <div className="flex items-center gap-3">
+    <section id="fashion-and-beauty" className="border-t border-hairline bg-paper py-8 text-ink desk:py-10">
+      <Container className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,2.4fr)_minmax(0,1fr)] lg:gap-10">
+        <div className="bg-ink/5 p-6 sm:p-10">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <h2 className="font-heading text-[30px] font-semibold leading-none text-heading desk:text-[36px]">
+              Fashion and Beauty
+            </h2>
             <Link
               href={FASHION_HREF}
               className="font-nav text-[11px] tracking-[1.8px] text-accent uppercase hover:text-ink"
             >
               All gowns
             </Link>
-            <p className="font-nav text-[11px] tracking-[1.8px] text-ink uppercase" aria-live="polite">
-              {String(index + 1).padStart(2, "0")} / {count}
-            </p>
-            <button
-              type="button"
-              aria-label="Previous gown"
-              disabled={atStart}
-              onClick={prev}
-              className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
-            >
-              <CarouselArrow direction="prev" />
-            </button>
-            <button
-              type="button"
-              aria-label="Next gown"
-              disabled={atEnd}
-              onClick={next}
-              className="grid size-9 place-items-center border border-hairline text-heading hover:border-heading disabled:opacity-40"
-            >
-              <CarouselArrow direction="next" />
-            </button>
+          </div>
+          <p className="mt-4 font-nav text-[11px] tracking-[1.6px] text-muted uppercase">
+            The gowns, looks and faces of the Miss season
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-8">
+            <article className="min-w-0">
+              <Link href={lead.href} className="group block">
+                <CoverImage
+                  src={lead.image}
+                  alt={lead.alt}
+                  className="aspect-[4/5] w-full"
+                  imageClassName="object-top transition duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width: 767px) 100vw, 420px"
+                />
+                <Kicker tone="accent" className="mt-5">
+                  {lead.kicker}
+                </Kicker>
+                <h3 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading group-hover:text-ink desk:text-[26px]">
+                  {lead.title}
+                </h3>
+                <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">{lead.byline}</p>
+              </Link>
+            </article>
+
+            <ul className="flex min-w-0 flex-col gap-6">
+              {picks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="group flex items-start gap-4">
+                    <CoverImage
+                      src={item.image}
+                      alt={item.alt}
+                      className="aspect-[4/3] w-[42%] shrink-0"
+                      imageClassName="object-top"
+                      sizes="(max-width: 767px) 42vw, 200px"
+                    />
+                    <span className="min-w-0">
+                      <Kicker tone="accent">{item.kicker}</Kicker>
+                      <span className="mt-2 block font-heading text-[16px] font-semibold leading-[1.4] text-heading group-hover:underline">
+                        {item.title}
+                      </span>
+                      <span className="mt-2 block font-nav text-[11px] tracking-[1.2px] text-muted">{item.byline}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <Swiper
-          modules={[A11y]}
-          {...swiperProps}
-          slidesPerView={1}
-          spaceBetween={16}
-          speed={450}
-          watchOverflow
-          breakpoints={{
-            720: { slidesPerView: 2, spaceBetween: 20 },
-            1440: { slidesPerView: 3, spaceBetween: 24 },
-          }}
-          a11y={{
-            prevSlideMessage: "Previous gown",
-            nextSlideMessage: "Next gown",
-          }}
-          className="fashion-gowns mt-10 w-full"
-        >
-          {gowns.map((gown) => (
-            <SwiperSlide key={gown.slug}>
-              <article className="min-w-0">
-                <Link href={gownPath(gown)} className="group block">
-                  <CoverImage
-                    src={gown.image}
-                    alt={gown.alt}
-                    className="aspect-[3/4] w-full"
-                    imageClassName="object-top transition duration-500 group-hover:scale-[1.02]"
-                    sizes="(max-width: 719px) 100vw, (max-width: 1439px) 50vw, 440px"
-                  />
-                  <Kicker tone="accent" className="mt-4">
-                    {gown.pageant}
-                  </Kicker>
-                  <h3 className="mt-2 font-heading text-[16px] font-medium leading-snug text-heading group-hover:text-accent">
-                    {gown.dress}
-                  </h3>
-                  <p className="mt-2 font-nav text-[11px] tracking-[1.4px] text-muted uppercase">
-                    {gown.name} · {gown.designer}
+        <aside>
+          <ul className="flex flex-col">
+            {rail.map((item) => (
+              <li key={item.href} className="border-b border-hairline py-6 first:pt-0">
+                <Link href={item.href} className="group block">
+                  <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-nav text-[10px] font-medium tracking-[1.4px] uppercase">
+                    <span className="text-accent">{item.kicker}</span>
+                    {item.date ? <span className="text-muted">{item.date}</span> : null}
                   </p>
+                  <span className="mt-3 flex items-start gap-4">
+                    <span className="min-w-0 flex-1">
+                      <span className="block font-heading text-[15px] leading-[1.4] text-heading group-hover:text-ink">
+                        {item.title}
+                      </span>
+                      <span className="mt-3 block font-nav text-[11px] tracking-[1.2px] text-muted">{item.byline}</span>
+                    </span>
+                    <CoverImage
+                      src={item.image}
+                      alt=""
+                      className="h-[72px] w-[96px] shrink-0"
+                      imageClassName="object-top"
+                      sizes="96px"
+                    />
+                  </span>
                 </Link>
-              </article>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </Container>
     </section>
   );

@@ -7,7 +7,7 @@ import { HeroMosaic } from "@/components/home/HeroMosaic";
 import { PlayZone } from "@/components/home/PlayZone";
 import { VoteCta } from "@/components/home/VoteCta";
 import { WatchNow } from "@/components/home/WatchNow";
-import { GOWNS } from "@/lib/fashion";
+import { fashionFront } from "@/lib/fashion";
 import { ARCHIVE_POLLS, OPEN_GAMES } from "@/lib/play";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 import { EXCLUSIVE_INTERVIEWS, FINAL_VIDEOS, HOME_RAIL_COUNT, OTHER_INTERVIEWS } from "@/lib/videos";
@@ -31,7 +31,7 @@ export default function Home() {
         finalVideos={FINAL_VIDEOS.slice(0, HOME_RAIL_COUNT)}
       />
       <BigFour />
-      <FashionBeauty gowns={GOWNS} />
+      <FashionBeauty {...fashionFront()} />
       {/* <GalleryPreview /> */}
       <PlayZone game={OPEN_GAMES[0]} polls={ARCHIVE_POLLS.slice(0, 4)} />
       <VoteCta />

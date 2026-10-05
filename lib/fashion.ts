@@ -1,3 +1,5 @@
+import { listDesk, storyPath, type Story } from "@/lib/stories";
+
 export type Gown = {
   slug: string;
   pageant: string;
@@ -95,4 +97,72 @@ export function getGown(slug: string) {
 
 export function otherGowns(slug: string) {
   return GOWNS.filter((gown) => gown.slug !== slug);
+}
+
+export type FashionItem = {
+  href: string;
+  kicker: string;
+  title: string;
+  byline: string;
+  image: string;
+  alt: string;
+  date?: string;
+};
+
+const BIG_FOUR = ["Miss World", "Miss Universe", "Miss Earth", "Miss International"] as const;
+const LOOKS = /gown|costume|headshot|swimsuit|fashion|style|runway|look\b/i;
+
+function pageantOf(text: string) {
+  return BIG_FOUR.find((name) => text.includes(name));
+}
+
+function gownItem(gown: Gown, kicker: string): FashionItem {
+  return {
+    href: gownPath(gown),
+    kicker,
+    title: `${gown.dress}: ${gown.name}’s ${gown.pageant} gown`,
+    byline: `Gown by ${gown.designer}`,
+    image: gown.image,
+    alt: gown.alt,
+  };
+}
+
+function storyItem(story: Story, kicker: string): FashionItem {
+  return {
+    href: storyPath(story),
+    kicker,
+    title: story.title,
+    byline: `By ${story.author}`,
+    image: story.cover ?? story.image,
+    alt: story.title,
+    date: story.date,
+  };
+}
+
+/**
+ * The homepage Fashion and Beauty front: the reigning Big Four gowns, the desk's
+ * style stories about those pageants, and the newest Beauty Talk for each crown.
+ */
+export function fashionFront() {
+  const [first, ...gowns] = GOWNS;
+  const looks = ["opinions", "featured", "specials", "news"]
+    .flatMap((section) => listDesk({ section }))
+    .filter((story) => LOOKS.test(story.title) && pageantOf(`${story.title} ${story.tags.join(" ")}`));
+  const talks = listDesk({ section: "beauty-talks" });
+  const interviews = BIG_FOUR.flatMap((name) => {
+    const talk = talks.find((story) => story.title.includes(name));
+    return talk ? [storyItem(talk, `Beauty Talks · ${name}`)] : [];
+  });
+
+  return {
+    lead: gownItem(first, `Look of the Season · ${first.pageant}`),
+    picks: [
+      ...gowns.map((gown) => gownItem(gown, `Gowns · ${gown.pageant}`)),
+      ...looks.slice(0, 1).map((story) => storyItem(story, `Style · ${pageantOf(`${story.title} ${story.tags.join(" ")}`)}`)),
+    ],
+    rail: [
+      ...looks.slice(1, 2).map((story) => storyItem(story, `Style · ${pageantOf(`${story.title} ${story.tags.join(" ")}`)}`)),
+      ...interviews,
+    ],
+  };
 }
