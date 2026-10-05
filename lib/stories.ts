@@ -1,3 +1,5 @@
+import liveDesk from "./news-desk.json";
+
 export type StorySection =
   | "news"
   | "opinions"
@@ -23,6 +25,10 @@ export type Story = {
   quote?: { text: string; credit: string };
   inline?: { src: string; caption: string };
   links?: { href: string; label: string }[];
+  /** Full-size picture, when the story has one; `image` may only be a thumbnail. */
+  cover?: string;
+  /** The angelopedia.com page a desk story was filed from. */
+  source?: string;
 };
 
 export const EDITION_LABEL = "Saturday, 26 September 2026";
@@ -587,7 +593,29 @@ const STORIES: Story[] = [
   },
 ];
 
-const bySlug = new Map(STORIES.map((story) => [story.slug, story]));
+/** Stories filed from the angelopedia.com news desks, newest first. Slugs keep the live `Title/id` shape. */
+const DESK_STORIES = liveDesk as Story[];
+
+const bySlug = new Map([...STORIES, ...DESK_STORIES].map((story) => [story.slug, story]));
+
+function matches(story: Story, query?: string) {
+  if (!query) return true;
+  return [story.title, story.dek, story.kicker, story.author, ...story.tags].join(" ").toLowerCase().includes(query);
+}
+
+function newestFirst(a: Story, b: Story) {
+  return a.dateISO < b.dateISO ? 1 : a.dateISO > b.dateISO ? -1 : 0;
+}
+
+/** A news desk listing. No section is the main News desk; a query searches every desk and the edition. */
+export function listDesk(options?: { section?: string; q?: string }) {
+  const query = options?.q?.trim().toLowerCase();
+  if (query && !options?.section) {
+    return [...STORIES, ...DESK_STORIES].filter((story) => matches(story, query)).sort(newestFirst);
+  }
+  const section = options?.section ?? "news";
+  return DESK_STORIES.filter((story) => story.section === section && matches(story, query));
+}
 
 export function getStory(slug: string) {
   return bySlug.get(slug);
@@ -608,12 +636,9 @@ export function listStories(options?: { section?: string; q?: string }) {
 }
 
 export function relatedStories(story: Story, count = 3) {
-  const sameSection = listStories({ section: story.section }).filter(
-    (item) => item.slug !== story.slug,
-  );
-  const others = listStories().filter(
-    (item) => item.slug !== story.slug && item.section !== story.section,
-  );
+  const pool = story.source ? DESK_STORIES : listStories();
+  const sameSection = pool.filter((item) => item.slug !== story.slug && item.section === story.section);
+  const others = pool.filter((item) => item.slug !== story.slug && item.section !== story.section);
   return [...sameSection, ...others].slice(0, count);
 }
 
@@ -638,7 +663,7 @@ export const MOST_READ_STORIES = MOST_READ_SLUGS.map((slug) => {
 });
 
 export function storyPath(story: Story) {
-  return `/news/${story.slug}`;
+  return `/news/${story.slug.split("/").map(encodeURIComponent).join("/")}`;
 }
 
 const NEWS_DESK_SECTIONS = ["opinions", "beauty-talks", "featured", "specials", "in-pictures"] as const;

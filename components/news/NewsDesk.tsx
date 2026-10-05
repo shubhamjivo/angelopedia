@@ -4,12 +4,13 @@ import { NEWS_IN_PICTURES, picturePath } from "@/lib/pictures";
 import {
   MOST_READ_STORIES,
   SECTION_LABELS,
-  listStories,
+  listDesk,
   newsDeskPath,
   storyPath,
   type Story,
   type StorySection,
 } from "@/lib/stories";
+import { FeaturedDesk, OpinionsDesk, PicturesDesk, SpecialsDesk, TalksDesk } from "@/components/news/DeskLayouts";
 import { Container } from "@/components/ui/Container";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Kicker } from "@/components/ui/Kicker";
@@ -61,16 +62,24 @@ export function sectionLabel(section?: string) {
   return "The Latest";
 }
 
-export function NewsDesk({ section, query }: { section?: StorySection; query: string }) {
+const DESK_DEKS: Record<StorySection, string> = {
+  news: "Crowns, contests and the people who carry them — reported daily from 195 nations.",
+  opinions: "Favourites, verdicts and arguments — what our writers make of the season.",
+  "beauty-talks": "In conversation with the queens, in their own words.",
+  featured: "The long reads and cover stories from the Angelopedia desk.",
+  specials: "Lists, look-backs and one-off reports, filed by date.",
+  "in-pictures": "The season in albums — finals, favourites and crowning moments.",
+};
+
+export function NewsDesk({ section, query, page = 1 }: { section?: StorySection; query: string; page?: number }) {
   const pictures = section === "in-pictures";
-  const items = pictures ? pictureItems(query) : storyItems(listStories({ section, q: query }));
+  const stories = pictures ? [] : listDesk({ section, q: query });
+  const items = pictures ? pictureItems(query) : storyItems(stories);
   const [featured, ...feed] = items;
   const heading = query ? `Results for “${query}”` : sectionLabel(section);
   const dek = query
     ? `${items.length} ${items.length === 1 ? "story" : "stories"} match.`
-    : section
-      ? `${sectionLabel(section)} from the Angelopedia desk.`
-      : "Crowns, contests and the people who carry them — reported daily from 195 nations.";
+    : DESK_DEKS[section ?? "news"];
 
   return (
     <main>
@@ -94,130 +103,142 @@ export function NewsDesk({ section, query }: { section?: StorySection; query: st
         </Container>
       </nav>
 
-      <section id="stories" className="py-8 desk:py-10">
-        <Container className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
-          <div className="min-w-0 flex-1">
-            {featured ? (
-              <article className="flex flex-col gap-8 border-b border-hairline pb-14 lg:flex-row lg:items-center">
-                <div className="min-w-0 flex-1">
-                  <Kicker tone="accent">{featured.kicker}</Kicker>
-                  <h2 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading desk:text-[26px]">
-                    <Link href={featured.href} className="hover:text-ink">
-                      {featured.title}
-                    </Link>
-                  </h2>
-                  <p className={`mt-4 font-body text-[15px] leading-6 text-neutral-500${featured.clamp ? " line-clamp-4" : ""}`}>
-                    {featured.dek}
-                  </p>
-                  <p className="mt-5 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
-                    {featured.byline}
-                  </p>
-                </div>
-                <Link href={featured.href} className="lg:w-[420px] lg:shrink-0">
-                  <CoverImage
-                    src={featured.image}
-                    alt={featured.title}
-                    className="h-[280px] w-full lg:h-[360px]"
-                    sizes="420px"
-                  />
-                </Link>
-              </article>
-            ) : (
-              <p className="border-b border-hairline pb-14 font-body text-[17px] leading-7 text-neutral-500">
-                No stories match. Try another section, or search a pageant, a country, or a writer.
-              </p>
-            )}
-
-            <div className="flex flex-col">
-              {feed.map((item) => (
-                <article key={item.key} className="flex gap-6 border-b border-hairline py-8">
+      {query || !section ? (
+        <section id="stories" className="py-8 desk:py-10">
+          <Container className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
+            <div className="min-w-0 flex-1">
+              {featured ? (
+                <article className="flex flex-col gap-8 border-b border-hairline pb-14 lg:flex-row lg:items-center">
                   <div className="min-w-0 flex-1">
-                    <Kicker>{item.kicker}</Kicker>
-                    <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
-                      <Link href={item.href} className="hover:text-ink">
-                        {item.title}
+                    <Kicker tone="accent">{featured.kicker}</Kicker>
+                    <h2 className="mt-3 font-heading text-[22px] font-semibold leading-[1.3] text-heading desk:text-[26px]">
+                      <Link href={featured.href} className="hover:text-ink">
+                        {featured.title}
                       </Link>
-                    </h3>
-                    <p className={`mt-2 font-body text-[15px] leading-6 text-neutral-500${item.clamp ? " line-clamp-3" : ""}`}>
-                      {item.dek}
+                    </h2>
+                    <p className={`mt-4 font-body text-[15px] leading-6 text-neutral-500${featured.clamp ? " line-clamp-4" : ""}`}>
+                      {featured.dek}
                     </p>
-                    <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
-                      {item.byline}
+                    <p className="mt-5 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
+                      {featured.byline}
                     </p>
                   </div>
-                  <Link href={item.href} className="hidden w-[220px] shrink-0 sm:block">
+                  <Link href={featured.href} className="lg:w-[420px] lg:shrink-0">
                     <CoverImage
-                      src={item.image}
-                      alt={item.title}
-                      className="h-[147px] w-[220px]"
-                      sizes="220px"
+                      src={featured.image}
+                      alt={featured.title}
+                      className="h-[280px] w-full lg:h-[360px]"
+                      sizes="420px"
                     />
                   </Link>
                 </article>
-              ))}
-            </div>
-          </div>
+              ) : (
+                <p className="border-b border-hairline pb-14 font-body text-[17px] leading-7 text-neutral-500">
+                  No stories match. Try another section, or search a pageant, a country, or a writer.
+                </p>
+              )}
 
-          <aside className="flex w-full flex-col gap-10 lg:w-[280px] lg:shrink-0">
-            <div>
-              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
-                Most Read
-              </p>
-              <ol className="mt-4 flex flex-col gap-4">
-                {MOST_READ_STORIES.map((story, index) => (
-                  <li key={story.slug}>
-                    <Link href={storyPath(story)} className="group flex w-full items-start gap-3">
+              <div className="flex flex-col">
+                {feed.map((item) => (
+                  <article key={item.key} className="flex gap-6 border-b border-hairline py-8">
+                    <div className="min-w-0 flex-1">
+                      <Kicker>{item.kicker}</Kicker>
+                      <h3 className="mt-2 font-heading text-[16px] font-semibold leading-[1.4] text-heading">
+                        <Link href={item.href} className="hover:text-ink">
+                          {item.title}
+                        </Link>
+                      </h3>
+                      <p className={`mt-2 font-body text-[15px] leading-6 text-neutral-500${item.clamp ? " line-clamp-3" : ""}`}>
+                        {item.dek}
+                      </p>
+                      <p className="mt-3 font-nav text-[11px] tracking-[1.5px] text-muted uppercase">
+                        {item.byline}
+                      </p>
+                    </div>
+                    <Link href={item.href} className="hidden w-[220px] shrink-0 sm:block">
                       <CoverImage
-                        src={story.image}
-                        alt=""
-                        className="size-16 shrink-0"
-                        imageClassName="object-cover"
-                        sizes="64px"
+                        src={item.image}
+                        alt={item.title}
+                        className="h-[147px] w-[220px]"
+                        sizes="220px"
                       />
-                      <span className="font-heading text-[22px] leading-none text-accent">{index + 1}</span>
-                      <span className="min-w-0 font-heading text-[15px] leading-[1.4] text-heading group-hover:text-ink">
-                        {story.title}
-                      </span>
                     </Link>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            <div>
-              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
-                Follow a Pageant
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {FOLLOW_PAGEANTS.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="border border-hairline px-3 py-1.5 font-nav text-[10px] tracking-[1.2px] uppercase hover:border-ink"
-                  >
-                    {item.label}
-                  </Link>
+                  </article>
                 ))}
               </div>
             </div>
 
-            <div>
-              <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
-                The Crown Letter
-              </p>
-              <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">
-                One elegant email each Sunday — the week in pageantry, curated.
-              </p>
-              <Link
-                href="/#newsletter"
-                className="mt-4 flex h-11 items-center justify-center border border-ink font-nav text-[11px] tracking-[2px] uppercase"
-              >
-                Subscribe
-              </Link>
-            </div>
-          </aside>
-        </Container>
-      </section>
+            <aside className="flex w-full flex-col gap-10 lg:w-[280px] lg:shrink-0">
+              <div>
+                <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                  Most Read
+                </p>
+                <ol className="mt-4 flex flex-col gap-4">
+                  {MOST_READ_STORIES.map((story, index) => (
+                    <li key={story.slug}>
+                      <Link href={storyPath(story)} className="group flex w-full items-start gap-3">
+                        <CoverImage
+                          src={story.image}
+                          alt=""
+                          className="size-16 shrink-0"
+                          imageClassName="object-cover"
+                          sizes="64px"
+                        />
+                        <span className="font-heading text-[22px] leading-none text-accent">{index + 1}</span>
+                        <span className="min-w-0 font-heading text-[15px] leading-[1.4] text-heading group-hover:text-ink">
+                          {story.title}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div>
+                <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                  Follow a Pageant
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {FOLLOW_PAGEANTS.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="border border-hairline px-3 py-1.5 font-nav text-[10px] tracking-[1.2px] uppercase hover:border-ink"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="border-b border-ink pb-3 font-nav text-[11px] tracking-[2px] uppercase">
+                  The Crown Letter
+                </p>
+                <p className="mt-4 font-body text-[15px] leading-6 text-neutral-500">
+                  One elegant email each Sunday — the week in pageantry, curated.
+                </p>
+                <Link
+                  href="/#newsletter"
+                  className="mt-4 flex h-11 items-center justify-center border border-ink font-nav text-[11px] tracking-[2px] uppercase"
+                >
+                  Subscribe
+                </Link>
+              </div>
+            </aside>
+          </Container>
+        </section>
+      ) : section === "opinions" ? (
+        <OpinionsDesk stories={stories} />
+      ) : section === "beauty-talks" ? (
+        <TalksDesk stories={stories} page={page} />
+      ) : section === "featured" ? (
+        <FeaturedDesk stories={stories} />
+      ) : section === "specials" ? (
+        <SpecialsDesk stories={stories} />
+      ) : (
+        <PicturesDesk query={query} />
+      )}
     </main>
   );
 }

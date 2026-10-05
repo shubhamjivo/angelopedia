@@ -6,8 +6,20 @@ import { getStory, isNewsDeskSection, listStories, newsDeskPath, type StorySecti
 
 type NewsProps = {
   params: Promise<{ section?: string[] }>;
-  searchParams: Promise<{ section?: string; q?: string }>;
+  searchParams: Promise<{ section?: string; q?: string; page?: string }>;
 };
+
+function storySlug(segments: string[]) {
+  return segments
+    .map((segment) => {
+      try {
+        return decodeURIComponent(segment);
+      } catch {
+        return segment;
+      }
+    })
+    .join("/");
+}
 
 export function generateStaticParams() {
   const desks = ["opinions", "beauty-talks", "featured", "specials", "in-pictures"].map((section) => ({
@@ -21,7 +33,7 @@ export async function generateMetadata({ params, searchParams }: NewsProps): Pro
   const { section } = await params;
   const { q } = await searchParams;
   const segment = section?.[0];
-  const story = segment ? getStory(segment) : undefined;
+  const story = section ? getStory(storySlug(section)) : undefined;
   if (story) return { title: story.title, description: story.dek };
   const active = segment && isNewsDeskSection(segment) ? segment : undefined;
   const title = q?.trim() ? `Search: ${q.trim()}` : sectionLabel(active);
@@ -33,10 +45,16 @@ export async function generateMetadata({ params, searchParams }: NewsProps): Pro
 
 export default async function NewsPage({ params, searchParams }: NewsProps) {
   const { section } = await params;
-  if (section && section.length > 1) notFound();
+  // Desk stories keep the live `/news/Title/id` shape, so a story may span two segments.
+  if (section && section.length > 2) notFound();
+  if (section && section.length === 2) {
+    const story = getStory(storySlug(section));
+    if (!story) notFound();
+    return <StoryArticle story={story} />;
+  }
 
   const segment = section?.[0];
-  const { section: legacy, q } = await searchParams;
+  const { section: legacy, q, page } = await searchParams;
   const query = q?.trim() ?? "";
 
   if (!segment && legacy && isNewsDeskSection(legacy)) {
@@ -45,7 +63,7 @@ export default async function NewsPage({ params, searchParams }: NewsProps) {
   }
 
   if (segment && isNewsDeskSection(segment)) {
-    return <NewsDesk section={segment as StorySection} query={query} />;
+    return <NewsDesk section={segment as StorySection} query={query} page={Number(page) || 1} />;
   }
 
   if (segment) {

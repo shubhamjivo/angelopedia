@@ -6,6 +6,8 @@ import { Kicker } from "@/components/ui/Kicker";
 
 export function StoryArticle({ story }: { story: Story }) {
   const next = relatedStories(story);
+  // Desk stories without a full-size picture only have a 400px thumbnail, shown at column width.
+  const hero = story.cover ?? story.image;
 
   return (
     <main>
@@ -23,12 +25,13 @@ export function StoryArticle({ story }: { story: Story }) {
           </p>
         </Container>
 
-        <Container className="pb-4">
+        <Container className={hero === story.image && story.source ? "max-w-[720px] pb-4" : "pb-4"}>
           <figure>
             <CoverImage
-              src={story.image}
+              src={hero}
               alt={story.title}
-              className="aspect-[16/9] w-full"
+              className={hero === story.image && story.source ? "aspect-[5/4] w-full" : "aspect-[16/9] w-full"}
+              imageClassName="object-top"
               sizes="(max-width: 1439px) 100vw, 1360px"
               priority
             />
